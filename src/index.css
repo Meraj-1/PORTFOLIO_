@@ -29,7 +29,7 @@ html {
   }
   
   .rotateReact {
-    animation: rotateReact 5s linear infinite;
+    animation: rotateReact 10s linear infinite;
   }
   
 
@@ -63,20 +63,21 @@ html {
       background-position: 0% 50%;
     }
   }
-  
+ 
   .animate-text {
     background: linear-gradient(
-      90deg,
+      100deg,
       #ff7eb3,
       #ff758c,
       #a29bfe,
       #74b9ff,
-      #55efc4,
+      #38be98,
       #00cec9
+
     );
     background-size: 200% 200%;
     animation: textGradientAnimation 4s ease infinite;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
+  } 
   

@@ -3,11 +3,11 @@ import { assets } from "../assests/assests.js";
 const About = () => (
   <section
     id="about"
-    className="relative bg-gradient-to-b from-gray-900 to-gray-800 text-white py-20"
+    className="mt-10 relative bg-gradient-to-b from-gray-900 to-gray-800 text-white py-20"
   >
     {/* Background Effects */}
     <div className="absolute inset-0">
-      <div className="absolute -top-20 -left-20 w-72 h-72 bg-purple-600 blur-[200px] opacity-40"></div>
+      <div className="absolute-top-20 -left-20 w-72 h-72 bg-purple-600 blur-[200px] opacity-40"></div>
       <div className="absolute bottom-0 right-20 w-96 h-96 bg-indigo-500 blur-[250px] opacity-40"></div>
     </div>
 
