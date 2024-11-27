@@ -1,7 +1,7 @@
 const Projects = () => {
     const projects = [
       {
-        name: "ZERODHA_CLONE",
+        name: "ZERODHA",
         description: "A modern trading platform clone built with React.",
         link: "https://zerodhaclonefivne.vercel.app/",
       },
