@@ -63,9 +63,9 @@ const Projects = () => {
                 </a>
   
                 {/* Floating Project Index */}
-                {/* <div className="absolute top-6 left-6 bg-gradient-to-br from-indigo-500 to-purple-600 text-white font-bold text-lg w-12 h-12 flex items-center justify-center rounded-full shadow-md">
+                <div className="absolute top-6 left-6 bg-gradient-to-br from-indigo-500 to-purple-600 text-white font-bold text-lg w-12 h-12 flex items-center justify-center rounded-full shadow-md">
                   #{index + 1}
-                </div> */}
+                </div>
               </div>
             ))}
           </div>

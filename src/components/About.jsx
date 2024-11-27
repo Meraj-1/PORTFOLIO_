@@ -34,20 +34,42 @@ const About = () => (
             aesthetic, while ensuring optimal performance and accessibility.
           </p>
   
-          {/* Skills Section */}
-          <div className="mt-8">
-            <h3 className="text-2xl font-semibold mb-4 text-indigo-400">Skills</h3>
-            <ul className="flex flex-wrap gap-4 justify-center md:justify-start">
-              {['HTML', 'CSS', 'JavaScript', 'React', 'TailwindCSS'].map((skill, index) => (
-                <li
-                  key={index}
-                  className="bg-gradient-to-r from-purple-600 to-indigo-600 px-5 py-2 rounded-full text-sm text-white font-medium shadow-md transform hover:scale-105 transition-transform duration-300"
-                >
-                  {skill}
-                </li>
-              ))}
-            </ul>
-          </div>
+{/* Skills Section */}
+<div className="mt-8">
+  <h3 className="text-2xl font-semibold mb-4 text-indigo-400">Skills</h3>
+  <ul className="flex flex-wrap gap-6 justify-center md:justify-start">
+    {[
+      { name: 'HTML', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+      { name: 'CSS', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+      // { name: 'JavaScript', image: 'https://w1.pngwing.com/pngs/951/574/png-transparent-react-logo-javascript-redux-vuejs-angular-angularjs-expressjs-front-and-back-ends-thumbnail.png' },
+      { name: 'React', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', animate: true }
+      // { name: 'TailwindCSS', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg' },
+    ].map((skill, index) => (
+      <li
+        key={index}
+        className="flex flex-col items-center gap-2 group"
+      >
+        <div
+          className={`relative w-16 h-16 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-full p-2 shadow-md transform hover:scale-110 transition-transform duration-300 ${
+            skill.name === 'React' ? 'animate-spin-slow' : ''
+          }`}
+        >
+          <img
+            src={skill.image}
+            alt={skill.name}
+            className="w-full h-full object-contain"
+          />
+          {skill.name === 'React' && (
+            <div className="absolute inset-0 rounded-full border-4 border-dotted border-purple-300 animate-spin-fast"></div>
+          )}
+        </div>
+        <span className="text-sm text-gray-300 group-hover:text-indigo-400 transition-colors duration-300 font-medium">
+          {skill.name}
+        </span>
+      </li>
+    ))}
+  </ul>
+</div>
         </div>
       </div>
   
