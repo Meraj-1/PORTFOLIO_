@@ -2,8 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap'); */
+
+/* * {
+    font-family: outfit;
+} */
+/* 
+.prata-regular {
+    font-family: "prata", serif;
+    font-weight: 400;
+    font-style: normal;
+} */
+
+
 html {
     scroll-behavior: smooth;
+  }
+
+  @keyframes rotateReact {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .rotateReact {
+    animation: rotateReact 5s linear infinite;
+  }
+  
+
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
   }
   
   @keyframes spin-slow {
