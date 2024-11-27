@@ -52,3 +52,31 @@ html {
     animation: spin-slow 8s linear infinite;
   }
   
+  @keyframes textGradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .animate-text {
+    background: linear-gradient(
+      90deg,
+      #ff7eb3,
+      #ff758c,
+      #a29bfe,
+      #74b9ff,
+      #55efc4,
+      #00cec9
+    );
+    background-size: 200% 200%;
+    animation: textGradientAnimation 4s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
