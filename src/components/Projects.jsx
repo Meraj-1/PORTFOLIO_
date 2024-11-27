@@ -6,7 +6,7 @@ const Projects = () => {
         link: "https://zerodhaclonefivne.vercel.app/",
       },
       {
-        name: "REAL_ESTATE",
+        name: "REAL-ESTATE",
         description: "A sleek real estate website with responsive design.",
         link: "https://real-estate-henna-nine.vercel.app/",
       },
