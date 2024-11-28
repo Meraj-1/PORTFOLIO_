@@ -28,7 +28,7 @@ const About = () => (
         </h2>
         <p className="text-lg  leading-relaxed mb-6 text-gray-300">
           Hi, I'm a passionate web developer with expertise in HTML, CSS,
-          JavaScript, React, and TailwindCSS. I specialize in creating
+          JavaScript, React, and TailwindCSS. & Bootstrap I specialize in creating
           responsive, interactive, and visually appealing user interfaces.
         </p>
         <p className="text-lg  leading-relaxed text-gray-400">
@@ -46,7 +46,8 @@ const About = () => (
               { name: 'JavaScript', image: 'https://cdn.worldvectorlogo.com/logos/javascript-1.svg' },
               { name: 'React', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', animate: true },
               { name: 'TailwindCSS', image: 'https://www.svgrepo.com/show/374118/tailwind.svg' },
-              {name: 'Bootstrap', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/512px-Bootstrap_logo.svg.png'}
+              {name: 'Bootstrap', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/512px-Bootstrap_logo.svg.png'},
+              {name: 'GitHub', image: "https://cdn-icons-png.flaticon.com/512/25/25231.png"}
             ].map((skill, index) => (
               <li key={index} className="flex flex-col items-center gap-2 group">
                 <div
