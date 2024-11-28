@@ -31,7 +31,7 @@ const Contact = () => {
     <section id="contact" className="bg-gradient-to-b from-gray-900 to-gray-800 text-white py-16">
       <div className="container mx-auto text-center px-6">
         {/* Contact Heading */}
-        <h2 className="text-4xl font-bold text-indigo-400 mb-8">Contact Me</h2>
+        <h2 className="text-4xl animate-text font-bold text-indigo-400 mb-8">Contact Me</h2>
 
         {submitted ? (
           <div className="text-green-400 text-lg font-medium">

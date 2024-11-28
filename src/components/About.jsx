@@ -23,15 +23,15 @@ const About = () => (
 
       {/* About Content */}
       <div className="text-center md:text-left">
-        <h2 className="text-5xl  font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500">
+        <h2 className="text-5xl animate-text font-extrabold mb-6 text-transparent bg-clip-text ">
           About Me
         </h2>
-        <p className="text-lg animate-text leading-relaxed mb-6 text-gray-300">
+        <p className="text-lg  leading-relaxed mb-6 text-gray-300">
           Hi, I'm a passionate web developer with expertise in HTML, CSS,
           JavaScript, React, and TailwindCSS. I specialize in creating
           responsive, interactive, and visually appealing user interfaces.
         </p>
-        <p className="text-lg animate-text leading-relaxed text-gray-400">
+        <p className="text-lg  leading-relaxed text-gray-400">
           My goal is to build web experiences that are both functional and
           aesthetic, while ensuring optimal performance and accessibility.
         </p>
