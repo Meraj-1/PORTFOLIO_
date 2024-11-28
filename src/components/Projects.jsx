@@ -47,23 +47,23 @@ const Projects = () => {
                 className="relative group bg-[#1E293B] border border-gray-700 rounded-3xl shadow-xl p-8 hover:shadow-2xl hover:scale-[1.03] transform transition-transform duration-500"
               >
                 {/* Content Section */}
-                <h3 className="text-3xl font-bold text-center text-gray-200 mb-4 group-hover:text-purple-400 transition-colors duration-300">
+                <h3 className="text-3xl animate-text font-bold text-center text-gray-200 mb-4 group-hover:text-purple-400 transition-colors duration-300">
                   {project.name}
                 </h3>
-                <p className="text-gray-300 text-lg font-light mb-6 tracking-wide">
+                <p className="text-gray-300 animate-text text-lg font-light mb-6 tracking-wide">
                   {project.description}
                 </p>
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-gradient-to-r from-purple-600 to-indigo-500 text-white font-semibold px-6 py-3 rounded-full shadow-lg transform hover:-translate-y-1 hover:shadow-2xl transition-transform duration-300"
+                  className="inline-block   bg-gradient-to-r from-purple-600 to-indigo-500 text-white font-semibold px-6 py-3 rounded-full shadow-lg transform hover:-translate-y-1 hover:shadow-2xl transition-transform duration-300"
                 >
                   View Project
                 </a>
   
                 {/* Floating Project Index */}
-                <div className="absolute top-6 left-6 bg-gradient-to-br from-indigo-500 to-purple-600 text-white font-bold text-lg w-12 h-12 flex items-center justify-center rounded-full shadow-md">
+                <div className="absolute  top-6 left-6 bg-gradient-to-br from-indigo-500 to-purple-600 text-white font-bold text-lg w-12 h-12 flex items-center justify-center rounded-full shadow-md">
                   #{index + 1}
                 </div>
               </div>
