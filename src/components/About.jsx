@@ -45,6 +45,8 @@ const About = () => (
               { name: 'CSS', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
               { name: 'JavaScript', image: 'https://cdn.worldvectorlogo.com/logos/javascript-1.svg' },
               { name: 'React', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', animate: true },
+              { name: 'Mongo DB', image: 'https://icon.icepanel.io/Technology/svg/MongoDB.svg'},
+              { name: 'Java', image: 'https://brandeps.com/logo-download/J/Java-logo-vector-01.svg'},
               { name: 'TailwindCSS', image: 'https://www.svgrepo.com/show/374118/tailwind.svg' },
               {name: 'Bootstrap', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/512px-Bootstrap_logo.svg.png'},
               {name: 'GitHub', image: "https://cdn-icons-png.flaticon.com/512/25/25231.png"}
