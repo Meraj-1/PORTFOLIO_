@@ -7,7 +7,7 @@ const Footer = () => (
         <p className="text-sm mt-2">
           Built with ❤️ by{' '}
           <a
-            href="#"
+            href="https://www.instagram.com/vue_code/"
             className="text-indigo-400 hover:text-indigo-300 transition-colors duration-200"
           >
             [MOHAMMAD MERAJ ANSARI]

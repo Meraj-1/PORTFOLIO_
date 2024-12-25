@@ -81,3 +81,9 @@ html {
     -webkit-text-fill-color: transparent;
   } 
   
+ .topic_head
+  {
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
