@@ -67,12 +67,19 @@ html {
   .animate-text {
     background: linear-gradient(
       100deg,
-      #ff7eb3,
+      /* #ff7eb3,
       #ff758c,
       #a29bfe,
       #74b9ff,
       #38be98,
-      #00cec9
+      #00cec9 */
+      #430064, /* Soft Lavender */
+#390068, /* Deep Orchid */
+#120997, /* Bright Periwinkle */
+#0e035a, /* Cool Lilac */
+#180f69, /* Mystic Mint */
+#1d13e6  /* Turquoise Violet */
+
 
     );
     background-size: 200% 200%;
@@ -87,3 +94,24 @@ html {
     font-weight: 700;
     font-style: italic;
   }
+
+  @keyframes fadeSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Style for the scrollbar */
+::-webkit-scrollbar {
+  width: 8px;  /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #9162e2;  /* Purple color for the thumb */
+  border-radius: 10px;  /* Rounded corners for the thumb */
+}

@@ -6,6 +6,8 @@ import Java from "./Java.svg";
 import javascript from "./javascript.svg";
 import react from "./react.svg";
 import Mongo from "./Mongo.png";
+// import logo from "./logo.avif"
+import Business from "./Business.webp"
 
 import tailwind from "./tailwind.png";
 
@@ -19,6 +21,7 @@ export const Icon = [
     github,
     Bootstrap,
     tailwind,
-  
+    Business
+    // logo
 
 ];

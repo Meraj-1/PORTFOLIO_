@@ -1,10 +1,10 @@
-import { icon } from "@fortawesome/fontawesome-svg-core";
+// import { icon } from "@fortawesome/fontawesome-svg-core";
 import { Icon } from "../assests/assests.js";
 
 const About = () => (
   <section
     id="about"
-    className="mt-10 relative bg-gradient-to-b from-gray-900 to-gray-800 text-white py-20"
+    className="mt-10 relative bg-gradient-to-b  text-black py-20"
   >
     {/* Background Effects */}
     <div className="absolute inset-0">
@@ -13,63 +13,64 @@ const About = () => (
     </div>
 
     <div className="relative container mx-auto flex flex-col md:flex-row items-center gap-12 px-6">
-      {/* Profile Image */}
-      {/* <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-8 border-gradient-to-br from-indigo-500 to-purple-600 shadow-lg transform hover:scale-105 transition-transform duration-300">
-        <img
-          src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVvcGxlJTIwdGVjaG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D"
-          alt="Profile"
-          className="w-full h-full object-cover"
-        />
-      </div> */}
-
       {/* About Content */}
       <div className="text-center md:text-left">
-        <h2 className="text-5xl animate-text topic_head font-extrabold mb-6 text-transparent bg-clip-text ">
-          About Me
-        </h2>
-        
-        <p className="text-lg  leading-relaxed mb-6 text-gray-300">
-        I am a passionate software developer with expertise in building modern web applications using HTML, CSS, JavaScript, React, and TailwindCSS. I have experience 
-        working with MongoDB for database solutions and Java for backend development. Skilled in utilizing frameworks like Bootstrap for responsive designs, I craft intuitive
-         and engaging user interfaces. With a strong grasp of version control systems like GitHub, I ensure collaborative and efficient development workflows. I thrive in solving
-         complex problems and staying updated with the latest technology trends.
-        </p>
-        <p className="text-lg  leading-relaxed text-gray-400">
-          My goal is to build web experiences that are both functional and
-          aesthetic, while ensuring optimal performance and accessibility.
-        </p>
+        <h2 className="text-4xl sm:text-4xl md:text-5xl lg:text-7xl topic_head animate-text flex items-center justify-center font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 mb-16">
+        "Turning Ideas into Reality"
+          </h2>
+          <div className="flex flex-col gap-2 lg:flex-row justify-between  sm:space-y-4">
+  <img className="w-full lg:w-1/2 mb-4 md:mb-0" src={Icon[9]} alt="icon" />
+
+  <div className="text-lg  leading-relaxed  text-black w-full">
+  <h3 className="font-bold text-start">Transforming Concepts into Functional Solutions</h3>
+  <p className="text-start mb-4">Developers turn abstract ideas into tangible applications by writing efficient, scalable code that meets real-world needs.</p>  
+  <h3 className="font-bold text-start">Crafting User-Centric Experiences</h3>
+  <p className="text-start mb-4">Developers design intuitive interfaces, ensuring that complex systems are accessible and easy to use for everyone.</p>  
+  <h3 className="font-bold text-start">Implementing Scalable Solutions</h3>
+  <p className="text-start mb-4">Developers design and implement efficient algorithms and data structures to optimize performance and reduce latency.</p>
+  <h3 className="font-bold text-start">Ensuring Seamless Integration and Scalability</h3>
+  <p className="text-start">Developers build scalable and maintainable solutions, ensuring they can adapt to evolving user needs and business growth.</p>
+  </div>
+
+  
+</div>
+
+
+
 
         {/* Skills Section */}
-        <div className="mt-8">
-          <h3 className="text-2xl font-semibold mb-4 text-indigo-400">Skills</h3>
-          <ul className="flex flex-wrap gap-6 justify-center md:justify-start">
+        <div className="mt-40 mb-20 ">
+          {/* <h3 className="text-2xl font-semibold mb-4  text-purple-500">Skills</h3> */}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl topic_head animate-text flex items-center justify-center font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 mb-16">
+          My Arsenal of Technologies
+          </h2>
+          <ul className="flex flex-wrap gap-6  sm:gap-10   justify-center items-center ">
             {[
               {name: 'HTML', image: Icon[0]}, 
               {name: 'CSS', image: Icon[1]},
               {name: 'JavaScript', image: Icon[2]},
-              {name: 'React', image: Icon[3] , animate: true },
+              {name: 'React', image: Icon[3] ,animate: true},
               {name: 'Java', image: Icon[4]},
               {name: 'Mongo DB', image:Icon[5]},
               {name: 'GitHub', image: Icon[6]},
-              {name: 'TailwindCSS', image: Icon[8] },
               {name: 'Bootstrap', image: Icon[7]},
-
+              {name: 'TailwindCSS', image: Icon[8]}
             ].map((skill, index) => (
               <li key={index} className="flex flex-col items-center gap-2 group">
-                <div
-                  className={`relative w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-900 rounded-full p-2 shadow-md transform hover:scale-110 transition-transform duration-300 ${
-                    skill.name === 'React' ? 'rotateReact' : ''
-                  }`}
-                >
+                <div 
+  className={`relative w-16 h-16 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600
+   rounded-full p-2 shadow-md transform hover:scale-110 transition-transform duration-300 ${
+    skill.name === 'React' ? 'rotateReact' : ''
+  }`}>
                   <img
                     src={skill.image}
                     alt={skill.name}
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <span className="text-sm text-gray-300 group-hover:text-indigo-400 transition-colors duration-300 font-medium">
+                <h2 className="text-md text-black group-hover:text-indigo-400 transition-colors duration-300 font-medium">
                   {skill.name}
-                </span>
+                </h2>
               </li>
             ))}
           </ul>
@@ -78,7 +79,7 @@ const About = () => (
     </div>
 
     {/* Decorative Footer Gradient */}
-    <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-gray-800 to-transparent"></div>
+    <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-purple-300 to-transparent"></div>
   </section>
 );
 

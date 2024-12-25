@@ -15,17 +15,17 @@ const Projects = () => {
         description: "An e-commerce platform with dynamic product listings.",
         link: "https://ecomerce-web-six.vercel.app/",
       },
-      // {
-      //   name: "KITE",
-      //   description: "A dashboard clone featuring interactive data visualization.",
-      //   link: "https://dashboardclone.vercel.app/",
-      // },
+      {
+        name: "KITE",
+        description: "A dashboard clone featuring interactive data visualization.",
+        link: "https://dashboardclone.vercel.app/",
+      },
     ];
   
     return (
       <section
         id="projects"
-        className="relative bg-gradient-to-r from-[#1E293B] to-[#0F172A] text-white py-20 overflow-hidden"
+        className="relative bg-gradient-to-r from-[#ffffff] to-[#ffffff] text-white py-20 overflow-hidden"
       >
         {/* Background Glows */}
         <div className="absolute inset-0">
@@ -35,7 +35,7 @@ const Projects = () => {
   
         <div className="relative  container mx-auto px-6">
           {/* Heading */} 
-          <h2 className="text-6xl topic_head animate-text flex items-center justify-center font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 mb-16">
+          <h2 className="text-4xl sm:text-4xl md:text-6xl lg:text-7xl topic_head animate-text flex items-center justify-center font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 mb-16">
             My Masterpiece Projects
           </h2>
   
@@ -44,13 +44,13 @@ const Projects = () => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="relative group bg-[#1E293B] border border-gray-700 rounded-3xl shadow-xl p-8 hover:shadow-2xl hover:scale-[1.03] transform transition-transform duration-500"
+                className="relative group bg-[#ffffffbd]  border-purple-900 border-2 rounded-3xl shadow-xl p-9 hover:shadow-3xl hover:scale-[1.02] transform transition-transform duration-500"
               >
                 {/* Content Section */}
-                <h3 className="text-3xl font-bold text-center text-gray-200 mb-4 group-hover:text-purple-400 transition-colors duration-300">
+                <h3 className="text-3xl font-bold text-center text-black mb-4 group-hover:text-purple-400 transition-colors duration-300">
                   {project.name}
                 </h3>
-                <p className="text-gray-300 text-lg font-light mb-6 tracking-wide">
+                <p className="text-black text-lg font-light mb-6 tracking-wide">
                   {project.description}
                 </p>
                 <a
@@ -63,16 +63,16 @@ const Projects = () => {
                 </a>
   
                 {/* Floating Project Index */}
-                <div className="absolute top-6 left-6 bg-gradient-to-br from-indigo-500 to-purple-600 text-white font-bold text-lg w-12 h-12 flex items-center justify-center rounded-full shadow-md">
-                  #{index + 1}
-                </div>
+                {/* <div className="absolute top-6 left-6 bg-gradient-to-br from-indigo-500 to-purple-600 text-white font-bold text-lg w-12 h-12 flex items-center justify-center rounded-full shadow-md"> */}
+                  {/* #{index + 1}
+                </div> */}
               </div>
             ))}
           </div>
         </div>
   
         {/* Decorative Footer */}
-        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#0F172A] to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-purple-300 to-transparent"></div>
       </section>
     );
   };
