@@ -40,7 +40,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden bg-gradient-to-b from-purple-300  to-purple-100 text-black  transition-all duration-300 ease-in-out overflow-hidden ${isMenuOpen ? 'max-h-48' : 'max-h-0'
+        className={`md:hidden bg-gradient-to-b from-purple-100  to-purple-100 text-black  transition-all duration-300 ease-in-out overflow-hidden ${isMenuOpen ? 'max-h-48' : 'max-h-0'
           }`}
       >
         <ul className="flex flex-col items-center gap-4 py-4">

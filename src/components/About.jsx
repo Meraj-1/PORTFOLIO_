@@ -88,7 +88,7 @@ const About = () => {
             ].map((skill, index) => (
               <li key={index} className="flex flex-col items-center gap-2 group">
                 <div 
-  className={`relative w-16 h-16 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600
+  className={`relative w-16 h-16 bg-gradient-to-br from-indigo-100 via-purple-400 to-purple-900
    rounded-full p-2 shadow-md transform hover:scale-110 transition-transform duration-300 ${
     skill.name === 'React' ? 'rotateReact' : ''
   }`}>
