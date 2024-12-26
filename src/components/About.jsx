@@ -22,7 +22,7 @@ const About = () => {
       <div className="text-center md:text-left">
         <motion.h2 
        initial={{opacity: 0, y:50}}
-       transition={{duration: 1.5}}
+       transition={{duration: 2}}
        whileInView={{opacity: 1, y:0}}
        viewport={{once: true}}
         className="text-4xl sm:text-5xl md:text-4xl lg:text-7xl topic_head animate-text flex items-center justify-center font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 mb-16">
@@ -30,17 +30,17 @@ const About = () => {
           </motion.h2>
           <div className="flex flex-col gap-6 lg:flex-row justify-between  sm:space-y-4">
   <motion.img 
-   initial={{opacity: 0, x:-200}}
-   transition={{duration: 1.5}}
-   whileInView={{opacity: 1, x:1}}
-   viewport={{once: Infinity}}
+    initial={{opacity: 0, y:10}}
+    transition={{duration: 2}}
+    whileInView={{opacity: 1, y:0}}
+    viewport={{once: true}}
   className="w-full lg:w-1/2 mb-4 md:mb-0" src={Icon[9]} alt="icon" />
 
   <motion.div 
-  initial={{opacity: 0, x:200}}
-  transition={{duration: 2}}
-  whileInView={{opacity: 1, x:1}}
-  viewport={{once: true}}
+   initial={{opacity: 0, y:10}}
+   transition={{duration: 2}}
+   whileInView={{opacity: 1, y:0}}
+   viewport={{once: true}}
   className="text-lg  leading-relaxed  text-black w-full">
   <h3 className="font-bold text-start">Transforming Concepts into Functional Solutions</h3>
   <p className="text-start mb-4">Developers turn abstract ideas into tangible applications by writing efficient, scalable code that meets real-world needs.</p>  
@@ -55,9 +55,6 @@ const About = () => {
   
 </div>
 
-
-
-
         {/* Skills Section */}
         <div className="mt-40 mb-20 ">
           {/* <h3 className="text-2xl font-semibold mb-4  text-purple-500">Skills</h3> */}
@@ -70,10 +67,10 @@ const About = () => {
           My Arsenal of Technologies
           </motion.h2>
           <motion.ul
-            initial={{opacity: 0, x:-200}}
-            transition={{duration: 2}}
-            whileInView={{opacity: 1, x:1}}
-            viewport={{once: true}}
+             initial={{opacity: 0, y:10}}
+             transition={{duration: 2}}
+             whileInView={{opacity: 1, y:0}}
+             viewport={{once: true}}
           className="flex flex-wrap gap-6  sm:gap-10   justify-center items-center ">
             {[
               {name: 'HTML', image: Icon[0]}, 
