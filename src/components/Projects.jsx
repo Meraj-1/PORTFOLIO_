@@ -1,3 +1,6 @@
+import React from 'react'
+import { motion } from "motion/react"
+
 const Projects = () => {
     const projects = [
       {
@@ -15,15 +18,20 @@ const Projects = () => {
         description: "An e-commerce platform with dynamic product listings.",
         link: "https://ecomerce-web-six.vercel.app/",
       },
-      {
-        name: "KITE",
-        description: "A dashboard clone featuring interactive data visualization.",
-        link: "https://dashboardclone.vercel.app/",
-      },
+      // {
+      //   name: "KITE",
+      //   description: "A dashboard clone featuring interactive data visualization.",
+      //   link: "https://dashboardclone.vercel.app/",
+      // },
     ];
   
     return (
-      <section
+      <motion.section
+      initial={{opacity: 0, y:10}}
+      transition={{duration: 1.5}}
+      whileInView={{opacity: 1, y:0}}
+      viewport={{once: true}}
+
         id="projects"
         className="relative bg-gradient-to-r from-[#ffffff] to-[#ffffff] text-white py-20 overflow-hidden"
       >
@@ -35,9 +43,14 @@ const Projects = () => {
   
         <div className="relative  container mx-auto px-6">
           {/* Heading */} 
-          <h2 className="text-4xl sm:text-4xl md:text-6xl lg:text-7xl topic_head animate-text flex items-center justify-center font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 mb-16">
+          <motion.h2
+           initial={{opacity: 0, y:10}}
+           transition={{duration: 1.5}}
+           whileInView={{opacity: 1, y:0}}
+           viewport={{once: true}}
+          className="text-4xl sm:text-4xl md:text-6xl lg:text-7xl topic_head animate-text flex items-center justify-center font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 mb-16">
             My Masterpiece Projects
-          </h2>
+          </motion.h2>
   
           {/* Projects Grid */}
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -73,7 +86,7 @@ const Projects = () => {
   
         {/* Decorative Footer */}
         <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-purple-300 to-transparent"></div>
-      </section>
+      </motion.section>
     );
   };
   

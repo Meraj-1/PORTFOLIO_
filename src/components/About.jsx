@@ -1,8 +1,13 @@
 // import { icon } from "@fortawesome/fontawesome-svg-core";
+import React from 'react'
 import { Icon } from "../assests/assests.js";
+import { motion } from "framer-motion"
 
-const About = () => (
-  <section
+
+
+const About = () => {
+  return(
+  <motion.section
     id="about"
     className="mt-10 relative bg-gradient-to-b  text-black py-20"
   >
@@ -15,13 +20,28 @@ const About = () => (
     <div className="relative container mx-auto flex flex-col md:flex-row items-center gap-12 px-6">
       {/* About Content */}
       <div className="text-center md:text-left">
-        <h2 className="text-4xl sm:text-4xl md:text-5xl lg:text-7xl topic_head animate-text flex items-center justify-center font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 mb-16">
+        <motion.h2 
+       initial={{opacity: 0, y:50}}
+       transition={{duration: 1.5}}
+       whileInView={{opacity: 1, y:0}}
+       viewport={{once: true}}
+        className="text-4xl sm:text-5xl md:text-4xl lg:text-7xl topic_head animate-text flex items-center justify-center font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 mb-16">
         "Turning Ideas into Reality"
-          </h2>
-          <div className="flex flex-col gap-2 lg:flex-row justify-between  sm:space-y-4">
-  <img className="w-full lg:w-1/2 mb-4 md:mb-0" src={Icon[9]} alt="icon" />
+          </motion.h2>
+          <div className="flex flex-col gap-6 lg:flex-row justify-between  sm:space-y-4">
+  <motion.img 
+   initial={{opacity: 0, x:-200}}
+   transition={{duration: 1.5}}
+   whileInView={{opacity: 1, x:1}}
+   viewport={{once: Infinity}}
+  className="w-full lg:w-1/2 mb-4 md:mb-0" src={Icon[9]} alt="icon" />
 
-  <div className="text-lg  leading-relaxed  text-black w-full">
+  <motion.div 
+  initial={{opacity: 0, x:200}}
+  transition={{duration: 2}}
+  whileInView={{opacity: 1, x:1}}
+  viewport={{once: true}}
+  className="text-lg  leading-relaxed  text-black w-full">
   <h3 className="font-bold text-start">Transforming Concepts into Functional Solutions</h3>
   <p className="text-start mb-4">Developers turn abstract ideas into tangible applications by writing efficient, scalable code that meets real-world needs.</p>  
   <h3 className="font-bold text-start">Crafting User-Centric Experiences</h3>
@@ -30,7 +50,7 @@ const About = () => (
   <p className="text-start mb-4">Developers design and implement efficient algorithms and data structures to optimize performance and reduce latency.</p>
   <h3 className="font-bold text-start">Ensuring Seamless Integration and Scalability</h3>
   <p className="text-start">Developers build scalable and maintainable solutions, ensuring they can adapt to evolving user needs and business growth.</p>
-  </div>
+  </motion.div>
 
   
 </div>
@@ -41,10 +61,20 @@ const About = () => (
         {/* Skills Section */}
         <div className="mt-40 mb-20 ">
           {/* <h3 className="text-2xl font-semibold mb-4  text-purple-500">Skills</h3> */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl topic_head animate-text flex items-center justify-center font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 mb-16">
+          <motion.h2
+           initial={{opacity: 0, y:50}}
+           transition={{duration: 1.5}}
+           whileInView={{opacity: 1, y:0}}
+           viewport={{once: true}}
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl topic_head animate-text flex items-center justify-center font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 mb-16">
           My Arsenal of Technologies
-          </h2>
-          <ul className="flex flex-wrap gap-6  sm:gap-10   justify-center items-center ">
+          </motion.h2>
+          <motion.ul
+            initial={{opacity: 0, x:-200}}
+            transition={{duration: 2}}
+            whileInView={{opacity: 1, x:1}}
+            viewport={{once: true}}
+          className="flex flex-wrap gap-6  sm:gap-10   justify-center items-center ">
             {[
               {name: 'HTML', image: Icon[0]}, 
               {name: 'CSS', image: Icon[1]},
@@ -73,14 +103,15 @@ const About = () => (
                 </h2>
               </li>
             ))}
-          </ul>
+          </motion.ul>
         </div>
       </div>
     </div>
 
     {/* Decorative Footer Gradient */}
     <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-purple-300 to-transparent"></div>
-  </section>
-);
+  </motion.section>
+) 
+};
 
 export default About;

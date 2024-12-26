@@ -6,11 +6,11 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-opacity-80 backdrop-filter bg-gradient-to-b from-purple-300 to-purple-100 backdrop-blur-md text-white fixed w-full top-0 z-50 shadow-md">
+    <header className="bg-opacity-80 backdrop-filter bg-gradient-to-b from-purple-100 to-purple-100 backdrop-blur-md text-white fixed w-full top-0 z-50 shadow-md">
       <nav className="container mx-auto flex justify-between items-center p-4">
         {/* Logo */}
-        <h1 className="text-2xl topic_head  md:text-3xl font-bold text-transparent bg-clip-text animate-text">
-          MERAJ ANSARI
+        <h1 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text animate-text">
+         PORTFOLIO
         </h1>
 
         {/* Desktop Menu */}

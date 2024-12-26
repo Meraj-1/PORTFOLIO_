@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {motion} from "framer-motion"
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -31,7 +32,13 @@ const Contact = () => {
     <section id="contact" className="bg-gradient-to-b from-white-900 to-gray-800 text-white py-16">
       <div className="container mx-auto text-center px-6">
         {/* Contact Heading */}
-        <h2 className="text-4xl animate-text font-bold topic_head text-indigo-400 mb-8">Contact Me </h2>
+        <motion.h2
+         initial={{opacity: 0, y:10}}
+         transition={{duration: 1.5}}
+         whileInView={{opacity: 1, y:0}}
+         viewport={{once: true}}
+        className="text-4xl animate-text font-bold topic_head text-indigo-400 mb-8">Contact Me 
+        </motion.h2>
       
 
         {submitted ? (
@@ -43,33 +50,49 @@ const Contact = () => {
             onSubmit={handleSubmit}
             className="flex flex-col items-center gap-6 w-full max-w-lg mx-auto"
           >
-            <input
+            <motion.input
+            initial={{opacity: 0, x:-200}}
+            transition={{duration: 2}}
+            whileInView={{opacity: 1, x:1}}
+            viewport={{once: true}}
               type="text"
               name="name"
               placeholder="Your Name"
               required
               className="w-full px-4 py-2 rounded-lg bg-purple-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
-            <input
+            <motion.input
+            initial={{opacity: 0, x:200}}
+            transition={{duration: 2}}
+            whileInView={{opacity: 1, x:1}}
+            viewport={{once: true}}
               type="email"
               name="email"
               placeholder="Your Email"
               required
               className="w-full px-4 py-2 rounded-lg bg-purple-800 text-white border border-purple-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
-            <textarea
+            <motion.textarea
+            initial={{opacity: 0, x:-200}}
+            transition={{duration: 2}}
+            whileInView={{opacity: 1, x:1}}
+            viewport={{once: true}}
               name="message"
               placeholder="Your Message"
               rows="5"
               required
               className="w-full px-4 py-2 rounded-lg bg-purple-800 text-white border border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-900"
-            ></textarea>
-            <button
+            />
+            <motion.button
+         initial={{opacity: 0, y:10}}
+         transition={{duration: 1.5}}
+         whileInView={{opacity: 1, y:0}}
+         viewport={{once: true}}
               type="submit"
               className="bg-purple-600 hover:bg-purple-900 text-white font-medium px-6 py-3 rounded-lg shadow-lg transition-all duration-300"
             >
               Send Message
-            </button>
+            </motion.button>
           </form>
         )}
 
