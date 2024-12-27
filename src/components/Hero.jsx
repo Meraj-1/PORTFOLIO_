@@ -1,6 +1,7 @@
 import React from 'react'
 import {motion} from 'framer-motion'
 import {Icon} from "../assests/assests"
+import Dev from './Dev';
 
 const Hero = () => {
 
@@ -58,15 +59,15 @@ const Hero = () => {
     className='text-2xl sm:text-2xl md:text-2xl lg:text-3xl topic_head animate-text text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 mb-6 sm:mb-10'>
       "The software we create today defines the world of tomorrow."
     </motion.h2>
+    <Dev/>
 
-    
     {/* contact */}
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       transition={{ duration: 2 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="p-4 shadow mt-10  shadow-purple-400"
+      className=""
     >
       <table className=''>
         <tbody>

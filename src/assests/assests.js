@@ -10,8 +10,12 @@ import Mongo from "./Mongo.png";
 import Business from "./Business.webp"
 import gmail from "./gmail.png"
 import insta from "./insta.jpg"
-
+import dev  from "./deve.avif"
 import tailwind from "./tailwind.png";
+// import Bug from "./Bug.svg"
+import perform from "./Perform.png"
+import group from "./group.png"
+
 
 export const Icon = [
     HTML,
@@ -25,6 +29,10 @@ export const Icon = [
     tailwind,
     Business,
     gmail,
-    insta
+    insta,
+    dev,
+    perform,
+    group,
+    // Bug
     // logo
 ];
