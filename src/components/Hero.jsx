@@ -1,5 +1,6 @@
 import React from 'react'
 import {motion} from 'framer-motion'
+import {Icon} from "../assests/assests"
 
 const Hero = () => {
 
@@ -10,7 +11,7 @@ const Hero = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.05, // Delay between each letter
+        staggerChildren: 0.07, // Delay between each letter
       },
     },
   };
@@ -23,9 +24,6 @@ const Hero = () => {
   return (
 <div className='px-3 mt-20 pt-10'>
   <div className='flex flex-col sm:px-10 md:px-20 lg:px-40'>
-  {/* <h2 className="text-4xl sm:text-4xl md:text-4xl lg:text-5xl topic_head font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 mb-8 sm:mb-12 md:mb-16">
-        <span className="typing-animation">Hi, I'm MERAJ ANSARI</span>
-      </h2> */}
         <motion.h2
       className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl topic_head animate-text font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 mb-8 sm:mb-12 md:mb-16"
       variants={container}
@@ -38,7 +36,7 @@ const Hero = () => {
           className="inline-block"
           variants={child}
         >
-          {char === " " ? "\u00A0" : char}
+         {char === " " ? `\u00A0` : char}
         </motion.span>
       ))}
     </motion.h2>
@@ -66,10 +64,17 @@ const Hero = () => {
      transition={{duration: 2}}
      whileInView={{opacity: 1, y:0}}
      viewport={{once: true}}
-    className='flex flex-col'>
-      <a className='font-medium text-purple-900 text-xl'>Gmail : mohdmerajansari76@gmail.com</a>
-      <a className='font-medium text-purple-900 text-xl' href='https://www.instagram.com/vue_code/'>Instagram : vue_code</a>
-      <a className='font-medium text-purple-900 text-xl' href='https://github.com/Meraj-1'>GitHub : vue_code</a>
+    className='flex flex-col gap-2'>
+      <a className=' text-purple-900 text-xl flex pt-2 items-center' href="https://mail.google.com/mail/?view=cm&fs=1&to=mohdmerajansari76@gmail.com&su=Proposal for Software Development Collaboration&body=Hello,%0D%0AI
+       hope this message finds you well. My name is Meraj Ansari, and I am a Software Developer. I would love to assist you with your project or any technical requirements.">
+        <img src={Icon[10]} className='w-10 bg-white '/>
+     : mohdmerajansari76@gmail.com</a>
+      {/* <a className=' text-purple-900 text-xl flex  pt-2 items-center ' href='https://www.instagram.com/vue_code/'>
+      <img src={Icon[11]} className='w-20 bg-white '/>
+     : vue_code</a> */}
+      <a className=' text-purple-900 text-xl flex pt-2 ' href='https://github.com/Meraj-1'>
+      <img src={Icon[6]} className='w-8 pr-1 '/>
+     : vue_code</a>
     </motion.div>
   </div>
 

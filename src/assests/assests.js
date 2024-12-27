@@ -8,6 +8,8 @@ import react from "./react.svg";
 import Mongo from "./Mongo.png";
 // import logo from "./logo.avif"
 import Business from "./Business.webp"
+import gmail from "./gmail.png"
+import insta from "./insta.jpg"
 
 import tailwind from "./tailwind.png";
 
@@ -21,7 +23,8 @@ export const Icon = [
     github,
     Bootstrap,
     tailwind,
-    Business
+    Business,
+    gmail,
+    insta
     // logo
-
 ];
