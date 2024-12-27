@@ -59,22 +59,52 @@ const Hero = () => {
       "The software we create today defines the world of tomorrow."
     </motion.h2>
 
-    <motion.div 
-     initial={{opacity: 0, y:10}}
-     transition={{duration: 2}}
-     whileInView={{opacity: 1, y:0}}
-     viewport={{once: true}}
-    className='flex flex-col gap-2'>
-      <a className=' text-purple-900 text-xl flex pt-2 items-center' href="https://mail.google.com/mail/?view=cm&fs=1&to=mohdmerajansari76@gmail.com&su=Proposal for Software Development Collaboration&body=Hello,%0D%0AI
-       hope this message finds you well. My name is Meraj Ansari, and I am a Software Developer. I would love to assist you with your project or any technical requirements.">
-        <img src={Icon[10]} className='w-10 bg-white '/>
-     : mohdmerajansari76@gmail.com</a>
-      {/* <a className=' text-purple-900 text-xl flex  pt-2 items-center ' href='https://www.instagram.com/vue_code/'>
-      <img src={Icon[11]} className='w-20 bg-white '/>
-     : vue_code</a> */}
-      <a className=' text-purple-900 text-xl flex pt-2 ' href='https://github.com/Meraj-1'>
-      <img src={Icon[6]} className='w-8 pr-1 '/>
-     : vue_code</a>
+    
+    {/* contact */}
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      transition={{ duration: 2 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="p-4 shadow mt-10  shadow-purple-400"
+    >
+      <table className=''>
+        <tbody>
+          {/* Email Link */}
+          <tr>
+            <td className="p-2 align-middle">
+              <img src={Icon[10]} alt="Email Icon" className="w-8 h-8 bg-white rounded-full" />
+            </td>
+            <td className="p-2 ">
+              <a
+                className="text-purple-600 text-lg hover:underline"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=mohdmerajansari76@gmail.com&su=Proposal for Software Development Collaboration&body=Hello,%0D%0AI hope this message finds you well. My name is Meraj Ansari, and I am a Software Developer. I would love to assist you with your project or any technical requirements."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+               : mohdmerajansari76@gmail.com
+              </a>
+            </td>
+          </tr>
+
+          {/* GitHub Link */}
+          <tr>
+            <td className="p-2 align-middle">
+              <img src={Icon[6]} alt="GitHub Icon" className="w-8 h-8 bg-white rounded-full" />
+            </td>
+            <td className="p-2 align-middle">
+              <a
+                className="text-purple-600 text-lg hover:underline"
+                href="https://github.com/Meraj-1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+               : vue_code
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </motion.div>
   </div>
 
@@ -84,7 +114,7 @@ const Hero = () => {
     transition={{duration: 2}}
     whileInView={{opacity: 1, y:0}}
     viewport={{once: true}}
-    className='bg-purple-600 text-white font-bold text-lg py-3 px-6 rounded-md transition-all duration-300 hover:bg-purple-700 '>
+    className='bg-purple-600  text-white font-bold text-lg py-3 px-6 rounded-md transition-all duration-300 hover:bg-purple-700 '>
       <a href="#contact" className=" text-center">CONTACT ME</a>
     </motion.button>
   </div>
@@ -98,4 +128,21 @@ export default Hero;
 
 
 
-// 
+
+// <motion.div 
+// initial={{opacity: 0, y:10}}
+// transition={{duration: 2}}
+// whileInView={{opacity: 1, y:0}}
+// viewport={{once: true}}
+// className='flex flex-col gap-2'>
+//  <a className=' text-purple-900 text-xl flex pt-2 items-center' href="https://mail.google.com/mail/?view=cm&fs=1&to=mohdmerajansari76@gmail.com&su=Proposal for Software Development Collaboration&body=Hello,%0D%0AI
+//   hope this message finds you well. My name is Meraj Ansari, and I am a Software Developer. I would love to assist you with your project or any technical requirements.">
+//    <img src={Icon[10]} className='w-10 bg-white '/>
+// : mohdmerajansari76@gmail.com</a>
+//  {/* <a className=' text-purple-900 text-xl flex  pt-2 items-center ' href='https://www.instagram.com/vue_code/'>
+//  <img src={Icon[11]} className='w-20 bg-white '/>
+// : vue_code</a> */}
+//  <a className=' text-purple-900 text-xl flex pt-2 ' href='https://github.com/Meraj-1'>
+//  <img src={Icon[6]} className='w-8 pr-1 '/>
+// : vue_code</a>
+// </motion.div> 
