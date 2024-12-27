@@ -36,10 +36,10 @@ const Projects = () => {
         className="relative bg-gradient-to-r from-[#ffffff] to-[#ffffff] text-white py-20 overflow-hidden"
       >
         {/* Background Glows */}
-        <div className="absolute inset-0">
+        {/* <div className="absolute inset-0">
           <div className="absolute -top-10 -left-10 w-72 h-72 bg-purple-600 blur-[200px] opacity-50"></div>
           <div className="absolute -bottom-16 right-10 w-96 h-96 bg-indigo-500 blur-[250px] opacity-40"></div>
-        </div>
+        </div> */}
   
         <div className="relative  container mx-auto px-6">
           {/* Heading */} 

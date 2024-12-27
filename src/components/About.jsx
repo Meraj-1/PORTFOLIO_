@@ -49,13 +49,12 @@ const About = () => {
 
           {/* Skills Section */}
           <div className="mt-40 mb-20 ">
-            {/* <h3 className="text-2xl font-semibold mb-4  text-purple-500">Skills</h3> */}
             <motion.h2
               initial={{ opacity: 0, y: 50 }}
               transition={{ duration: 1.5 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl topic_head animate-text flex items-center justify-center font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 mb-16">
+              className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl topic_head animate-text flex items-center justify-center font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 mb-16">
               My Arsenal of Technologies
             </motion.h2>
             <motion.ul
