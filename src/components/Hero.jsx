@@ -49,7 +49,7 @@ const Hero = () => {
      whileInView={{opacity: 1, y:0}}
      viewport={{once: true}}
     className="text-2xl sm:text-2xl md:text-2xl lg:text-3xl topic_head animate-text text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 mb-2 sm:mb-4">
-      A Passionate Software Developer
+      "A Passionate Software Developer"
     </motion.h2>
     <motion.h2
      initial={{opacity: 0, y:10}}
@@ -59,6 +59,10 @@ const Hero = () => {
     className='text-2xl sm:text-2xl md:text-2xl lg:text-3xl topic_head animate-text text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 mb-6 sm:mb-10'>
       "The software we create today defines the world of tomorrow."
     </motion.h2>
+    <p className='text-xl topic_head animate-text text-transparent bg-clip-text '>
+    "Through innovation and collaboration, we shape a future of endless possibilities.
+    Every line of code brings us one step closer to a smarter, more connected world."
+    </p>
     <Dev/>
 
     {/* contact */}
