@@ -3,11 +3,11 @@ import { motion } from "motion/react"
 
 const Projects = () => {
     const projects = [
-      {
-        name: "ZERODHA",
-        description: "A modern trading platform clone built with React.",
-        link: "https://zerodhaclonefivne.vercel.app/",
-      },
+      // {
+      //   name: "ZERODHA",
+      //   description: "A modern trading platform clone built with React.",
+      //   link: "https://zerodhaclonefivne.vercel.app/",
+      // },
       {
         name: "REAL-ESTATE",
         description: "A sleek real estate website with responsive design.",

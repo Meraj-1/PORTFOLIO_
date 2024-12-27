@@ -9,7 +9,7 @@ const About = () => {
   return (
     <motion.section
       id="about"
-      className="mt-10 relative bg-gradient-to-b  text-black py-20">
+      className="mt-10 relative   text-black py-20 lg:py-40">
       <div className="relative container mx-auto flex flex-col md:flex-row items-center gap-12 px-6">
         {/* About Content */}
         <div className="text-center md:text-left">
@@ -18,7 +18,7 @@ const About = () => {
             transition={{ duration: 2 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl sm:text-5xl md:text-4xl lg:text-7xl topic_head animate-text flex items-center justify-center font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 mb-16">
+            className="text-4xl sm:text-5xl md:text-4xl lg:text-7xl topic_head animate-text flex items-center justify-center text-center mb-20 md:mb-20   lg:mb-20  bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 ">
             "Turning Ideas into Reality"
           </motion.h2>
           <div className="flex flex-col gap-6  xl:flex-row  justify-between  sm:space-y-4">
@@ -27,14 +27,14 @@ const About = () => {
               transition={{ duration: 2 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="w-full xl:w-1/2  mb-4 md:mb-0" src={Icon[9]} alt="icon" />
+              className="w-full xl:w-1/2  mb-4 md:mb-0 border rounded-full" src={Icon[9]} alt="icon" />
 
             <motion.div
              initial={{ opacity: 0, y: 100 }}
              transition={{ duration: 2 }}
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
-              className="text-lg  leading-relaxed  text-black w-full">
+              className="text-lg leading-relaxed  text-black w-full">
               <h3 className="font-bold text-start">Transforming Concepts into Functional Solutions</h3>
               <p className="text-start mb-4">Developers turn abstract ideas into tangible applications by writing efficient, scalable code that meets real-world needs.</p>
               <h3 className="font-bold text-start">Crafting User-Centric Experiences</h3>
@@ -48,7 +48,7 @@ const About = () => {
           </div>
 
           {/* Skills Section */}
-          <div className="mt-40 mb-20 ">
+          <div className="lg:mt-60 mt-20  mb-20 ">
             <motion.h2
               initial={{ opacity: 0, y: 50 }}
               transition={{ duration: 1.5 }}
