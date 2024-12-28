@@ -30,7 +30,7 @@ const Dev = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             src={Icon[12]}
-            className=' rounded-full '
+            className=' rounded-full'
             alt=""
           />
         </div>

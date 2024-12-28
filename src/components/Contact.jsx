@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {motion} from "framer-motion"
+    
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);

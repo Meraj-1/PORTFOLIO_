@@ -1,3 +1,5 @@
+import React from 'react'
+
 const Footer = () => (
     <footer className="bg-gradient-to-t from-purple-200  text-black py-6">
       <div className="container mx-auto text-center">
