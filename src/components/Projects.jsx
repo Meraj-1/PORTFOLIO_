@@ -48,7 +48,7 @@ const Projects = () => {
            transition={{duration: 1.5}}
            whileInView={{opacity: 1, y:0}}
            viewport={{once: true}}
-          className="text-4xl sm:text-4xl md:text-6xl lg:text-7xl topic_head animate-text flex items-center justify-center font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 mb-16">
+          className="text-4xl sm:text-4xl md:text-6xl lg:text-7xl mt-10 md:mt-20 mb-20 md:mb-40  topic_head animate-text flex items-center justify-center font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 ">
             My Masterpiece Projects
           </motion.h2>
   

@@ -30,6 +30,7 @@ const Dev = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             src={Icon[12]}
+            // src= "https://blogimage.vantagecircle.com/content/images/2023/03/employee-engagement-committee-names.png"
             className=' rounded-full'
             alt=""
           />
