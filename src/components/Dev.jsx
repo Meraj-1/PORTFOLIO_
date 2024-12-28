@@ -10,7 +10,7 @@ const Dev = () => {
         transition={{ duration: 2 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className='text-xl sm:text-2xl flex justify-center  md:text-2xl lg:text-3xl topic_head animate-text text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 mb-20 lg:mb-20 sm:mb-10'>
+        className='text-xl sm:text-2xl md:text-3xl flex justify-center lg:text-3xl topic_head animate-text text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 mb-20 lg:mb-20 sm:mb-10'>
         "End-to-End Software Development"
       </motion.h2>
 
