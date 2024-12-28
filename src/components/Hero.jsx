@@ -68,7 +68,6 @@ const Hero = () => {
     "Through innovation and collaboration, we shape a future of endless possibilities.
     Every line of code brings us one step closer to a smarter, more connected world."
     </motion.p>
-    <Dev/>
 
     {/* contact */}
     <motion.div
@@ -76,7 +75,7 @@ const Hero = () => {
       transition={{ duration: 2 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className=""
+      className="MT-10"
     >
       <table className=''>
         <tbody>
@@ -128,6 +127,8 @@ const Hero = () => {
       <a href="#contact" className=" text-center">CONTACT ME</a>
     </motion.button>
   </div>
+  <Dev/>
+
 </div>
 
 
