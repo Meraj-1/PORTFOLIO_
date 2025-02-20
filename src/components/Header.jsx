@@ -6,10 +6,10 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[#000000] fixed w-full top-0 z-50 shadow-md">
+    <header className="bg-[#000000] fixed border-b-2 sm:border-b-1 w-full top-0 z-50 shadow-md">
       <nav className="container mx-auto flex justify-between items-center p-4">
         {/* Logo */}
-        <h1 className="text-2xl text-white pt-[15px] md:text-3xl cursor-pointer font-bold text-transparent bg-clip-text animate-text">
+        <h1 className="text-2xl text-white p-2 md:text-3xl cursor-pointer font-bold text-transparent bg-clip-text animate-text">
          PORTFOLIO
         </h1>
 
