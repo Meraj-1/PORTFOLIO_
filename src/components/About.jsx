@@ -72,7 +72,8 @@ const About = () => {
                 { name: 'Mongo DB', image: Icon[5] },
                 { name: 'GitHub', image: Icon[6] },
                 { name: 'Bootstrap', image: Icon[7] },
-                { name: 'TailwindCSS', image: Icon[8] }
+                { name: 'TailwindCSS', image: Icon[8] },
+                { name: 'TailwindCSS', image : "https://w7.pngwing.com/pngs/205/650/png-transparent-node-js-javascript-software-developer-express-js-computer-software-node-js-logo-nodejs-software-development-thumbnail.png" }
               ].map((skill, index) => (
                 <li key={index} className="flex flex-col items-center gap-2 group">
                   <div
