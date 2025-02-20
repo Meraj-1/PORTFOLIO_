@@ -15,7 +15,8 @@ import tailwind from "./tailwind.png";
 // import Bug from "./Bug.svg"
 import perform from "./Perform.png"
 import group from "./group.png"
-
+import express from "./express.png"
+import node from "./node.png"
 
 export const Icon = [
     HTML,
@@ -33,6 +34,8 @@ export const Icon = [
     dev,
     perform,
     group,
+    express,
+    node
     // Bug
     // logo
 ];
