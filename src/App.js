@@ -15,14 +15,15 @@ const App = () => {
   }, []);
 
   return (
-  <div className=''>
+  <div>
      <Header />
+     <div className='px-4 sm:px-[5vw] ms:px-[7vw] lg:px-[9vw] bg-[#000000]'>
       <Hero/>
       <About />
       <Projects />
       <Contact />
     <Footer /> 
-    
+    </div>
   </div>
 );
 }

@@ -64,29 +64,23 @@ html {
     }
   }
  
-  .animate-text {
+  /* .animate-text {
     background: linear-gradient(
-      100deg,
-      /* #ff7eb3,
-      #ff758c,
-      #a29bfe,
-      #74b9ff,
-      #38be98,
-      #00cec9 */
-      #430064, /* Soft Lavender */
-#390068, /* Deep Orchid */
-#120997, /* Bright Periwinkle */
-#0e035a, /* Cool Lilac */
-#180f69, /* Mystic Mint */
-#1d13e6  /* Turquoise Violet */
+      190deg,
+     
+#efefef, 
+#000000, 
+#ffffff, 
+#000000, 
+#ffffff  
 
 
     );
     background-size: 200% 200%;
-    animation: textGradientAnimation 4s ease infinite;
+    animation: textGradientAnimation 4s ease infinite ;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  } 
+  }  */
   
  .topic_head
   {
