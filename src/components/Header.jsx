@@ -5,7 +5,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[#000000] fixed border-b-[1px] sm:border-b-2 w-full top-0 z-50 shadow-md">
+    <header className="bg-[#000000] fixed border-b-[0.1px] w-full top-0 z-50 shadow-md">
       <nav className="container mx-auto flex justify-between items-center p-4">
         {/* Logo */}
         <h1 className="text-2xl text-white p-2 md:text-3xl cursor-pointer font-bold text-transparent bg-clip-text animate-text">
@@ -40,11 +40,11 @@ const Header = () => {
       {/* Mobile Menu */}
 {/* Mobile Menu */}
 <div
-  className={`md:hidden text-white transition-all duration-500 ease-in-out overflow-hidden ${
+  className={`md:hidden text-white  transition-all duration-500 ease-in-out overflow-hidden ${
     isMenuOpen ? "max-h-[548px] opacity-100" : "max-h-0 opacity-0"
   }`}
 >
-  <div className="flex items-center justify-between border-t-[1px] border-b-[1px] p-10">
+  <div className="flex items-center justify-between  border-b-[1px] p-10">
     {/* Image placed next to the list */}
     <div className="w-40 border-b-[1px] cursor-pointer ">
       <img src={Icon.leave} className="w-full" alt="" />
