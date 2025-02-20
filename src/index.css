@@ -102,12 +102,11 @@ html {
 
   /* Style for the scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;  /* Width of the scrollbar */
+  width: 4px;  
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #9162e2;  /* Purple color for the thumb */
-  border-radius: 10px;  /* Rounded corners for the thumb */
+  background-color: #000000;  
 }
 
 

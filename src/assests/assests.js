@@ -17,8 +17,9 @@ import perform from "./Perform.png"
 import group from "./group.png"
 import express from "./express.png"
 import node from "./node.png"
+import leave  from "./leave.jpg"
 
-export const Icon = [
+export const Icon = {
     HTML,
     Css,
     javascript,
@@ -35,7 +36,9 @@ export const Icon = [
     perform,
     group,
     express,
-    node
+    node,
+    leave
     // Bug
     // logo
-];
+};
+
