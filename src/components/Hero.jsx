@@ -2,6 +2,7 @@ import React from 'react'
 import {motion} from 'framer-motion'
 import {Icon} from "../assests/assests"
 import Dev from './Dev';
+import Cube from './Cube';
 
 const Hero = () => {
 
@@ -41,7 +42,6 @@ const Hero = () => {
         </motion.span>
       ))}
     </motion.h2>
-
     <div className="absolute top-0 left-auto animate-cursor bg-black h-8 w-[3px] sm:h-10 md:h-12 lg:h-14"></div>
     <motion.h2
      initial={{opacity: 0, y:10}}
@@ -59,15 +59,15 @@ const Hero = () => {
      className="text-2xl sm:text-2xl md:text-2xl topic_head text-white mb-2 sm:mb-4">
       "The software we create today defines the world of tomorrow."
     </motion.h2>
-    {/* <motion.p
+    <motion.p
       initial={{opacity: 0, y:10}}
       transition={{duration:3}}
       whileInView={{opacity: 1, y:0}}
       viewport={{once: true}}
-    className=' topic_head  text-white '>
+    className='text-white '>
     "Through innovation and collaboration, we shape a future of endless possibilities.
     Every line of code brings us one step  closer to a smarter, more connected world."
-    </motion.p> */}
+    </motion.p>
 
     {/* contact */}
     <motion.div
@@ -128,7 +128,6 @@ const Hero = () => {
     </motion.button>
   </div>
   <Dev/>
-
 </div>
 
 

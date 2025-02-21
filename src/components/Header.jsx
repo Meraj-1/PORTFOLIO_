@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Icon } from "../assests/assests";
+import Cube from "./Cube";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +12,7 @@ const Header = () => {
         <h1 className="text-2xl text-white p-2 md:text-3xl cursor-pointer font-bold text-transparent bg-clip-text animate-text">
           PORTFOLIO
         </h1>
-
+  
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6">
           <button className="px-4 py-2 rounded-lg shadow-md text-white border hover:text-black  hover:bg-white  duration-300 ">
@@ -46,9 +47,11 @@ const Header = () => {
 >
   <div className="flex items-center justify-between  border-b-[1px] p-10">
     {/* Image placed next to the list */}
-    <div className="w-40 border-b-[1px] cursor-pointer ">
-      <img src={Icon.leave} className="w-full" alt="" />
+    <div className="w-40 border-2 cursor-pointer ">
+      {/* <img src={Icon.leave} className="w-full" alt="" /> */}
+  <Cube/>
     </div>
+
 
     {/* Navigation List */}
     <ul className="flex gap-9 flex-col items-center">

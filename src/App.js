@@ -7,6 +7,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import initializeAnalytics from './components/Analytics';
+import Cube from './components/Cube';
 
 const App = () => {
 
@@ -22,6 +23,7 @@ const App = () => {
       <About />
       <Projects />
       <Contact />
+      <Cube/>
     <Footer /> 
     </div>
   </div>
