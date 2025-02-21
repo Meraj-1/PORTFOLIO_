@@ -10,7 +10,7 @@ const Dev = () => {
         transition={{ duration: 2 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className='text-xl sm:text-2xl md:text-3xl flex justify-center lg:text-3xl topic_head animate-text text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 mb-20 lg:mb-20 sm:mb-10'>
+        className='text-xl sm:text-2xl md:text-3xl flex justify-center lg:text-3xl topic_head animate-text text-transparent text-white mb-20 lg:mb-20 sm:mb-10'>
         "End-to-End Software Development"
       </motion.h2>
 
@@ -21,7 +21,7 @@ const Dev = () => {
             transition={{ duration: 2 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className='text-2xl sm:text-2xl flex justify-center md:text-2xl lg:text-2xl topic_head animate-text text-transparent bg-clip-text mb-6 sm:mb-10'>
+            className='text-2xl sm:text-2xl flex justify-center md:text-2xl lg:text-2xl topic_head text-white mb-6 sm:mb-10'>
             Development
           </motion.h2>
           <motion.img
@@ -29,7 +29,7 @@ const Dev = () => {
             transition={{ duration: 2 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            src={Icon[12]}
+            src={Icon.perform}
             // src= "https://blogimage.vantagecircle.com/content/images/2023/03/employee-engagement-committee-names.png"
             className=' rounded-full'
             alt=""
@@ -42,7 +42,7 @@ const Dev = () => {
             transition={{ duration: 2 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className='text-2xl sm:text-2xl flex justify-center md:text-2xl lg:text-2xl topic_head animate-text text-transparent bg-clip-text mb-6 sm:mb-10'>
+            className='text-2xl sm:text-2xl flex justify-center md:text-2xl lg:text-2xl topic_head text-white mb-6 sm:mb-10'>
             Growth
           </motion.h2>
           <motion.img
@@ -50,7 +50,7 @@ const Dev = () => {
           transition={{ duration: 2 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-            src={Icon[13]}
+            src={Icon.group}
             className=' rounded-full '
             alt=""
           />
@@ -62,15 +62,15 @@ const Dev = () => {
             transition={{ duration: 2 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className='text-2xl sm:text-2xl flex justify-center md:text-2xl lg:text-2xl topic_head animate-text text-transparent bg-clip-text mb-6 sm:mb-10'>
-            "Empowering Teamwork"
+            className='text-2xl sm:text-2xl flex justify-center md:text-2xl lg:text-2xl topic_head text-white mb-6 sm:mb-10'>
+            Empowering Teamwork
           </motion.h2>
           <motion.img
              initial={{ opacity: 0, y: 10 }}
              transition={{ duration: 2 }}
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
-            src={Icon[14]}
+            src={Icon.group}
             className=' rounded-full '
             alt=""
           />
