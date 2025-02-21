@@ -18,6 +18,8 @@ import group from "./group.png"
 import express from "./express.png"
 import node from "./node.png"
 import leave  from "./leave.jpg"
+import ecom1 from "./ecom-p1.png"
+import ecom2 from "./ecom-p2.png"
 
 export const Icon = {
     HTML,
@@ -37,8 +39,10 @@ export const Icon = {
     group,
     express,
     node,
-    leave
+    leave,
     // Bug
     // logo
+    ecom1,
+    ecom2
 };
 

@@ -30,7 +30,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="bg-gradient-to-b from-white-900 to-gray-800 text-white py-16">
+    <section id="contact" className="bg-gradient-to-b from-white-900 to-gray-800 text-white pt-16">
       <div className="container mx-auto text-center px-6">
         {/* Contact Heading */}
         <motion.h2
@@ -38,7 +38,7 @@ const Contact = () => {
        transition={{duration: 2}}
        whileInView={{opacity: 1, y:0}}
        viewport={{once: true}}
-        className="text-4xl animate-text font-bold topic_head text-indigo-400 mb-8">Contact Me 
+        className="text-3xl animate-text font-bold font-sans text-white mb-8">Contact Me 
         </motion.h2>
       
 
@@ -60,7 +60,7 @@ const Contact = () => {
               name="name"
               placeholder="Your Name"
               required
-              className="w-full px-4 py-2 rounded-lg bg-purple-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-2 rounded-lg  text-white border bg-white  focus:outline-none"
             />
             <motion.input
              initial={{opacity: 0, y:10}}
@@ -71,7 +71,7 @@ const Contact = () => {
               name="email"
               placeholder="Your Email"
               required
-              className="w-full px-4 py-2 rounded-lg bg-purple-800 text-white border border-purple-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-2 rounded-lg  text-white border bg-white  focus:outline-none"
             />
             <motion.textarea
              initial={{opacity: 0, y:10}}
@@ -82,7 +82,7 @@ const Contact = () => {
               placeholder="Your Message"
               rows="5"
               required
-              className="w-full px-4 py-2 rounded-lg bg-purple-800 text-white border border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-900"
+              className="w-full px-4 py-2 rounded-lg  text-white border bg-white  focus:outline-none"
             />
             <motion.button
       initial={{opacity: 0, y:10}}
@@ -90,7 +90,7 @@ const Contact = () => {
       whileInView={{opacity: 1, y:0}}
       viewport={{once: true}}
               type="submit"
-              className="bg-purple-600 hover:bg-purple-900 text-white font-medium px-6 py-3 rounded-lg shadow-lg transition-all duration-300"
+              className="bg-white hover:bg-white text-black font-medium px-6 py-3 rounded-lg shadow-lg transition-all duration-300"
             >
               Send Message
             </motion.button>
@@ -98,10 +98,10 @@ const Contact = () => {
         )}
 
         {/* Divider */}
-        <div className="my-12 border-t border-gray-700 w-3/4 mx-auto"></div>
+        <div className="my-12 border-t border-white w-9/4 mx-auto"></div>
 
         {/* Instagram Section */}
-        <div className="mt-8">
+        {/* <div className="mt-8">
           <h3 className="text-2xl font-semibold mb-4 text-indigo-400">Connect with me on Instagram</h3>
           <a
             href="https://www.instagram.com/vue_code/"
@@ -119,7 +119,7 @@ const Contact = () => {
             </svg>
             Follow Me
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
