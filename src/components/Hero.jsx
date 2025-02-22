@@ -24,10 +24,11 @@ const Hero = () => {
 
   };
   return (
-<div className='px-3 mt-20 pt-10'>
+<div className='px-3 flex justify-center  items-center'>
+  <div className='flex justify-center items-center h-[70vh] md:h-[100vh]'>
   <div className='flex flex-col sm:px-10 md:px-20 lg:px-7'>
         <motion.h2
-      className="text-3xl sm:text-4xl md:text-4xl topic_head  text-white mb-8 sm:mb-12 md:mb-20"
+      className="text-3xl sm:text-4xl border-t md:text-9xl topic_head  text-white mb-8 "
       variants={container}
       initial="hidden"
       animate="visible"
@@ -42,7 +43,6 @@ const Hero = () => {
         </motion.span>
       ))}
     </motion.h2>
-    <div className="absolute top-0 left-auto animate-cursor bg-black h-8 w-[3px] sm:h-10 md:h-12 lg:h-14"></div>
     <motion.h2
      initial={{opacity: 0, y:10}}
      transition={{duration: 2}}
@@ -51,83 +51,9 @@ const Hero = () => {
     className="text-2xl sm:text-2xl md:text-2xl topic_head text-white mb-2 sm:mb-4">
       "A Passionate Software Developer"
     </motion.h2>
-    {/* <motion.h2
-     initial={{opacity: 0, y:10}}
-     transition={{duration:2}}
-     whileInView={{opacity: 1, y:0}}
-     viewport={{once: true}}
-     className="text-2xl sm:text-2xl md:text-2xl topic_head text-white mb-2 sm:mb-4">
-      "The software we create today defines the world of tomorrow."
-    </motion.h2> */}
-    {/* <motion.p
-      initial={{opacity: 0, y:10}}
-      transition={{duration:3}}
-      whileInView={{opacity: 1, y:0}}
-      viewport={{once: true}}
-    className='text-white '>
-    "Through innovation and collaboration, we shape a future of endless possibilities.
-    Every line of code brings us one step  closer to a smarter, more connected world."
-    </motion.p> */}
-
-    {/* contact */}
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      transition={{ duration: 2 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="MT-10"
-    >
-      <table className=''>
-        <tbody>
-          {/* Email Link */}
-          <tr>
-            <td className="p-2 align-middle">
-              <img src={Icon.gmail} alt="Email Icon" className="w-8 h-8 bg-white rounded-full" />
-            </td>
-            <td className="p-2 ">
-              <a
-                className="text-white text-lg hover:underline"
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=mohdmerajansari76@gmail.com&su=Proposal for Software Development Collaboration&body=Hello,%0D%0AI hope this message finds you well. My name is Meraj Ansari, and I am a Software Developer. I would love to assist you with your project or any technical requirements."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-               : mohdmerajansari76@gmail.com
-              </a>
-            </td>
-          </tr>
-
-          {/* GitHub Link */}
-          {/* <tr>
-            <td className="p-2 align-middle">
-              <img src={Icon.github} alt="GitHub Icon" className="w-8 h-8 bg-white rounded-full" />
-            </td>
-            <td className="p-2 align-middle">
-              <a
-                className="text-white text-lg hover:underline"
-                href="https://github.com/Meraj-1"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-               : vue_code
-              </a>
-            </td>
-          </tr> */}
-        </tbody>
-      </table>
-    </motion.div>
+    </div>
   </div>
-
-  {/* <div className='mt-10 flex md:px-20 sm:px-10   lg:px-10 '>
-    <motion.button 
-    initial={{opacity: 0, y:10}}
-    transition={{duration: 2}}
-    whileInView={{opacity: 1, y:0}}
-    viewport={{once: true}}
-    className='bg-black hover:bg-white border  text-white hover:text-black font-bold  text-md py-3 px-6 rounded-md  duration-300 '>
-      <a href="#contact" className=" text-center ">CONTACT ME</a>
-    </motion.button>
-  </div> */}
-  <Dev/>
+  {/* <Dev/> */}
 </div>
 
 

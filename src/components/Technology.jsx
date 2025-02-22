@@ -11,7 +11,7 @@ const Technology = () => {
       transition={{ duration: 1.5 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl topic_head animate-text flex items-center justify-center  text-center font-mono text-white mb-16">
+      className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl  animate-text font-bold flex items-center justify-center  text-center  text-white mb-16">
       My Arsenal of Technologies
     </motion.h2>
     {/* <div className='flex justify-between'>
@@ -35,7 +35,6 @@ const Technology = () => {
         { name: 'GitHub', image: "https://e7.pngegg.com/pngimages/1009/39/png-clipart-github-computer-icons-repository-github-white-cat-like-mammal.png" },
         { name: 'Bootstrap', image: Icon.Bootstrap },
         { name: 'TailwindCSS', image: Icon.tailwind },
-        // { name: 'TailwindCSS', image : "https://w7.pngwing.com/pngs/205/650/png-transparent-node-js-javascript-software-developer-express-js-computer-software-node-js-logo-nodejs-software-development-thumbnail.png" }
       ].map((skill, index) => (
         <li key={index} className="flex flex-col items-center gap-2 group">
           <div
