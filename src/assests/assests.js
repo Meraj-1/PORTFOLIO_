@@ -20,6 +20,7 @@ import node from "./node.png"
 import leave  from "./leave.jpg"
 import ecom1 from "./ecom-p1.png"
 import ecom2 from "./ecom-p2.png"
+import circle from "./cricle.jpg"
 
 export const Icon = {
     HTML,
@@ -43,6 +44,7 @@ export const Icon = {
     // Bug
     // logo
     ecom1,
-    ecom2
+    ecom2,
+    circle
 };
 

@@ -18,11 +18,11 @@ const About = () => {
             transition={{ duration: 2 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl sm:text-5xl md:text-4xl lg:text-7xl topic_head animate-text flex items-center justify-center text-center mb-20 md:mb-20   lg:mb-20  text-white ">
-            "Turning Ideas into Reality"
+            className="text-4xl sm:text-5xl md:text-4xl lg:text-7xl font-bold  flex items-center justify-center text-center mb-20 md:mb-20   lg:mb-20  text-white ">
+            Turning Ideas into Reality
           </motion.h2>
           <div className="flex flex-col gap-6  xl:flex-row  justify-between  sm:space-y-4">
-            <motion.img
+            {/* <motion.img
               initial={{ opacity: 0, y: 100 }}
               transition={{ duration: 2 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -43,7 +43,7 @@ const About = () => {
               <p className="text-start mb-4">Developers design and implement efficient algorithms and data structures to optimize performance and reduce latency.</p>
               <h3 className="font-bold text-start">Ensuring Seamless Integration and Scalability</h3>
               <p className="text-start">Developers build scalable and maintainable solutions, ensuring they can adapt to evolving user needs and business growth.</p>
-            </motion.div>
+            </motion.div> */}
 
           </div>
 

@@ -18,13 +18,16 @@ const Projects = () => {
           transition={{ duration: 1.5 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl sm:text-4xl md:text-6xl lg:text-7xl mt-10 md:mt-20 mb-20 md:mb-40 topic_head flex items-center justify-center font-extrabold text-center"
+          className="text-4xl sm:text-4xl md:text-6xl lg:text-7xl mt-10 md:mt-20 mb-20 md:mb-40  flex items-center justify-center font-bold text-center"
         >
           My Masterpiece Projects
         </motion.h2>
 
+        <div className='flex mb-5 text-xl justify-start items-start'>
+          <h2 className='cursor-pointer border-b-2'>SHOPPING PLATFORM</h2>
+          </div>
         <div className="flex flex-col items-center">
-          <AnimatePresence mode="wait">
+         <AnimatePresence mode="wait">
             {isFirstImage ? (
               <motion.img
                 key="image1"
@@ -47,12 +50,24 @@ const Projects = () => {
               />
             )}
           </AnimatePresence>
+          <div className='flex justify-between gap-10 '>
           <button
             onClick={toggleImage}
-            className="mt-4 px-4 py-2  text-white rounded-md border-b-4 duration-300"
+            className="mt-4 px-4 py-2  cursor-pointer text-white  rounded-md border-b-4 "
           >
             View
           </button>
+          <button className='cursor-pointer mt-4 px-4 py-2  rounded-md border-b-4'>
+            <a href="https://github.com/Meraj-1/Ecomerce_web" target="_blank" rel="noopener noreferrer">
+               GitHub
+            </a>
+        
+          </button>
+          <button className='cursor-pointer mt-4 px-4 py-2  rounded-md border-b-4'> 
+             <a href="https://ecomerce-web-six.vercel.app/" target="_blank" rel="noopener noreferrer">
+              Live 
+            </a></button>
+          </div>
         </div>
       </div>
     </section>
