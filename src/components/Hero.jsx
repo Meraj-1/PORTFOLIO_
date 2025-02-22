@@ -51,15 +51,15 @@ const Hero = () => {
     className="text-2xl sm:text-2xl md:text-2xl topic_head text-white mb-2 sm:mb-4">
       "A Passionate Software Developer"
     </motion.h2>
-    <motion.h2
+    {/* <motion.h2
      initial={{opacity: 0, y:10}}
      transition={{duration:2}}
      whileInView={{opacity: 1, y:0}}
      viewport={{once: true}}
      className="text-2xl sm:text-2xl md:text-2xl topic_head text-white mb-2 sm:mb-4">
       "The software we create today defines the world of tomorrow."
-    </motion.h2>
-    <motion.p
+    </motion.h2> */}
+    {/* <motion.p
       initial={{opacity: 0, y:10}}
       transition={{duration:3}}
       whileInView={{opacity: 1, y:0}}
@@ -67,7 +67,7 @@ const Hero = () => {
     className='text-white '>
     "Through innovation and collaboration, we shape a future of endless possibilities.
     Every line of code brings us one step  closer to a smarter, more connected world."
-    </motion.p>
+    </motion.p> */}
 
     {/* contact */}
     <motion.div
@@ -97,7 +97,7 @@ const Hero = () => {
           </tr>
 
           {/* GitHub Link */}
-          <tr>
+          {/* <tr>
             <td className="p-2 align-middle">
               <img src={Icon.github} alt="GitHub Icon" className="w-8 h-8 bg-white rounded-full" />
             </td>
@@ -111,13 +111,13 @@ const Hero = () => {
                : vue_code
               </a>
             </td>
-          </tr>
+          </tr> */}
         </tbody>
       </table>
     </motion.div>
   </div>
 
-  <div className='mt-10 flex md:px-20 sm:px-10   lg:px-10 '>
+  {/* <div className='mt-10 flex md:px-20 sm:px-10   lg:px-10 '>
     <motion.button 
     initial={{opacity: 0, y:10}}
     transition={{duration: 2}}
@@ -126,7 +126,7 @@ const Hero = () => {
     className='bg-black hover:bg-white border  text-white hover:text-black font-bold  text-md py-3 px-6 rounded-md  duration-300 '>
       <a href="#contact" className=" text-center ">CONTACT ME</a>
     </motion.button>
-  </div>
+  </div> */}
   <Dev/>
 </div>
 
