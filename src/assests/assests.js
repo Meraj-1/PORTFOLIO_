@@ -21,6 +21,8 @@ import leave  from "./leave.jpg"
 import ecom1 from "./ecom-p1.png"
 import ecom2 from "./ecom-p2.png"
 import circle from "./cricle.jpg"
+import estate1 from "./estate1.png"
+import estate2 from "./estate2.png"
 
 export const Icon = {
     HTML,
@@ -45,6 +47,8 @@ export const Icon = {
     // logo
     ecom1,
     ecom2,
-    circle
+    circle,
+    estate1,
+    estate2
 };
 
