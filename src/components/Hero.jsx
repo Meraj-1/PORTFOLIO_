@@ -48,8 +48,8 @@ const Hero = () => {
      transition={{duration: 2}}
      whileInView={{opacity: 1, y:0}}
      viewport={{once: true}}
-    className="text-2xl sm:text-2xl md:text-2xl topic_head text-white mb-2 sm:mb-4">
-      "A Passionate Software Developer"
+    className="text-2xl sm:text-2xl md:text-4xl font-bold mt-10 text-white mb-2 sm:mb-4">
+      A Passionate Software Developer
     </motion.h2>
     </div>
   </div>
