@@ -24,7 +24,7 @@ const Dev = () => {
             className='text-2xl sm:text-2xl flex justify-center md:text-2xl lg:text-2xl topic_head text-white mb-6 sm:mb-10'>
             Development
           </motion.h2>
-          <motion.img
+          {/* <motion.img
             initial={{ opacity: 0, y: 10 }}
             transition={{ duration: 2 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ const Dev = () => {
             // src= "https://blogimage.vantagecircle.com/content/images/2023/03/employee-engagement-committee-names.png"
             className=' rounded-full'
             alt=""
-          />
+          /> */}
         </div>
 
         <div className='flex flex-col items-center mb-10 sm:mb-10'>
@@ -45,7 +45,7 @@ const Dev = () => {
             className='text-2xl sm:text-2xl flex justify-center md:text-2xl lg:text-2xl topic_head text-white mb-6 sm:mb-10'>
             Growth
           </motion.h2>
-          <motion.img
+          {/* <motion.img
           initial={{ opacity: 0, y: 10 }}
           transition={{ duration: 2 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -53,7 +53,7 @@ const Dev = () => {
             src={Icon.group}
             className=' rounded-full '
             alt=""
-          />
+          /> */}
         </div>
 
         <div className='flex flex-col items-center'>
@@ -65,7 +65,7 @@ const Dev = () => {
             className='text-2xl sm:text-2xl flex justify-center md:text-2xl lg:text-2xl topic_head text-white mb-6 sm:mb-10'>
             Empowering Teamwork
           </motion.h2>
-          <motion.img
+          {/* <motion.img
              initial={{ opacity: 0, y: 10 }}
              transition={{ duration: 2 }}
              whileInView={{ opacity: 1, y: 0 }}
@@ -73,7 +73,7 @@ const Dev = () => {
             src={Icon.group}
             className=' rounded-full '
             alt=""
-          />
+          /> */}
         </div>
       </div>
     </div>

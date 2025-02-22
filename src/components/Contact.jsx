@@ -34,18 +34,18 @@ const Contact = () => {
     <section id="contact" className="flex md:flex-row flex-col  text-white pt-16">
       <div className="container mx-auto text-center px-6">
         {/* Contact Heading */}
-        <motion.h2
+        {/* <motion.h2
        initial={{opacity: 0, y:10}}
        transition={{duration: 2}}
        whileInView={{opacity: 1, y:0}}
        viewport={{once: true}}
         className="text-3xl animate-text font-bold font-sans text-white mb-8">Contact Me 
-        </motion.h2>
-       <div className="flex flex-col justify-center  ">
+        </motion.h2> */}
+       <div className="flex flex-col justify-center items-center  ">
         <div>
         <img src={Icon.circle}/>
         </div>
-        <div className="">
+        <div className="w-full">
         {submitted ? (
           <div className="text-green-400 text-lg font-medium">
             🎉 Your message has been sent successfully! Thank you for reaching out.
