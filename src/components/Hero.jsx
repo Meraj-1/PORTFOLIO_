@@ -1,11 +1,71 @@
-import React from 'react'
-import {motion} from 'framer-motion'
-import {Icon} from "../assests/assests"
-import Dev from './Dev';
-import Cube from './Cube';
+// import React from 'react'
+// import {motion} from 'framer-motion'
+// import {Icon} from "../assests/assests"
+// import Dev from './Dev';
+// import Cube from './Cube';
+
+// const Hero = () => {
+
+//   const text = "Hi, I'm MERAJ ANSARI"; // The text to animate
+
+//   const container = {
+//     hidden: { opacity: 1 },
+//     visible: {
+//       opacity: 1,
+//       transition: {
+//         staggerChildren: 0.07, // Delay between each letter
+//       },
+//     },
+//   };
+
+//   const child = {
+//     hidden: { opacity: 0, y: "100%" },
+//     visible: { opacity: 1, y: "0%" },
+
+//   };
+//   return (
+// <div className='px-3 flex justify-center  items-center'>
+//   <div className='flex justify-center items-center h-[70vh] md:h-[100vh]'>
+//   <div className='flex flex-col sm:px-10  '>
+//         <motion.h2
+//       className="text-3xl border-t-4 border-b-4 sm:text-4xl lg:text-7xl md:text-5xl topic_head  text-white mb-8 "
+//       variants={container} 
+//       initial="hidden"
+//       animate="visible"
+//     >
+//       {text.split("").map((char, index) => (
+//         <motion.span
+//           key={index}
+//           className="inline-block"
+//           variants={child}
+//         >
+//          {char === " " ? `\u00A0` : char}
+//         </motion.span>
+//       ))}
+//     </motion.h2>
+//     <motion.h2
+//      initial={{opacity: 0, y:10}}
+//      transition={{duration: 2}}
+//      whileInView={{opacity: 1, y:0}}
+//      viewport={{once: true}}
+//     className="text-2xl sm:text-2xl lg:text-4xl md:text-2xl font-bold mt-10 text-white mb-2 sm:mb-4">
+//       A Passionate Software Developer
+//     </motion.h2>
+//     </div>
+//   </div>
+//   {/* <Dev/> */}
+// </div>
+
+
+//   )
+// }
+
+// export default Hero;
+import React from 'react';
+import { motion } from 'framer-motion';
+// import Herobg from '../assests/'; // Adjust the path if needed
 
 const Hero = () => {
-
   const text = "Hi, I'm MERAJ ANSARI"; // The text to animate
 
   const container = {
@@ -21,46 +81,45 @@ const Hero = () => {
   const child = {
     hidden: { opacity: 0, y: "100%" },
     visible: { opacity: 1, y: "0%" },
-
   };
+
   return (
-<div className='px-3 flex justify-center  items-center'>
-  <div className='flex justify-center items-center h-[70vh] md:h-[100vh]'>
-  <div className='flex flex-col sm:px-10 md:px-20 lg:px-7'>
-        <motion.h2
-      className="text-3xl sm:text-4xl border-t md:text-9xl topic_head  text-white mb-8 "
-      variants={container}
-      initial="hidden"
-      animate="visible"
+    <div 
+      className="px-3 flex justify-center items-center h-screen bg-cover bg-center bg-no-repeat" 
+      style={{ backgroundImage: "url('/bg2.png')" }}
     >
-      {text.split("").map((char, index) => (
-        <motion.span
-          key={index}
-          className="inline-block"
-          variants={child}
-        >
-         {char === " " ? `\u00A0` : char}
-        </motion.span>
-      ))}
-    </motion.h2>
-    <motion.h2
-     initial={{opacity: 0, y:10}}
-     transition={{duration: 2}}
-     whileInView={{opacity: 1, y:0}}
-     viewport={{once: true}}
-    className="text-2xl sm:text-2xl md:text-4xl font-bold mt-10 text-white mb-2 sm:mb-4">
-      A Passionate Software Developer
-    </motion.h2>
+      <div className='flex justify-center items-center h-[70vh] md:h-[100vh]'>
+        <div className='flex flex-col sm:px-10'>
+          <motion.h2
+            className="text-3xl border-t-4 border-b-4 sm:text-4xl lg:text-7xl md:text-5xl topic_head text-white mb-8"
+            variants={container} 
+            initial="hidden"
+            animate="visible"
+          >
+            {text.split("").map((char, index) => (
+              <motion.span key={index} className="inline-block" variants={child}>
+                {char === " " ? `\u00A0` : char}
+              </motion.span>
+            ))}
+          </motion.h2>
+          <motion.h2
+            initial={{ opacity: 0, y: 10 }}
+            transition={{ duration: 2 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-2xl sm:text-2xl lg:text-4xl md:text-2xl font-bold mt-10 text-white mb-2 sm:mb-4"
+          >
+            A Passionate Software Developer
+          </motion.h2>
+        </div>
+      </div>
     </div>
-  </div>
-  {/* <Dev/> */}
-</div>
-
-
-  )
+  );
 }
 
 export default Hero;
+
+
 
 
 
