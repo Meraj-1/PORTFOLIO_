@@ -144,7 +144,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="relative text-white py-10 overflow-hidden">
+    <section id="projects" className="relative text-white  overflow-hidden">
       <div className="container mx-auto px-6">
         {/* Heading */}
         <motion.h2

@@ -5,7 +5,7 @@ import Cube from './Cube.jsx';
 
 const Technology = () => {
   return (
-    <div className="lg:mt-60 mt-20 flex flex-col  mb-20 ">
+    <div className="lg:mt-60 mt-20 flex flex-col ">
     <motion.h2
       initial={{ opacity: 0, y: 50 }}
       transition={{ duration: 1.5 }}
@@ -52,6 +52,7 @@ const Technology = () => {
           </h2>
         </li>
       ))}
+      
     </motion.ul>
   </div>
   )
