@@ -61,19 +61,19 @@
 // }
 
 // export default Hero;
-import React from 'react';
-import { motion } from 'framer-motion';
-// import Herobg from '../assests/'; // Adjust the path if needed
+import React from "react";
+import { motion } from "framer-motion";
+import { Icon } from "../assests/assests";
 
 const Hero = () => {
-  const text = "Hi, I'm MERAJ ANSARI"; // The text to animate
+  const text = "Hi, I'm MERAJ ANSARI";
 
   const container = {
     hidden: { opacity: 1 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.07, // Delay between each letter
+        staggerChildren: 0.07,
       },
     },
   };
@@ -84,15 +84,27 @@ const Hero = () => {
   };
 
   return (
-    <div 
-      className="px-3 flex justify-center items-center h-screen bg-cover bg-center bg-no-repeat" 
+    <div
+      className="px-3 flex items-center justify-center h-screen bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/bg2.png')" }}
     >
-      <div className='flex justify-center items-center h-[70vh] md:h-[100vh]'>
-        <div className='flex flex-col sm:px-10'>
+      <div className="flex flex-col xlg:flex-row items-center  gap-6 md:gap-12">
+        {/* Profile Image */}
+        <motion.img
+         initial={{ opacity: 0, y: 10 }}
+         transition={{ duration: 5 }}
+         whileInView={{ opacity: 4, y: 2 }}
+         viewport={{ once: true }}
+          className="h-[260px] cursor-pointer md:h-[350px] rounded-lg shadow-lg object-cover"
+          src={Icon.person}
+          alt="Profile"
+        />
+
+        {/* Hero Text */}
+        <div className="flex flex-col sm:px-10 text-center md:text-left">
           <motion.h2
-            className="text-3xl border-t-4 border-b-4 sm:text-4xl lg:text-7xl md:text-5xl topic_head text-white mb-8"
-            variants={container} 
+            className="text-3xl border-t-4  sm:text-4xl lg:text-7xl md:text-5xl topic_head text-white mb-8"
+            variants={container}
             initial="hidden"
             animate="visible"
           >
@@ -102,24 +114,24 @@ const Hero = () => {
               </motion.span>
             ))}
           </motion.h2>
+     <div className="flex justify-center ">
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
             transition={{ duration: 2 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-2xl sm:text-2xl lg:text-4xl md:text-2xl font-bold mt-10 text-white mb-2 sm:mb-4"
+            className="text-2xl sm:text-2xl lg:text-4xl md:text-2xl font-bold mt-10 text-white mb-2 sm:mb-4 border-t-4"
           >
             A Passionate Software Developer
           </motion.h2>
+          </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Hero;
-
-
 
 
 
