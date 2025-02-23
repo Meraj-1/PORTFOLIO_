@@ -145,7 +145,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="relative text-white  overflow-hidden">
-      <div className="container mx-auto px-6">
+      <div className="container lg:p-30 md:p-10  mx-auto ">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 10 }}
@@ -158,7 +158,7 @@ const Projects = () => {
         </motion.h2>
 
         {/* Grid Container: 1 column in md & below, 2 columns in lg */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2   grid-cols-1 lg:grid-cols-2 gap-20 md:gap-10">
           {/* First Project */}
           <div>
             <div className="flex mb-5 text-xl justify-start items-start">
