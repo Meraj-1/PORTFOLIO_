@@ -108,7 +108,7 @@ const Hero = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       className="h-[260px] cursor-pointer md:h-[350px] rounded-lg shadow-lg object-cover"
-      src={Icon?.person || "/default-profile.png"} // Ensure a fallback image
+      src={Icon?.person}
       alt="Profile"
     />
 
@@ -119,8 +119,8 @@ const Hero = () => {
         delay={150}
         animateBy="words"
         direction="top"
-        onAnimationComplete={handleAnimationComplete} // Ensure this function exists
-        className="text-2xl sm:text-2xl lg:text-6xl md:text-2xl font-bold mb-8 border-b-4 border-white"
+        onAnimationComplete={handleAnimationComplete} 
+        className="flex justify-center items-center text-2xl sm:text-2xl lg:text-6xl md:text-2xl font-bold mb-8"
       />
 
       <div className="flex justify-center md:justify-start">
@@ -129,8 +129,8 @@ const Hero = () => {
         delay={150}
         animateBy="words"
         direction="top"
-        onAnimationComplete={handleAnimationComplete} // Ensure this function exists
-        className="text-2xl sm:text-2xl lg:text-5xl md:text-2xl font-bold mb-8 border-b-4 border-white"
+        onAnimationComplete={handleAnimationComplete} 
+        className="flex justify-center items-center text-2xl sm:text-2xl lg:text-5xl md:text-2xl font-bold mb-8 "
       />
       </div>
     </div>
