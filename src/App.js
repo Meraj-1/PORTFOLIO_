@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import Header from './components/Header';
-import About from './components/About';
+// import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -21,7 +21,7 @@ const App = () => {
      <div className='px-4 sm:px-[5vw] ms:px-[7vw] lg:px-[9vw] bg-[#000000]'>
       <Hero/>
       <Technology/>
-      <About />
+      {/* <About /> */}
       <Projects />
       <Contact />
     <Footer /> 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {motion} from "framer-motion"
 import { Icon } from "../assests/assests";
-    
+import Particles from "./Particles";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -31,81 +31,90 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="flex md:flex-row flex-col  text-white pt-16">
-      <div className="container mx-auto text-center px-6">
-        {/* Contact Heading */}
-        {/* <motion.h2
-       initial={{opacity: 0, y:10}}
-       transition={{duration: 2}}
-       whileInView={{opacity: 1, y:0}}
-       viewport={{once: true}}
-        className="text-3xl animate-text font-bold font-sans text-white mb-8">Contact Me 
-        </motion.h2> */}
-       <div className="flex flex-col justify-center items-center  ">
+    <section id="contact" className="relative mt-0 flex md:flex-row flex-col text-white pt-16">
+    {/* Particles Background */}
+    <div className="absolute inset-0 w-full h-full">
+      <Particles
+        particleColors={['#ffffff', '#ffffff']}
+        particleCount={200}
+        particleSpread={10}
+        speed={0.1}
+        particleBaseSize={100}
+        moveParticlesOnHover={true}
+        alphaParticles={false}
+        disableRotation={false}
+      />
+    </div>
+  
+    {/* Contact Content */}
+    <div className="relative container mx-auto text-center px-6 z-10">
+      <div className="flex flex-col justify-center items-center">
         <div>
-        <img src={Icon.circle}/>
+          <img src={Icon.circle} alt="Contact Icon" classname="bg-none" />
         </div>
         <div className="w-full">
-        {submitted ? (
-          <div className="text-green-400 text-lg font-medium">
-            🎉 Your message has been sent successfully! Thank you for reaching out.
-          </div>
-        ) : (
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-col items-center gap-6 w-full max-w-lg mx-auto"
-          >
-            <motion.input
-             initial={{opacity: 0, y:10}}
-             transition={{duration: 2}}
-             whileInView={{opacity: 1, y:0}}
-             viewport={{once: true}}
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              required
-              className="w-full px-4 py-2 rounded-lg  text-white border bg-black  focus:outline-none"
-            />
-            <motion.input
-             initial={{opacity: 0, y:10}}
-             transition={{duration: 2}}
-             whileInView={{opacity: 1, y:0}}
-             viewport={{once: true}}
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
-              className="w-full px-4 py-2 rounded-lg  text-white border bg-black  focus:outline-none"
-            />
-            <motion.textarea
-             initial={{opacity: 0, y:10}}
-             transition={{duration: 2}}
-             whileInView={{opacity: 1, y:0}}
-             viewport={{once: true}}
-              name="message"
-              placeholder="Your Message"
-              rows="5"
-              required
-              className="w-full px-4 py-2 rounded-lg  text-white border bg-black  focus:outline-none"
-            />
-            <motion.button
-      initial={{opacity: 0, y:10}}
-      transition={{duration: 2}}
-      whileInView={{opacity: 1, y:0}}
-      viewport={{once: true}}
-              type="submit"
-              className="bg-black  text-white  border-b font-medium px-6 py-3 rounded-lg shadow-lg transition-all duration-300"
+          {submitted ? (
+            <div className="text-green-400 text-lg font-medium">
+              🎉 Your message has been sent successfully! Thank you for reaching out.
+            </div>
+          ) : (
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col items-center gap-6 w-full max-w-lg mx-auto"
             >
-              Send Message
-            </motion.button>
-          </form>
-        )}
+              <motion.input
+                initial={{ opacity: 0, y: 10 }}
+                transition={{ duration: 2 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                className="w-full px-4 py-2 rounded-lg text-white border bg-black focus:outline-none"
+              />
+              <motion.input
+                initial={{ opacity: 0, y: 10 }}
+                transition={{ duration: 2 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+                className="w-full px-4 py-2 rounded-lg text-white border bg-black focus:outline-none"
+              />
+              <motion.textarea
+                initial={{ opacity: 0, y: 10 }}
+                transition={{ duration: 2 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                name="message"
+                placeholder="Your Message"
+                rows="5"
+                required
+                className="w-full px-4 py-2 rounded-lg text-white border bg-black focus:outline-none"
+              />
+              <motion.button
+                initial={{ opacity: 0, y: 10 }}
+                transition={{ duration: 2 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                type="submit"
+                className="bg-black text-white border-b font-medium px-6 py-3 rounded-lg shadow-lg transition-all duration-300"
+              >
+                Send Message
+              </motion.button>
+            </form>
+          )}
         </div>
-        </div>        
-        {/* Divider */}
-        <div className=" mt-10 border-t border-white w-9/4 mx-auto"></div>
       </div>
-    </section>
+  
+      {/* Divider */}
+      <div className="mt-10 border-t border-white w-9/4 mx-auto"></div>
+    </div>
+  </section>
+  
   );
 };
 
