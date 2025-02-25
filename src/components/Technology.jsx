@@ -2,6 +2,8 @@ import React from 'react'
 import { Icon } from "../assests/assests.js";
 import { motion } from "framer-motion"
 import Cube from './Cube.jsx';
+import Threads from './Threads';
+
 
 const Technology = () => {
   return (
@@ -14,11 +16,6 @@ const Technology = () => {
       className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl  animate-text font-bold flex items-center justify-center  text-center  text-white mb-16">
       My Arsenal of Technologies
     </motion.h2>
-    {/* <div className='flex justify-between'>
-    <Cube/>
-    <Cube/>
-    <Cube/>
-    </div> */}
     <motion.ul
       initial={{ opacity: 0, y: 10 }}
       transition={{ duration: 2 }}
@@ -52,7 +49,15 @@ const Technology = () => {
           </h2>
         </li>
       ))}
-      
+
+{/* <div style={{ width: '100%', height: '600px', position: 'relative' }}> */}
+  <div className='w-[100%] md:h-[200px] lg:h-[600px] h-[200px] sm:h-[400px]  ' style={{position: 'relative'}} >
+  <Threads
+    amplitude={1}
+    distance={0}
+    enableMouseInteraction={true}
+  />
+</div>
     </motion.ul>
   </div>
   )
