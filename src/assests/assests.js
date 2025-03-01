@@ -25,6 +25,8 @@ import estate1 from "./estate1.png"
 import estate2 from "./estate2.png"
 // import Herobg from "./Herobg.jpg"
 import person from "./person.jpg"
+import zerodha1 from "./zerodha1.png"
+import zerodha2 from "./zerodha2.png"
 
 export const Icon = {
     HTML,
@@ -52,7 +54,9 @@ export const Icon = {
     circle,
     estate1,
     estate2,
-    person
+    person,
+    zerodha1,
+    zerodha2
     // Herobg
 };
 
