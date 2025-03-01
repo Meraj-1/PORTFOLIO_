@@ -1,8 +1,6 @@
 import React from 'react'
 import { Icon } from "../assests/assests.js";
 import { motion } from "framer-motion"
-import Cube from './Cube.jsx';
-import Threads from './Threads';
 
 
 const Technology = () => {
@@ -49,15 +47,6 @@ const Technology = () => {
           </h2>
         </li>
       ))}
-
-{/* <div style={{ width: '100%', height: '600px', position: 'relative' }}> */}
-  <div className='w-[100%] md:h-[200px] lg:h-[600px] h-[200px] sm:h-[400px]  ' style={{position: 'relative'}} >
-  <Threads
-    amplitude={1}
-    distance={0}
-    enableMouseInteraction={true}
-  />
-</div>
     </motion.ul>
   </div>
   )
