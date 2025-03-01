@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {motion} from "framer-motion"
 import { Icon } from "../assests/assests";
-import Particles from "./Particles";
+// import Particles from "./Particles";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -33,20 +33,8 @@ const Contact = () => {
   return (
     <section id="contact" className="relative mt-0 flex md:flex-row flex-col text-white pt-16">
     {/* Particles Background */}
-    <div className="absolute inset-0 w-full h-full">
-      <Particles
-        particleColors={['#ffffff', '#ffffff']}
-        particleCount={200}
-        particleSpread={10}
-        speed={0.1}
-        particleBaseSize={100}
-        moveParticlesOnHover={true}
-        alphaParticles={false}
-        disableRotation={false}
-      />
-    </div>
-  
-    {/* Contact Content */}
+    
+  {/* Contact Content */}
     <div className="relative container mx-auto text-center px-6 z-10">
       <div className="flex flex-col justify-center items-center">
         <div>
