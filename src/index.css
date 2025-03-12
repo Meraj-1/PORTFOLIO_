@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
-
-* {
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&display=swap');
+/* * {
     font-family: outfit;
-} 
+}  */
  
 .prata-regular {
     font-family: "prata", serif;
@@ -17,4 +17,18 @@
 
 html {
     scroll-behavior: smooth;
+  }
+
+  .text_nav {
+    font-family: "Foldit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }  
+
+*  {
+    font-family: "Big Shoulders Stencil", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
   }

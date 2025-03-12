@@ -98,7 +98,7 @@ const Hero = () => {
   return (
 <div
   className="px-3 flex items-center justify-center h-screen bg-cover bg-center bg-no-repeat"
-  style={{ backgroundImage: "url('/bg2.png')" }}
+  // style={{ backgroundImage: "url('/bg2.png')" }}
 >
   <div className="flex flex-col xl:flex-row items-center gap-6 md:gap-12">
     {/* Profile Image */}
@@ -120,7 +120,7 @@ const Hero = () => {
         animateBy="words"
         direction="top"
         onAnimationComplete={handleAnimationComplete} 
-        className="flex justify-center items-center text-2xl sm:text-2xl lg:text-6xl md:text-2xl font-bold mb-8"
+        className="flex  justify-center items-center text-2xl  lg:text-6xl md:text-7xl  mb-8"
       />
 
       <div className="flex justify-center md:justify-start">
@@ -130,7 +130,7 @@ const Hero = () => {
         animateBy="words"
         direction="top"
         onAnimationComplete={handleAnimationComplete} 
-        className="flex justify-center items-center text-2xl sm:text-2xl lg:text-5xl md:text-2xl font-bold mb-8 "
+        className="flex  justify-center items-center text-2xl sm:text-2xl lg:text-5xl md:text-6xl font-bold mb-8 "
       />
       </div>
     </div>

@@ -9,14 +9,14 @@ const Header = () => {
     <header className="bg-[#000000] fixed border-b-[0.1px] w-full top-0 z-50 shadow-md">
       <nav className="container mx-auto flex justify-between items-center p-4">
         {/* Logo */}
-        <h1 className="text-2xl text-white p-2 md:text-3xl cursor-pointer font-bold text-transparent bg-clip-text animate-text">
+        <h1 className="text-2xl text_nav text-white p-2 md:text-3xl cursor-pointer font-bold text-transparent bg-clip-text animate-text">
           PORTFOLIO
         </h1>
   
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6">
-          <button className="px-4 py-2 rounded-lg shadow-md text-white border hover:text-black  hover:bg-white  duration-300 ">
-            <a href="#about">About</a>
+          <button className="px-4  py-2 rounded-lg shadow-md text-white border hover:text-black  hover:bg-white  duration-300 ">
+            <a  href="#about">About</a>
           </button>
 
           <button className="px-4 py-2 rounded-lg shadow-md text-white border hover:text-black  hover:bg-white  duration-300 ">
