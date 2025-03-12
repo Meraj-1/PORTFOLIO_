@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 const Technology = () => {
   return (
-    <div className="lg:mt-60 mt-20 flex flex-col ">
+    <div className="lg:mt-60 mt-20 md:mb-40 mb-20 flex flex-col ">
     <motion.h2
       initial={{ opacity: 0, y: 50 }}
       transition={{ duration: 1.5 }}
