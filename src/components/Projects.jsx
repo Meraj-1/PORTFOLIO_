@@ -81,7 +81,7 @@ const Projects = () => {
                 </button>
                 <button className="px-4 py-2 cursor-pointer rounded-md border-b-4">
                   <a
-                    href="https://ecomerce-web-six.vercel.app/"
+                    href="https://ecom-forever-2.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
