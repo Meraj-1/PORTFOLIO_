@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Icon } from '../assests/assests';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Icon } from "../assests/assests";
 
 const Projects = () => {
   const [isFirstImage, setIsFirstImage] = useState(true);
@@ -8,19 +8,19 @@ const Projects = () => {
   const [isthirdImage, serIsthirdImage] = useState(true);
 
   const toggleImage = () => {
-    setIsFirstImage(prev => !prev);
+    setIsFirstImage((prev) => !prev);
   };
 
   const toggleImage2 = () => {
-    setIsSecondImage(prev => !prev);
+    setIsSecondImage((prev) => !prev);
   };
   const toggleImage3 = () => {
-    serIsthirdImage(prev =>!prev);
+    serIsthirdImage((prev) => !prev);
   };
 
   return (
     <section id="projects" className="relative text-white  overflow-hidden">
-      <div className="container lg:p-30 md:p-10  mx-auto ">
+      <div className="container lg:p-60 md:p-10  mx-auto ">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 10 }}
@@ -72,7 +72,7 @@ const Projects = () => {
                 </button>
                 <button className="px-4 py-2 cursor-pointer rounded-md border-b-4">
                   <a
-                    href="https://github.com/Meraj-1/Ecomerce_web"
+                    href="https://github.com/Meraj-1/Ecom_Backend"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
