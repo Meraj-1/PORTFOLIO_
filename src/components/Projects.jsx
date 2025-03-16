@@ -72,7 +72,7 @@ const Projects = () => {
                 </button>
                 <button className="px-4 py-2 cursor-pointer rounded-md border-b-4">
                   <a
-                    href="https://github.com/Meraj-1/Ecomerce_web"
+                    href="https://github.com/Meraj-1/Ecom_Backend"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
