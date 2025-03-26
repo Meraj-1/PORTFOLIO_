@@ -5,15 +5,23 @@ import { motion } from "framer-motion"
 
 const Technology = () => {
   return (
-    <div className="lg:mt-60 mt-20 md:mb-40 mb-20 flex flex-col ">
-    <motion.h2
+    <div className="lg:mt-60 mt-20 gap-20  md:mb-40 mb-20 flex flex-col md:flex-row  items-center justify-center ">
+    {/* <motion.h2
       initial={{ opacity: 0, y: 50 }}
       transition={{ duration: 1.5 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl  animate-text font-bold flex items-center justify-center  text-center  text-white mb-16">
       My Arsenal of Technologies
-    </motion.h2>
+    </motion.h2> */}
+       <div className='flex justify-center mb-2 items-center'>
+    <motion.img 
+    initial={{ opacity: 0, y: 50 }}
+    transition={{ duration: 3 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    src="https://cdn3d.iconscout.com/3d/premium/thumb/male-developer-3d-icon-download-in-png-blend-fbx-gltf-file-formats--html-logo-programmer-web-development-pack-design-icons-6547028.png?f=webp" alt="" />
+    </div>
     <motion.ul
       initial={{ opacity: 0, y: 10 }}
       transition={{ duration: 2 }}
@@ -48,6 +56,7 @@ const Technology = () => {
         </li>
       ))}
     </motion.ul>
+ 
   </div>
   )
 }

@@ -97,10 +97,10 @@ const Hero = () => {
 
   return (
 <div
-  className="px-3 flex items-center justify-center h-screen w-full bg-cover bg-center bg-no-repeat"
+  className="px-3 flex items-center justify-center md:h-screen w-full bg-cover bg-center bg-no-repeat"
   // style={{ backgroundImage: "url('https://res.cloudinary.com/dg4jhba5c/image/upload/v1741605538/night-background_ni3vqb.jpg')" }}
 >
-  <div className="flex flex-col xl:flex-row md:mt-[260px] lg:mt-[180px] mt-10 items-center gap-6 md:gap-12">
+  <div className="flex flex-col xl:flex-row md:mt-[260px] lg:mt-[180px] mt-[180px] items-center gap-6 md:gap-12">
     {/* Profile Image */}
      <motion.img
       initial={{ opacity: 0, y: 10 }}
@@ -121,9 +121,8 @@ const Hero = () => {
         animateBy="words"
         direction="top"
         onAnimationComplete={handleAnimationComplete} 
-        className="flex  justify-center items-center text-2xl  lg:text-6xl md:text-7xl  mb-8"
+        className="flex justify-center items-center text-4xl lg:text-6xl md:text-7xl  mb-8"
       />
-
       <div className="flex justify-center text-white md:justify-start">
       <BlurText
         text="A Passionate Software Developer"
