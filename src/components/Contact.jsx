@@ -32,14 +32,13 @@ const Contact = () => {
 
   return (
     <section id="contact" className="relative mt-0 flex md:flex-row flex-col text-white pt-16">
-    {/* Particles Background */}
-    
-  {/* Contact Content */}
+  
     <div className="relative container mx-auto text-center px-6 z-10">
       <div className="flex flex-col justify-center items-center">
-        <div>
-          <img src={Icon.circle} alt="Contact Icon" classname="bg-none" />
-        </div>
+          <img
+          src={Icon.person}
+           alt="Contact Icon"      className="h-[260px] cursor-pointer md:h-[350px] rounded-lg  object-cover" />
+        
         <div className="w-full">
           {submitted ? (
             <div className="text-green-400 text-lg font-medium">
@@ -97,8 +96,6 @@ const Contact = () => {
           )}
         </div>
       </div>
-  
-      {/* Divider */}
       <div className="mt-10 border-t border-white w-9/4 mx-auto"></div>
     </div>
   </section>

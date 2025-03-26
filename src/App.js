@@ -18,13 +18,15 @@ const App = () => {
   return (
   <div>
      <Header />
-     <div className='px-4 sm:px-[5vw] ms:px-[7vw] lg:px-[9vw] bg-[#000000]'>
+     <div className=' bg-[#000000]'>
       <Hero/>
+      <div className='px-4 sm:px-[5vw] ms:px-[7vw] lg:px-[9vw]'>
       <Technology/>
       {/* <About /> */}
       <Projects />
       <Contact />
     <Footer /> 
+    </div>
     </div>
   </div>
 );
