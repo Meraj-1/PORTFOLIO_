@@ -17,7 +17,7 @@ const Technology = () => {
        <div className='flex justify-center mb-2 items-center'>
     <motion.img 
     initial={{ opacity: 0, y: 50 }}
-    transition={{ duration: 3 }}
+    transition={{ duration: 7 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     src="https://cdn3d.iconscout.com/3d/premium/thumb/male-developer-3d-icon-download-in-png-blend-fbx-gltf-file-formats--html-logo-programmer-web-development-pack-design-icons-6547028.png?f=webp" alt="" />
