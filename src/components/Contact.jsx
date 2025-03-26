@@ -35,7 +35,11 @@ const Contact = () => {
   
     <div className="relative container mx-auto text-center px-6 z-10">
       <div className="flex flex-col justify-center items-center">
-          <img
+          <motion.img
+              initial={{ opacity: 0, y: 50 }}
+              transition={{ duration: 3 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
           src={Icon.person}
            alt="Contact Icon"      className="h-[260px] cursor-pointer md:h-[350px] rounded-lg  object-cover" />
         
