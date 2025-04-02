@@ -20,7 +20,7 @@ const App = () => {
      <Header />
      <div className=' bg-[#000000]'>
       <Hero/>
-      <div className='px-4 sm:px-[5vw] ms:px-[7vw] lg:px-[9vw]'>
+      <div className=''>
       <Technology/>
       {/* <About /> */}
       <Projects />
@@ -33,3 +33,4 @@ const App = () => {
 }
 export default App;
 
+// px-4 sm:px-[5vw] ms:px-[7vw] lg:px-[9vw]

@@ -15,7 +15,7 @@ const Header = () => {
   
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6">
-          <button className="px-4  py-2 rounded-lg shadow-md text-white border hover:text-black  hover:bg-white  duration-300 ">
+          <button className="px-4   py-2 rounded-lg shadow-md text-white border hover:text-black  hover:bg-white  duration-300 ">
             <a  href="#about">About</a>
           </button>
 

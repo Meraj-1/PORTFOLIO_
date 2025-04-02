@@ -28,8 +28,10 @@ import person from "./person.jpg"
 import zerodha1 from "./zerodha1.png"
 import zerodha2 from "./zerodha2.png"
 import Backgroundclip from "./Background.mp4"
+import tech from "./techclip.mp4"
 
 export const Icon = {
+    tech,
     Backgroundclip,
     HTML,
     Css,
