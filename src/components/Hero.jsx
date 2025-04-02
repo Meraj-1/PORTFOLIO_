@@ -5,7 +5,7 @@ import BlurText from "./BlurText";
 
 const Hero = () => {
   return (
-    <div className="px-3 flex relative items-center justify-center md:h-screen w-full bg-cover bg-center bg-no-repeat">
+    <div className="px-3 flex relative items-center justify-center h-screen w-full bg-cover bg-center bg-no-repeat">
       {/* Background Video */}
       <video
         autoPlay
