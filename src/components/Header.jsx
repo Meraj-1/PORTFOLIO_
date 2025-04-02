@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Icon } from "../assests/assests";
+import { Icon } from "../assests/assets";
 import Cube from "./Cube";
 
 const Header = () => {
