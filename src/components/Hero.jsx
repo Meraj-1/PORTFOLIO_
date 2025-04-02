@@ -18,16 +18,10 @@ const Hero = () => {
 
       <div className="flex flex-col lg:flex-row xl:flex-row md:mt-[260px] lg:mt-[180px] mt-[180px] items-center gap-6 md:gap-12 relative z-10">
         {/* Profile Image */}
-        <motion.img
-          initial={{ opacity: 0, y: 40 }}
-          transition={{ duration: 7 }}
-          whileInView={{ opacity: 1, y: 2 }}
-          viewport={{ once: true }}
+        <img
           className="h-[260px] cursor-pointer md:h-[400px] rounded-lg object-cover"
           src={Icon.person}
-          alt="Profile"
         />
-
         {/* Hero Text */}
         <div className="flex flex-col text-center">
           <span className="text-white text-3xl md:text-4xl lg:text-5xl font-semibold">Hi, I'm <span className="hero_text">MERAJ ANSARI</span></span>
