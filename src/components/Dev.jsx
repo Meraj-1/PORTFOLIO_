@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon } from '../assests/assests'
+import { Icon } from '../assests/assets'
 import { motion } from 'framer-motion'
 
 const Dev = () => {

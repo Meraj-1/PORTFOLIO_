@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {motion} from "framer-motion"
-import { Icon } from "../assests/assests";
+import { Icon } from "../assests/assets";
 // import Particles from "./Particles";
 
 const Contact = () => {
@@ -40,7 +40,8 @@ const Contact = () => {
               transition={{ duration: 3 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-          src={Icon.person}
+      src="https://cdn3d.iconscout.com/3d/premium/thumb/robot-coding-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--html-logo-programming-developer-futuristic-20-pack-science-technology-illustrations-9008568.png?f=webp"
+
            alt="Contact Icon"      className="h-[260px] cursor-pointer md:h-[350px] rounded-lg  object-cover" />
         
         <div className="w-full">

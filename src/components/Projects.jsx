@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Icon } from "../assests/assests";
+import { Icon } from "../assests/assets";
 
 const Projects = () => {
   const [isFirstImage, setIsFirstImage] = useState(true);
@@ -20,7 +20,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="relative text-white  overflow-hidden">
-      <div className="container lg:p-20 md:p-10  mx-auto ">
+      <div className="container lg:p-40 md:p-10  mx-auto ">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 10 }}

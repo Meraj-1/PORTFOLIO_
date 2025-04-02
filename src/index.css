@@ -26,7 +26,7 @@ html {
     font-style: normal;
   }  
 
-*  {
+  .text_nav  {
     font-family: "Big Shoulders Stencil", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
