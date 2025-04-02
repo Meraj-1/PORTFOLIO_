@@ -5,7 +5,15 @@ import { motion } from "framer-motion"
 
 const Technology = () => {
   return (
-    <div className="lg:mt-60 mt-20 gap-20  md:mb-40 mb-20 flex flex-col md:flex-row  items-center justify-center ">
+    <div className="relative gap-20 h-screen  md:mb-40 mb-20 flex flex-col md:flex-row  items-center justify-center ">
+    <video 
+            autoPlay
+            loop
+            muted
+            className="absolute top-0 left-0 w-full h-full object-cover"
+          >
+            <source src={Icon.tech} type="video/mp4" /> {/* ✅ Using imported video */}
+          </video>
     {/* <motion.h2
       initial={{ opacity: 0, y: 50 }}
       transition={{ duration: 1.5 }}
@@ -14,7 +22,7 @@ const Technology = () => {
       className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl  animate-text font-bold flex items-center justify-center  text-center  text-white mb-16">
       My Arsenal of Technologies
     </motion.h2> */}
-       <div className='flex justify-center mb-2 items-center'>
+       <div className='flex justify-center relative mb-2 items-center'>
     <motion.img 
     initial={{ opacity: 0, y: 50 }}
     transition={{ duration: 7 }}

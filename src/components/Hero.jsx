@@ -16,39 +16,40 @@ const Hero = () => {
         <source src={Icon.Backgroundclip} type="video/mp4" /> {/* ✅ Using imported video */}
       </video>
 
-      <div className="flex flex-col xl:flex-row md:mt-[260px] lg:mt-[180px] mt-[180px] items-center gap-6 md:gap-12 relative z-10">
+      <div className="flex flex-col lg:flex-row xl:flex-row md:mt-[260px] lg:mt-[180px] mt-[180px] items-center gap-6 md:gap-12 relative z-10">
         {/* Profile Image */}
         <motion.img
           initial={{ opacity: 0, y: 40 }}
           transition={{ duration: 7 }}
-          whileInView={{ opacity: 1, y: 4 }}
+          whileInView={{ opacity: 1, y: 2 }}
           viewport={{ once: true }}
-          className="h-[260px] cursor-pointer md:h-[550px] rounded-lg object-cover"
+          className="h-[260px] cursor-pointer md:h-[400px] rounded-lg object-cover"
           src={Icon.person}
           alt="Profile"
         />
 
         {/* Hero Text */}
         <div className="flex flex-col text-center">
-          <span className="text-white text-3xl font-semibold">Hi, I'm MERAJ ANSARI</span>
-          <span className="text-white text-2xl p-3 font-semibold">
-            A Passionate <span className="border-b border-yellow-100">Software Developer</span>
+          <span className="text-white text-3xl md:text-4xl lg:text-5xl font-semibold">Hi, I'm <span className="hero_text">MERAJ ANSARI</span></span>
+          <span className="text-white text-2xl px-8 md:text-4xl lg:text-5xl font-semibold">
+            A Passionate <span className="border-b-4   hero_text">Software Developer</span>
           </span>
-        </div>
-
-        {/* Buttons */}
-        <div className="flex justify-center gap-4 md:gap-20 mt-10">
+          <div className="flex justify-center gap-4 md:gap-20 mt-10">
           <button>
-            <a className="px-9 py-3 border text-white rounded-full text-lg hover:text-black hover:bg-white duration-300" href="/#contact">
+            <a className="px-9 py-3 hero_text border text-white rounded-full text-lg hover:text-black hover:bg-green-400 duration-300" href="/#contact">
               Contact
             </a>
           </button>
           <button>
-            <a className="px-9 py-3 border text-white rounded-full text-lg hover:text-black hover:bg-white duration-300" href="">
+            <a className="px-9 py-3 hero_text border text-white rounded-full text-lg hover:text-black hover:bg-green-400 duration-300" href="">
               Resume
             </a>
           </button>
         </div>
+        </div>
+
+        {/* Buttons */}
+  
       </div>
     </div>
   );

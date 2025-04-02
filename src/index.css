@@ -4,6 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
 /* * {
     font-family: outfit;
 }  */
@@ -32,3 +33,10 @@ html {
     font-weight: 800;
     font-style: normal;
   }
+
+.hero_text {
+      font-family: "Cardo", serif;
+      font-weight: 900;
+      /* font-style: normal; */
+    }
+  
