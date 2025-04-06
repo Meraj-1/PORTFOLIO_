@@ -1,4 +1,5 @@
 import React from "react";
+import RotatingText from "../animate_compo/RotatingText";
 
 const Footer = () => (
   <footer className="text-black   py-3">
@@ -6,6 +7,7 @@ const Footer = () => (
     <p className="text-sm  text-white  font-light">
    {new Date().toLocaleDateString("en-GB")} 
 </p>
+
     </div>
   </footer>
 );
