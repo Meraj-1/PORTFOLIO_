@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Icon } from "../assests/assets";
 import AnimateText from "../animate_compo/AnimateText";
+import ShinyText from "../animate_compo/ShineText";
 
 const projectData = [
   {
@@ -55,14 +56,12 @@ const ProjectCard = ({ title, images, github, live }) => {
           >
             View
           </button>
-          <a
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 cursor-pointer rounded-md border-b-4"
-          >
-            GitHub
-          </a>
+          <ShinyText
+           text="GitHub" disabled={false} speed={3} className='custom-class text-lg px-4 py-2 cursor-pointer rounded-md border-b-4 normal_text'
+           href={github}
+           target="_blank"
+           rel="noopener noreferrer"
+           />
           <a
             href={live}
             target="_blank"

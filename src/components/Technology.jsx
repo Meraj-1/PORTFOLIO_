@@ -2,6 +2,7 @@ import React from "react";
 import { Icon } from "../assests/assets.js";
 import { motion } from "framer-motion";
 import RotatingText from "../animate_compo/RotatingText.jsx";
+import ShinyText from "../animate_compo/ShineText.jsx";
 
 const Technology = () => {
   return (
@@ -57,7 +58,8 @@ const Technology = () => {
                   className="h-full w-full object-contain"
                 />
               </div>
-              <h2 className="text-sm text-white font-medium">{skill.name}</h2>
+              <ShinyText
+               text={skill.name} disabled={false} speed={3} className='custom-class text-lg normal_text'/>
             </li>
           ))}
         </motion.ul>
