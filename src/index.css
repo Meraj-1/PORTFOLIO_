@@ -5,10 +5,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&display=swap');
+
 /* * {
     font-family: outfit;
 }  */
- 
+
+.tech_head {
+    font-family: "Hurricane", cursive;
+    font-weight: 900;
+    font-style: normal
+  
+}
+
 .prata-regular {
     font-family: "prata", serif;
     font-weight: 400;
