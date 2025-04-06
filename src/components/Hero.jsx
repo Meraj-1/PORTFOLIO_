@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import AnimateText from "../animate_compo/AnimateText";
 import ShinyText from "../animate_compo/ShineText";
+import TrueFocus from "../animate_compo/TrueFocus";
 
 const Hero = () => {
   const handleDownload = () => {
@@ -33,19 +34,6 @@ const Hero = () => {
 
       <div className="flex flex-col lg:flex-row xl:flex-row items-center gap-6 md:gap-12 relative z-10">
         {/* Profile Image */}
-        <h1>
-        <AnimateText
-       text="Hello, Tailwind!"
-       className="text-2xl font-semibold text-center"
-       delay={150}
-       animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
-       animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
-       easing="easeOutCubic"
-       threshold={0.2}
-       rootMargin="-50px"
-       onLetterAnimationComplete={handleAnimationComplete}
-      />
-        </h1>
         <img
           className="h-[260px] cursor-pointer md:h-[400px] rounded-lg object-cover"
           src={Icon.person}
@@ -53,10 +41,10 @@ const Hero = () => {
 
         {/* Hero Text */}
         <div className="flex flex-col text-center">
-          <span className="text-white text-3xl md:text-4xl lg:text-5xl font-semibold">
+          <span className="text-white text-3xl flex items-center justify-center md:text-4xl lg:text-5xl font-semibold">
           <AnimateText
-       text="Hi, I'm MERAJ ANSARI"
-       className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center"
+       text="Hi, I'm"
+       className="text-3xl md:text-4xl lg:text-5xl mb-2 font-semibold text-center"
        delay={150}
        animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
        animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
@@ -65,6 +53,16 @@ const Hero = () => {
        rootMargin="-50px"
        onLetterAnimationComplete={handleAnimationComplete}
       />
+      <div className="tech_head">
+      <TrueFocus
+      sentence="MERAJ ANSARI"
+      manualMode={false}
+      blurAmount={5}
+      borderColor="white"
+      animationDuration={2}
+      pauseBetweenAnimations={1}
+      />
+      </div>
             {/* Hi, I'm <span className="hero_text">MERAJ ANSARI</span> */}
           </span>
 
