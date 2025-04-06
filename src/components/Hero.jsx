@@ -3,6 +3,7 @@ import { Icon } from "../assests/assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import AnimateText from "../animate_compo/AnimateText";
+import ShinyText from "../animate_compo/ShineText";
 
 const Hero = () => {
   const handleDownload = () => {
@@ -86,16 +87,18 @@ const Hero = () => {
           <div className="flex justify-center gap-4 md:gap-20 mt-10">
             <button>
               <a
-                className="px-9 py-3 hero_text border text-white rounded-full text-lg hover:text-black hover:bg-green-400 duration-300"
+                className="px-9 py-3 hero_text border rounded-full"
                 href="/#contact"
               >
-                Contact
+                <ShinyText  text="Contact" disabled={false} speed={3} className='custom-class text-lg hero_text' />
               </a>
             </button>
 
             <button onClick={handleDownload}>
-              <span className="px-9 py-3 hero_text border text-white rounded-full text-lg hover:text-black hover:bg-green-400 duration-300">
-                Resume
+              {/* <ShinyText text="Just some shiny text!" disabled={false} speed={3} className='custom-class'/> */}
+              <span className="px-9 py-3 hero_text border text-white rounded-full text-lg">
+                <ShinyText text="Resume" disabled={false} speed={3} className='custom-class text-lg hero_text'/>
+                {/* Resume */}
                  <FontAwesomeIcon icon={faDownload} className="ml-2" />
               </span>
             </button>
