@@ -31,7 +31,7 @@ const Hero = () => {
         <source src={Icon.Backgroundclip} type="video/mp4" />
       </video>
 
-      <div className="flex flex-col lg:flex-row xl:flex-row md:mt-[260px] lg:mt-[180px] mt-[180px] items-center gap-6 md:gap-12 relative z-10">
+      <div className="flex flex-col lg:flex-row xl:flex-row items-center gap-6 md:gap-12 relative z-10">
         {/* Profile Image */}
         <h1>
         <AnimateText
@@ -87,7 +87,7 @@ const Hero = () => {
           <div className="flex justify-center gap-4 md:gap-20 mt-10">
             <button>
               <a
-                className="px-9 py-3 hero_text border rounded-full"
+                className="px-9 py-3 hero_text border  rounded-full"
                 href="/#contact"
               >
                 <ShinyText  text="Contact" disabled={false} speed={3} className='custom-class text-lg hero_text' />
