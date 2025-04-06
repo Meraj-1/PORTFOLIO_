@@ -41,10 +41,10 @@ const Hero = () => {
 
         {/* Hero Text */}
         <div className="flex flex-col text-center">
-          <span className="text-white text-3xl flex items-center justify-center md:text-4xl lg:text-5xl font-semibold">
+          <span className="text-white text-xl sm:flex items-center  justify-center md:text-4xl lg:text-5xl font-semibold">
           <AnimateText
        text="Hi, I'm"
-       className="text-3xl md:text-4xl lg:text-5xl mb-2 font-semibold text-center"
+       className="text-4xl  md:text-4xl normal_text lg:text-5xl font-semibold text-center"
        delay={150}
        animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
        animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
@@ -53,7 +53,7 @@ const Hero = () => {
        rootMargin="-50px"
        onLetterAnimationComplete={handleAnimationComplete}
       />
-      <div className="tech_head">
+      <div className="tech_head mt-5 sm:mt-0 mb-5 sm:mb-0">
       <TrueFocus
       sentence="MERAJ ANSARI"
       manualMode={false}
@@ -66,10 +66,10 @@ const Hero = () => {
             {/* Hi, I'm <span className="hero_text">MERAJ ANSARI</span> */}
           </span>
 
-          <span className="text-white text-2xl px-8 md:text-4xl lg:text-5xl font-semibold">
+          <span className="text-white  px-8 md:text-4xl lg:text-5xl font-semibold">
           <AnimateText
        text="A Passionate Software Developer"
-       className="text-2xl md:text-4xl lg:text-5xl font-semibold text-center"
+       className="text-3xl md:text-4xl normal_text lg:text-5xl font-semibold text-center"
        delay={150}
        animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
        animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
