@@ -5,15 +5,14 @@ import { motion } from "framer-motion";
 const Technology = () => {
   return (
     <div className="relative gap-20 h-screen  md:mb-40 mb-20 flex flex-col lg:flex-row  items-center justify-center ">
-      <video
+      {/* <video
         autoPlay
         loop
         muted
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
         <source src={Icon.tech} type="video/mp4" />{" "}
-        {/* ✅ Using imported video */}
-      </video>
+      </video> */}
       <div className="flex justify-center relative mb-2 items-center">
         <motion.img
           initial={{ opacity: 0, y: 50 }}
