@@ -3,6 +3,7 @@ import { Icon } from "../assests/assets.js";
 import { motion } from "framer-motion";
 import RotatingText from "../animate_compo/RotatingText.jsx";
 import ShinyText from "../animate_compo/ShineText.jsx";
+import StarBorder from "../animate_compo/StarBorder.jsx";
 
 const Technology = () => {
   return (
@@ -10,7 +11,7 @@ const Technology = () => {
       {/* Title and Rotating Text */}
       <div className="flex justify-center mt-20 md:mt-30 lg:mt-40 lg:mb-20 items-center gap-2 mb-10">
         <RotatingText
-          texts={["TOOL'S","&","Technologies"]}
+          texts={["TOOL'S","&","Technologie's"]}
           mainClassName="px-3 py-1 tech_head text-6xl md:text-7xl bg-Black text-White rounded-lg shadow-md overflow-hidden"
           staggerFrom="last"
           initial={{ y: "100%" }}
@@ -56,6 +57,7 @@ const Technology = () => {
                   className="h-full w-full object-contain"
                 />
               </div>
+              
               <ShinyText
                text={skill.name} disabled={false} speed={3} className='custom-class text-lg normal_text'/>
             </li>

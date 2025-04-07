@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Icon } from "../assests/assets";
 import Cube from "./Cube";
+import StarBorder from "../animate_compo/StarBorder";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="bg-[#000000] fixed  w-full top-0 z-50 shadow-md">
-      <nav className="container border-b-[0.1px] mx-auto flex justify-between items-center p-4">
+      <nav className="container mx-auto flex justify-between items-center p-4">
         {/* Logo */}
         <h1 className="text-2xl text_nav text-white p-2 md:text-3xl cursor-pointer font-bold text-transparent bg-clip-text animate-text">
           PORTFOLIO
@@ -15,20 +16,19 @@ const Header = () => {
   
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6">
-          <button className="px-4   py-2 rounded-lg shadow-md text-white border hover:text-black  hover:bg-white  duration-300 ">
+            <StarBorder>
             <a  href="#about">About</a>
-          </button>
-
-          <button className="px-4 py-2 rounded-lg shadow-md text-white border hover:text-black  hover:bg-white  duration-300 ">
+            </StarBorder>
+            <StarBorder>
             <li>
               <a href="#projects">Projects</a>
             </li>
-          </button>
-          <button className="px-4 py-2 rounded-lg shadow-md text-white border hover:text-black  hover:bg-white  duration-300 ">
+          </StarBorder>
+          <StarBorder>
             <li>
               <a href="#contact">Contact</a>
             </li>
-          </button>
+          </StarBorder>
         </ul>
         <button
           className="md:hidden text-white text-2xl focus:outline-none"
@@ -45,37 +45,42 @@ const Header = () => {
   }`}
 >
   <div className="flex items-center justify-between   p-10">
-    <div className="w-40 border-4 cursor-pointer ">
+    <div className="w-40 border-2 cursor-pointer ">
   <Cube/>
     </div>
     <ul className="flex gap-9 flex-col items-center">
+      <StarBorder>
       <li>
         <a
           href="#about"
-          className="hover:text-indigo-100 border-b-[1px] p-1"
+          className="p-3"
           onClick={() => setIsMenuOpen(false)}
         >
           About
         </a>
-      </li>
+      </li></StarBorder>
+      <StarBorder>
       <li>
         <a
           href="#projects"
-          className="hover:text-indigo-100 border-b-[1px] p-1"
+          className="p-3"
           onClick={() => setIsMenuOpen(false)}
         >
           Projects
         </a>
       </li>
+      </StarBorder>
+      <StarBorder>
       <li>
         <a
           href="#contact"
-          className="border-b-[1px] p-1"
+          className="p-3"
           onClick={() => setIsMenuOpen(false)}
         >
           Contact
         </a>
       </li>
+      </StarBorder>
     </ul>
   </div>
 </div>
