@@ -31,7 +31,7 @@ const Technology = () => {
         <motion.ul
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2 }}
+          transition={{ duration: 3 }}
           viewport={{ once: true }}
           className="flex flex-wrap gap-6 sm:gap-10 justify-center items-center"
         >
