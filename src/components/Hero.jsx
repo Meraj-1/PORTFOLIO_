@@ -5,6 +5,7 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import AnimateText from "../animate_compo/AnimateText";
 import ShinyText from "../animate_compo/ShineText";
 import TrueFocus from "../animate_compo/TrueFocus";
+import Orb from "../animate_compo/Orb";
 
 const Hero = () => {
   const handleDownload = () => {
@@ -29,16 +30,29 @@ const Hero = () => {
         muted
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
-        <source src={Icon.Backgroundclip} type="video/mp4" />
+      <source src={Icon.Backgroundclip} type="video/mp4" />
       </video>
 
       <div className="flex flex-col lg:flex-row xl:flex-row items-center gap-6 md:gap-12 relative z-10">
         {/* Profile Image */}
-        <img
-          className="h-[260px] cursor-pointer md:h-[400px] rounded-lg object-cover"
-          src={Icon.person}
-        />
+        <div className="relative w-[260px] md:w-[400px] h-[260px] md:h-[400px]">
+  {/* Orb as background */}
+  <div className="absolute  inset-0 z-0">
+    <Orb
+      hoverIntensity={0.5}
+      rotateOnHover={true}
+      hue={0}
+      forceHoverState={false}
+    />
+  </div>
 
+  {/* Profile Image on top */}
+  <img
+    className="w-full h-full z-10 relative cursor-pointer rounded-lg object-cover"
+    src={Icon.person}
+    alt="Profile"
+  />
+</div>
         {/* Hero Text */}
         <div className="flex flex-col text-center">
           <span className="text-white text-xl sm:flex items-center  justify-center md:text-4xl lg:text-5xl font-semibold">
