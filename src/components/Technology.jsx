@@ -49,7 +49,7 @@ const Technology = () => {
           ].map((skill, index) => (
             <li key={index} className="flex flex-col items-center gap-2 group">
               <div
-                className="w-20 h-16 md:w-36 cursor-pointer rounded-lg p-3 shadow-md flex items-center justify-center transition-transform duration-300 hover:scale-110"
+                className="w-20 h-20 md:w-36 cursor-pointer rounded-lg p-3 shadow-md flex items-center justify-center transition-transform duration-300 hover:scale-110"
               >
                 <img
                   src={skill.image}
@@ -57,7 +57,6 @@ const Technology = () => {
                   className="h-full w-full object-contain"
                 />
               </div>
-              
               <ShinyText
                text={skill.name} disabled={false} speed={3} className='custom-class text-lg normal_text'/>
             </li>

@@ -4,7 +4,7 @@ import github from "./github.png";
 import HTML from "./HTML.svg";
 import Java from "./Java.svg";
 import javascript from "./javascript.svg";
-import react from "./react.svg";
+import react from "./react.svg.png";
 import Mongo from "./Mongo.png";
 // import logo from "./logo.avif"
 import Business from "./Business.webp"
