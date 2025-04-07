@@ -82,9 +82,9 @@ const Hero = () => {
             </div>
           </span>
 
-          <span className="text-white px-8 md:text-4xl lg:text-5xl font-semibold">
+          <span className="text-white px-8 md:text-4xl mt-3 lg:text-5xl font-semibold">
             <AnimateText
-              text="A Passionate Software Developer"
+              text="A Passionate Full Stack Developer"
               className="text-3xl md:text-4xl normal_text lg:text-5xl font-semibold text-center"
               delay={150}
               animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
