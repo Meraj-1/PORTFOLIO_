@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Icon } from "@mui/material";
 import StarBorder from "../animate_compo/StarBorder";
 import ShinyText from "../animate_compo/ShineText";
 
@@ -38,22 +37,22 @@ const Contact = () => {
 
           {/* Social Links */}
           <div className="flex flex-col gap-4 text-left md:text-start w-full md:w-1/3">
-          <ShinyText
-           text="Connect With Me" disabled={false} speed={3} className='custom-class flex justify-start text-xl font-md  mb-2  text-center'/>
+            <ShinyText
+              text="Connect With Me" disabled={false} speed={3} className='custom-class flex justify-start text-xl font-md  mb-2  text-center' />
             <ul className="space-y-2">
               <li>
                 <ShinyText
-               text=" Instagram : @vue_coders" disabled={false} speed={3} className='custom-class text-l font-md text-center'/>
+                  text=" Instagram : @vue_coders" disabled={false} speed={3} className='custom-class text-l font-md text-center' />
                 <a href="#" className="text-white"></a></li>
               <li>
                 <ShinyText
-               text=" GitHub : Meraj-1" disabled={false} speed={3} className='custom-class text-l font-md text-center'/>
-                
-                </li>
+                  text=" GitHub : Meraj-1" disabled={false} speed={3} className='custom-class text-l font-md text-center' />
+
+              </li>
               <li>
                 <ShinyText
-               text="Gmail : mohdmerajansari76@gmail.com" disabled={false} speed={3} className='custom-class text-l font-md text-center'/>
-                </li>
+                  text="Gmail : mohdmerajansari76@gmail.com" disabled={false} speed={3} className='custom-class text-l font-md text-center' />
+              </li>
             </ul>
           </div>
 
@@ -82,54 +81,54 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                 {/* Name Field */}
                 <StarBorder>
-                <motion.input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  required
-                  className="w-full px-4 py-2 bg-inherit"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                  viewport={{ once: true }}
-                />
-          </StarBorder>
+                  <motion.input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                    className="w-full px-4 py-2 bg-inherit focus:outline-none"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                  />
+                </StarBorder>
                 {/* Email Field */}
                 <StarBorder>
-                <motion.input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  required
-                  className="w-full px-4 py-2  rounded-lg bg-inherit text-white "
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.1 }}
-                  viewport={{ once: true }}
-                />
-</StarBorder>
+                  <motion.input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                    className="w-full px-4 py-2  rounded-lg bg-inherit focus:outline-none text-white "
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.1 }}
+                    viewport={{ once: true }}
+                  />
+                </StarBorder>
                 {/* Message Field */}
                 <StarBorder>
-                <motion.textarea
-                  name="message"
-                  rows="5"
-                  placeholder="Your Message"
-                  required
-                  className="w-full px-4 py-2  rounded-lg bg-inherit text-white focus:outline-none"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  viewport={{ once: true }}
-                />
-</StarBorder>
+                  <motion.textarea
+                    name="message"
+                    rows="5"
+                    placeholder="Your Message"
+                    required
+                    className="w-full px-4 py-2  rounded-lg bg-inherit text-white focus:outline-none"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    viewport={{ once: true }}
+                  />
+                </StarBorder>
                 {/* Submit Button */}
                 <StarBorder>
-                <button
-                  type="submit"
-                >
-                  <ShinyText
-               text=" Send Message" disabled={false} speed={3} className='custom-class normal_text text-xl font-bold text-center'/>
-                </button>
+                  <button
+                    type="submit"
+                  >
+                    <ShinyText
+                      text=" Send Message" disabled={false} speed={3} className='custom-class normal_text text-xl font-bold text-center' />
+                  </button>
                 </StarBorder>
               </form>
             )}
