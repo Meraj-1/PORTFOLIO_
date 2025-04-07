@@ -39,18 +39,16 @@ const Technology = () => {
             { name: "CSS", image: Icon.Css },
             { name: "JavaScript", image: Icon.javascript },
             { name: "React", image: Icon.react },
+            { name: "Node.js", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSExv78hTzcjlPAXrxbaAy7zTF1KLE_597yjIMxEx00zj0n7U2WM-KH26q6vpk-F7NAjIM&usqp=CAU"},
+            { name: "Express", image: "https://adware-technologies.s3.amazonaws.com/uploads/technology/thumbnail/20/express-js.png"},
             { name: "Mongo DB", image: Icon.Mongo },
-            {
-              name: "GitHub",
-              image:
-                "https://e7.pngegg.com/pngimages/1009/39/png-clipart-github-computer-icons-repository-github-white-cat-like-mammal.png",
-            },
+            { name: "GitHub",  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt6DXuvit57V1DmjnlLcwst4O-sTL5D37gIQ&s",},
             { name: "Bootstrap", image: Icon.Bootstrap },
             { name: "TailwindCSS", image: Icon.tailwind },
           ].map((skill, index) => (
             <li key={index} className="flex flex-col items-center gap-2 group">
               <div
-                className="w-16 h-16 bg-white border border-gray-200 rounded-full p-3 shadow-md flex items-center justify-center transition-transform duration-300 hover:scale-110"
+                className="w-20 h-16 md:w-36 cursor-pointer rounded-lg p-3 shadow-md flex items-center justify-center transition-transform duration-300 hover:scale-110"
               >
                 <img
                   src={skill.image}
