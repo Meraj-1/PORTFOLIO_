@@ -127,16 +127,13 @@ const Contact = () => {
                     type="submit"
                   >
                     <ShinyText
-                      text=" Send Message" disabled={false} speed={3} className='custom-class normal_text text-xl font-bold text-center' />
+                      text="Send Message" disabled={false} speed={3} className='custom-class normal_text  text-xl font-bold text-center' />
                   </button>
                 </StarBorder>
               </form>
             )}
           </div>
         </div>
-
-        {/* Bottom Divider */}
-        <div className="mt-16 border-t border-neutral-700 w-full"></div>
       </div>
     </section>
   );
