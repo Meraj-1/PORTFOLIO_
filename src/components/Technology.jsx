@@ -46,6 +46,7 @@ const Technology = () => {
             { name: "GitHub",  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt6DXuvit57V1DmjnlLcwst4O-sTL5D37gIQ&s",},
             { name: "Bootstrap", image: Icon.Bootstrap },
             { name: "TailwindCSS", image: Icon.tailwind },
+            { name: "Dockers", image:Icon.docker }
           ].map((skill, index) => (
             <li key={index} className="flex flex-col items-center gap-2 group">
               <div

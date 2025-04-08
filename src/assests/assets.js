@@ -29,8 +29,10 @@ import zerodha1 from "./zerodha1.png"
 import zerodha2 from "./zerodha2.png"
 import Backgroundclip from "./Background.mp4"
 import tech from "./techclip.mp4"
+import docker from "./docker.png"
 
 export const Icon = {
+    docker,
     tech,
     Backgroundclip,
     HTML,
