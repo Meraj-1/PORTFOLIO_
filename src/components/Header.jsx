@@ -8,18 +8,18 @@ const Header = () => {
 
   return (
     <header className="bg-[#000000] fixed  w-full top-0 z-50 shadow-md">
-      <nav className="container mx-auto flex justify-between items-center p-4">
+      <nav className="container mx-auto flex justify-between items-center py-2 px-5">
         {/* Logo */}
         <h1 className="text-2xl text_nav text-white p-2 md:text-3xl cursor-pointer font-bold text-transparent bg-clip-text animate-text">
           PORTFOLIO
         </h1>
-  
+
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6">
-            <StarBorder>
-            <a  href="#about">About</a>
-            </StarBorder>
-            <StarBorder>
+          <StarBorder>
+            <a href="/">About</a>
+          </StarBorder>
+          <StarBorder>
             <li>
               <a href="#projects">Projects</a>
             </li>
@@ -37,54 +37,52 @@ const Header = () => {
           {isMenuOpen ? "☰" : "☰"}
         </button>
       </nav>
-
-// Mobile Menu 
-<div
-  className={`md:hidden text-white  transition-all duration-500 ease-in-out overflow-hidden ${
-    isMenuOpen ? "max-h-[548px] opacity-100" : "max-h-0 opacity-0"
-  }`}
->
-  <div className="flex items-center justify-between   p-10">
-    <div className="w-40 border-2 cursor-pointer ">
-  <Cube/>
-    </div>
-    <ul className="flex gap-9 flex-col items-center">
-      <StarBorder>
-      <li>
-        <a
-          href="#about"
-          className="p-3"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          About
-        </a>
-      </li></StarBorder>
-      <StarBorder>
-      <li>
-        <a
-          href="#projects"
-          className="p-3"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          Projects
-        </a>
-      </li>
-      </StarBorder>
-      <StarBorder>
-      <li>
-        <a
-          href="#contact"
-          className="p-3"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          Contact
-        </a>
-      </li>
-      </StarBorder>
-    </ul>
-  </div>
-</div>
-
+      <div
+        className={`md:hidden text-white  transition-all duration-500 ease-in-out overflow-hidden ${
+          isMenuOpen ? "max-h-[548px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="flex items-center justify-evenly py-3 ">
+          <div className="w-40 border-2 cursor-pointer ">
+            <Cube />
+          </div>
+          <ul className="flex gap-9 flex-col items-center">
+            <StarBorder>
+              <li>
+                <a
+                  href="#about"
+                  className="p-3"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  About
+                </a>
+              </li>
+            </StarBorder>
+            <StarBorder>
+              <li>
+                <a
+                  href="#projects"
+                  className="p-3"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Projects
+                </a>
+              </li>
+            </StarBorder>
+            <StarBorder>
+              <li>
+                <a
+                  href="#contact"
+                  className="p-3"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Contact
+                </a>
+              </li>
+            </StarBorder>
+          </ul>
+        </div>
+      </div>
     </header>
   );
 };
