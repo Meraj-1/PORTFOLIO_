@@ -68,7 +68,7 @@ const Contact = () => {
           /> */}
 
           {/* Contact Form */}
-          <div className="w-full max-w-lg md:w-2/3">
+          <div className="w-full max-w-[500px] md:w-2/3">
             {submitted ? (
               <motion.div
                 initial={{ opacity: 0 }}

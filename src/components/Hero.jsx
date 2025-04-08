@@ -6,6 +6,7 @@ import AnimateText from "../animate_compo/AnimateText";
 import ShinyText from "../animate_compo/ShineText";
 import TrueFocus from "../animate_compo/TrueFocus";
 import Orb from "../animate_compo/Orb";
+import Header from "./Header";
 
 const Hero = () => {
   const handleDownload = () => {
@@ -32,7 +33,6 @@ const Hero = () => {
       >
         <source src={Icon.Backgroundclip} type="video/mp4" />
       </video>
-
       <div className="flex flex-col lg:flex-row xl:flex-row items-center gap-6 md:gap-12 relative z-10">
         {/* Profile Image with Orb Background */}
         <div className="relative w-[260px] md:w-[400px] h-[260px] md:h-[400px]">
