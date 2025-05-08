@@ -37,16 +37,7 @@ const Hero = () => {
         {/* Profile Image with Orb Background */}
         <div className="relative w-[260px] md:w-[400px] h-[260px] md:h-[400px]">
           {/* Orb as background */}
-          <div className="absolute inset-0 flex items-center justify-center z-0">
-            <div className="scale-[1.3] sm:scale-[1.4] md:scale-[1.6] lg:scale-[1.8] xl:scale-[2] 2xl:scale-[2.2]">
-              <Orb
-                hoverIntensity={0.5}
-                rotateOnHover={true}
-                hue={0}
-                forceHoverState={false}
-              />
-            </div>
-          </div>
+      
 
           {/* Profile Image on top */}
           <img
