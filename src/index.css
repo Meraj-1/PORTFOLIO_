@@ -8,6 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Hurricane&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap');
 
 /* * {
     font-family: outfit;
@@ -47,8 +48,15 @@ html {
 
 .hero_text {
       font-family: "Cardo", serif;
-      font-weight: 900;
+      font-weight: 600;
       /* font-style: normal; */
     }
   
+  * {
+      font-family: "Atkinson Hyperlegible Mono", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+    }
+    
   

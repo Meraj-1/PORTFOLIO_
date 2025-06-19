@@ -31,13 +31,16 @@ const Hero = () => {
         muted
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
-        <source src={Icon.Backgroundclip} type="video/mp4" />
+        <source 
+        src={Icon.Backgroundclip}
+        // src='blob:https://artlist.io/1ed1b620-c43b-4cf6-a854-bab6571b579d'
+        type="video/mp4" />
       </video>
       <div className="flex flex-col lg:flex-row xl:flex-row items-center gap-6 md:gap-12 relative z-10">
         {/* Profile Image with Orb Background */}
         <div className="relative w-[260px] md:w-[400px] h-[260px] md:h-[400px]">
           {/* Orb as background */}
-      
+
 
           {/* Profile Image on top */}
           <img
@@ -122,7 +125,6 @@ const Hero = () => {
 };
 
 export default Hero;
-
 
 
 // A Passionate Software Developer
