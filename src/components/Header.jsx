@@ -15,7 +15,7 @@ const Header = () => {
         </h1>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-6">
+        <ul className="hidden md:flex gap-4">
           <StarBorder>
             <a href="/">About</a>
           </StarBorder>
@@ -42,23 +42,22 @@ const Header = () => {
           isMenuOpen ? "max-h-[548px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="flex items-center justify-evenly py-3 ">
-          <div className="w-40 border-2 cursor-pointer ">
+        <div className="flex items-center justify-evenly py-10">
+          <div className="w-40 border-2 cursor-pointer
+          ">
             <Cube />
           </div>
-          <ul className="flex gap-9 flex-col items-center">
-            <StarBorder>
+          <ul className="flex gap-6 flex-col ">
               <li>
                 <a
                   href="#about"
-                  className="p-3"
+                  className="px-3                   
+                  "
                   onClick={() => setIsMenuOpen(false)}
                 >
                   About
                 </a>
               </li>
-            </StarBorder>
-            <StarBorder>
               <li>
                 <a
                   href="#projects"
@@ -68,8 +67,6 @@ const Header = () => {
                   Projects
                 </a>
               </li>
-            </StarBorder>
-            <StarBorder>
               <li>
                 <a
                   href="#contact"
@@ -79,7 +76,6 @@ const Header = () => {
                   Contact
                 </a>
               </li>
-            </StarBorder>
           </ul>
         </div>
       </div>

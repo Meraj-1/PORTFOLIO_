@@ -122,12 +122,14 @@ const Contact = () => {
                   />
                 </StarBorder>
                 {/* Submit Button */}
-                <StarBorder>
+                <StarBorder
+                >
                   <button
                     type="submit"
+                    className="green-600"
                   >
                     <ShinyText
-                      text="Send Message" disabled={false} speed={3} className='custom-class normal_text  text-xl font-bold text-center' />
+                      text="Send Message" disabled={false} speed={3} className='custom-class normal_text text-xl font-bold text-center' />
                   </button>
                 </StarBorder>
               </form>

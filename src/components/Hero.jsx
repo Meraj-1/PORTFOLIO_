@@ -31,13 +31,16 @@ const Hero = () => {
         muted
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
-        <source src={Icon.Backgroundclip} type="video/mp4" />
+        <source 
+        src={Icon.Backgroundclip}
+        // src='blob:https://artlist.io/1ed1b620-c43b-4cf6-a854-bab6571b579d'
+        type="video/mp4" />
       </video>
       <div className="flex flex-col lg:flex-row xl:flex-row items-center gap-6 md:gap-12 relative z-10">
         {/* Profile Image with Orb Background */}
         <div className="relative w-[260px] md:w-[400px] h-[260px] md:h-[400px]">
           {/* Orb as background */}
-          <div className="absolute inset-0 flex items-center justify-center z-0">
+          {/* <div className="absolute inset-0 flex items-center justify-center z-0">
             <div className="scale-[1.3] sm:scale-[1.4] md:scale-[1.6] lg:scale-[1.8] xl:scale-[2] 2xl:scale-[2.2]">
               <Orb
                 hoverIntensity={0.5}
@@ -46,7 +49,7 @@ const Hero = () => {
                 forceHoverState={false}
               />
             </div>
-          </div>
+          </div> */}
 
           {/* Profile Image on top */}
           <img
@@ -131,7 +134,5 @@ const Hero = () => {
 };
 
 export default Hero;
-
-
 
 // A Passionate Software Developer
