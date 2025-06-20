@@ -7,12 +7,12 @@ import StarBorder from "../animate_compo/StarBorder.jsx";
 
 const Technology = () => {
   return (
-    <div className="px-4 sm:px-[5vw] md:px-[7vw] mb-10 lg:px-[15vw] py-10">
+    <div className="px-4 sm:px-[5vw] md:px-[7vw] h-full mb-10 lg:px-[15vw] py-10">
       {/* Title and Rotating Text */}
       <div className="flex justify-center mt-20 md:mt-30 lg:mt-40 lg:mb-20 items-center gap-2 mb-10">
         <RotatingText
           texts={["TOOL'S","&","Technologie's"]}
-          mainClassName="px-3 py-1 tech_head text-6xl md:text-7xl bg-Black text-White rounded-lg shadow-md overflow-hidden"
+          mainClassName="px-3 py-1 tech_head text-6xl bg-white  md:text-7xl  text-black rounded-lg  overflow-hidden"
           staggerFrom="last"
           initial={{ y: "100%" }}
           animate={{ y: 0 }}
@@ -50,7 +50,7 @@ const Technology = () => {
           ].map((skill, index) => (
             <li key={index} className="flex flex-col items-center gap-2 group">
               <div
-                className="w-20 h-20 md:w-36 cursor-pointer rounded-lg p-3 shadow-md flex items-center justify-center transition-transform duration-300 hover:scale-110"
+                className="w-20 h-20 md:w-36 cursor-pointer rounded-lg p-3  flex items-center justify-center transition-transform duration-300 hover:scale-110"
               >
                 <img
                   src={skill.image}
@@ -59,7 +59,7 @@ const Technology = () => {
                 />
               </div>
               <ShinyText
-               text={skill.name} disabled={false} speed={3} className='custom-class text-lg normal_text'/>
+               text={skill.name} disabled={false} speed={3} className='custom-class text-lg text-black'/>
             </li>
           ))}
         </motion.ul>
