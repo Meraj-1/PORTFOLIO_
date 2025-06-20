@@ -48,7 +48,7 @@ const Header = () => {
             {/* <Cube /> */}
           <img src={Icon.navbar} alt="" />
           </div>
-          <ul className="flex gap-6 flex-col ">
+          <ul className="flex gap-6 text-xl flex-col ">
               <li>
                 <a
                   href="#about"

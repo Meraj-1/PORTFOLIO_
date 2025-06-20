@@ -31,41 +31,25 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative pt-20 pb-16 bg-black text-white flex justify-center items-center">
+    <section id="contact" className="relative pt-20 pb-16 bg-lime-50 text-white flex justify-center items-center">
       <div className="container mx-auto px-6 z-10">
         <div className="flex flex-col md:flex-row items-center justify-center gap-12">
 
           {/* Social Links */}
-          <div className="flex flex-col gap-4 text-left md:text-start w-full md:w-1/3">
-            <ShinyText
-              text="Connect With Me" disabled={false} speed={3} className='custom-class flex justify-start text-xl font-md  mb-2  text-center' />
+          <div className="flex flex-col gap-4 text-black text-left md:text-start w-full md:w-1/3">
+          Connect With Me
             <ul className="space-y-2">
               <li>
-                <ShinyText
-                  text=" Instagram : @vue_coders" disabled={false} speed={3} className='custom-class text-l font-md text-center' />
-                <a href="#" className="text-white"></a></li>
+                 
+                <a href="#" className="">Instagram : @vue_coders</a></li>
               <li>
-                <ShinyText
-                  text=" GitHub : Meraj-1" disabled={false} speed={3} className='custom-class text-l font-md text-center' />
-
+ GitHub : Meraj-1
               </li>
               <li>
-                <ShinyText
-                  text="Gmail : mohdmerajansari76@gmail.com" disabled={false} speed={3} className='custom-class text-l font-md text-center' />
-              </li>
+             
+             Gmail : mohdmerajansari76@gmail.com </li>
             </ul>
           </div>
-
-          {/* Optional Center Image */}
-          {/* <motion.img
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 2 }}
-            viewport={{ once: true }}
-            src="your-image-url.png"
-            alt="Contact Visual"
-            className="w-[250px] md:w-[300px] rounded-lg object-cover"
-          /> */}
 
           {/* Contact Form */}
           <div className="w-full max-w-[500px] md:w-2/3">
@@ -78,7 +62,7 @@ const Contact = () => {
                 🎉 Your message has been sent successfully! Thank you for reaching out.
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-2">
                 {/* Name Field */}
                 <StarBorder>
                   <motion.input
