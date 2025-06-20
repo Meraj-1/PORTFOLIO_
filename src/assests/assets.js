@@ -28,12 +28,20 @@ import person from "./person.jpg"
 import zerodha1 from "./zerodha1.png"
 import zerodha2 from "./zerodha2.png"
 import Backgroundclip from "./Background.mp4"
-import tech from "./techclip.mp4"
+// import tech from "./techclip.mp4"
 import docker from "./docker.png"
+import manicon from "./man.jpg"
+import hero from "./hero_main.avif"
+import project from "./projects.avif"
+import navbar from "./navbar_mini.webp"
 
 export const Icon = {
     docker,
-    tech,
+    navbar,
+    // tech,
+    hero,
+    project,
+    manicon,
     Backgroundclip,
     HTML,
     Css,

@@ -25,37 +25,37 @@ const Hero = () => {
   return (
     <div className="px-3 flex relative items-center justify-center h-screen w-full bg-cover bg-center bg-no-repeat">
       {/* Background Video */}
-      <video
+      {/* <video
         autoPlay
         loop
         muted
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
-        <source 
+        <source
         src={Icon.Backgroundclip}
         // src='blob:https://artlist.io/1ed1b620-c43b-4cf6-a854-bab6571b579d'
         type="video/mp4" />
-      </video>
+      </video> */}
       <div className="flex flex-col lg:flex-row xl:flex-row items-center gap-6 md:gap-12 relative z-10">
         {/* Profile Image with Orb Background */}
-        <div className="relative w-[260px] md:w-[400px] h-[260px] md:h-[400px]">
+        <div className="">
           {/* Orb as background */}
 
 
           {/* Profile Image on top */}
           <img
-            className="w-full h-full z-10 relative cursor-pointer rounded-lg object-cover"
-            src={Icon.person}
+            className=" md:h-[500px] h-[300px] mt-10 cursor-pointer"
+            src={Icon.project}
             alt="Profile"
           />
         </div>
 
         {/* Hero Text */}
         <div className="flex flex-col text-center">
-          <span className="text-white text-xl sm:flex items-center justify-center md:text-4xl lg:text-5xl font-semibold">
+          <span className="text-black text-xl sm:flex items-center justify-center md:text-4xl lg:text-5xl font-semibold">
             <AnimateText
               text="Hi, I'm"
-              className="text-4xl md:text-4xl normal_text lg:text-5xl font-semibold text-center"
+              className="text-4xl md:text-4xl normal_text lg:text-3xl font-semibold text-center"
               delay={150}
               animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
               animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
@@ -64,22 +64,35 @@ const Hero = () => {
               rootMargin="-50px"
               onLetterAnimationComplete={handleAnimationComplete}
             />
-            <div className="tech_head mt-5 sm:mt-0 mb-5 sm:mb-0">
+            <div className="tech_head mt-5 text-black sm:mt-0 mb-5 sm:mb-0">
               <TrueFocus
                 sentence="MERAJ ANSARI"
                 manualMode={false}
                 blurAmount={5}
-                borderColor="white"
+                borderColor="purple"
                 animationDuration={2}
                 pauseBetweenAnimations={1}
               />
             </div>
           </span>
 
-          <span className="text-white px-8 md:text-4xl mt-3 lg:text-5xl font-semibold">
+          <span className="text-black px-8 md:text-4xl mt-3 lg:text-5xl font-semibold">
             <AnimateText
-              text="A Passionate Full Stack Developer"
-              className="text-3xl md:text-4xl normal_text lg:text-5xl font-semibold text-center"
+              text="A Passionate "
+              className="text-3xl md:text-4xl normal_text lg:text-4xl font-semibold text-center"
+              delay={150}
+              animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
+              animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
+              easing="easeOutCubic"
+              threshold={0.2}
+              rootMargin="-50px"
+              onLetterAnimationComplete={handleAnimationComplete}
+            />
+          </span>
+          <span className="text-black px-8  md:text-4xl mt-3 lg:text-5xl font-semibold">
+            <AnimateText
+              text="Full Stack Developer"
+              className="text-3xl hero_ md:text-4xl normal_text lg:text-8xl font-bold text-center"
               delay={150}
               animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
               animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
@@ -97,23 +110,13 @@ const Hero = () => {
                 className="px-9 py-3 hero_text border rounded-full"
                 href="/#contact"
               >
-                <ShinyText
-                  text="Contact"
-                  disabled={false}
-                  speed={3}
-                  className="custom-class text-lg hero_text"
-                />
+              Contact
               </a>
             </button>
 
             <button onClick={handleDownload}>
-              <span className="px-9 py-3 hero_text border text-white rounded-full text-lg">
-                <ShinyText
-                  text="Resume"
-                  disabled={false}
-                  speed={3}
-                  className="custom-class text-lg hero_text"
-                />
+              <span className="px-9 py-3 hero_text border text-black rounded-full text-lg">
+               Resume
                 <FontAwesomeIcon icon={faDownload} className="ml-2" />
               </span>
             </button>
