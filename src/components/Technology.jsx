@@ -7,7 +7,7 @@ import StarBorder from "../animate_compo/StarBorder.jsx";
 
 const Technology = () => {
   return (
-    <div className="px-4 sm:px-[5vw] md:px-[7vw] bg-yellow-100 h-full lg:px-[15vw] py-10">
+    <div className="px-4 sm:px-[5vw] md:px-[7vw] bg-yellow-100 md:h-full lg:px-[15vw] py-10">
       {/* Title and Rotating Text */}
       <div className="flex justify-center mt-20 md:mt-30 lg:mt-40 lg:mb-20 items-center gap-2 mb-10">
         <RotatingText

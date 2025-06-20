@@ -46,7 +46,7 @@ const ProjectCard = ({ title, images, github, live }) => {
         {/* <ShinyText
                text={title} disabled={false} speed={3} className='custom-class normal_text text-2xl font-bold mb-5 text-center'/> */}
         <div
-          className="cursor-pointer overflow-hidden  mb-6 relative group"
+          className="cursor-pointer overflow-hidden  mb-2 relative group"
           onClick={toggleImage}
         >
           <AnimatePresence mode="wait">
@@ -58,12 +58,12 @@ const ProjectCard = ({ title, images, github, live }) => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
-              className=" w-full h-60 md:h-72 lg:h-[550px] object-cover group-hover:scale-105 group-hover:brightness-90 transition duration-300"
+              className=" w-full h-100 md:h-72 lg:h-[550px] object-cover group-hover:scale-105 group-hover:brightness-90 transition duration-300"
             />
           </AnimatePresence>
         </div>
 
-        <div className="flex justify-center gap-5">
+        <div className="flex justify-center mb-10 gap-5">
           <a
             href={live}
             target="_blank"
