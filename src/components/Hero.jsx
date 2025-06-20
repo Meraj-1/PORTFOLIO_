@@ -44,7 +44,7 @@ const Hero = () => {
 
           {/* Profile Image on top */}
           <img
-            className=" md:h-[500px] h-[300px] md:mt-10 cursor-pointer"
+            className=" md:h-[500px]  mix-blend-lighten h-[300px] md:mt-10 cursor-pointer"
             src={Icon.project}
             alt="Profile"
           />
