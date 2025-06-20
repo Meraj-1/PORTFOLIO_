@@ -18,7 +18,7 @@ const App = () => {
   return (
   <div>
      <Header />
-     <div className=' bg-[#000000]'>'
+     <div className=' bg-[#ffffff]'>'
       {/* <Header/> */}
       <Hero/>
       <div className=''>
