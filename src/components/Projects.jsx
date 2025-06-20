@@ -40,50 +40,46 @@ const ProjectCard = ({ title, images, github, live }) => {
       viewport={{ once: true }}
       whileHover={{ scale: 1.03 }}
       transition={{ duration: 0.4 }}
-      className="rounded-3xl bg-[#000000] border border-[#2e2e2e] overflow-hidden  transition duration-300"
+      className=" overflow-hidden  transition duration-300"
     >
-      <div className="p-4">
-        <ShinyText
-               text={title} disabled={false} speed={3} className='custom-class normal_text text-2xl font-bold mb-5 text-center'/>
+      <div className="">
+        {/* <ShinyText
+               text={title} disabled={false} speed={3} className='custom-class normal_text text-2xl font-bold mb-5 text-center'/> */}
         <div
-          className="cursor-pointer overflow-hidden rounded-xl mb-6 relative group"
+          className="cursor-pointer overflow-hidden  mb-6 relative group"
           onClick={toggleImage}
         >
           <AnimatePresence mode="wait">
             <motion.img
               key={images[currentImageIndex]}
               src={images[currentImageIndex]}
-              alt={`${title} Screenshot`}
+              // alt={`${title} Screenshot`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
-              className="rounded-xl w-full h-60 md:h-72 lg:h-64 object-cover group-hover:scale-105 group-hover:brightness-90 transition duration-300"
+              className=" w-full h-60 md:h-72 lg:h-[550px] object-cover group-hover:scale-105 group-hover:brightness-90 transition duration-300"
             />
           </AnimatePresence>
         </div>
 
         <div className="flex justify-center gap-5">
-        <StarBorder>
           <a
             href={live}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2 font-medium"
+            className="px-5 py-2 text-black font-medium"
           >
             Live
           </a>
-          </StarBorder>
-          <StarBorder>
           <a
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2 font-medium"
+            className="px-5 py-2 text-black font-medium"
           >
             GitHub
           </a>
-          </StarBorder>
         </div>
       </div>
     </motion.div>
@@ -96,11 +92,11 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="relative text-white overflow-hidden py-16 bg-black">
+    <section id="projects" className="relative bg-gray-100 overflow-hidden py-16">
       <div className="container p-4 px-10    lg:px-40 xl:px-60 mx-auto">
         <AnimateText
           text="My Masterpiece Projects"
-          className="text-3xl sm:text-5xl normal_text md:text-6xl mb-16 font-bold flex justify-center"
+          className="text-3xl sm:text-5xl  text-black md:text-6xl mb-16 font-bold flex justify-center"
           delay={150}
           animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
           animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
@@ -110,7 +106,7 @@ const Projects = () => {
           onLetterAnimationComplete={handleAnimationComplete}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:gap-0 md:grid-cols-2">
           {projectData.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}
