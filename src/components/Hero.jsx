@@ -23,7 +23,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="px-3 flex relative items-center justify-centerh-[100vh] md:h-[120vh] lg:h-screen xl:h-[90vh] w-full bg-cover bg-center bg-no-repeat">
+    <div className="px-3 flex relative items-center justify-center h-[100vh] md:h-[120vh] lg:h-screen xl:h-[90vh] w-full bg-cover bg-center bg-no-repeat">
       {/* Background Video */}
       {/* <video
         autoPlay
