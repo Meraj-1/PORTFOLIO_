@@ -116,7 +116,7 @@ const Hero = () => {
   // };
 
   return (
-    <div className="flex justify-center flex-col md:flex-row h-auto lg:h-screen gap-10 lg:mt-20">
+    <div className="flex justify-center flex-col md:flex-row h-auto   lg:pt-20">
       <div className="md:m-20 m-2">
         <span className="font-bold md:text-[32px] text-[20px] text-white">
           HI I'm MERAJ <span className="text-pink-400 font-extrabold"> Software Developer </span> &<br />{" "}

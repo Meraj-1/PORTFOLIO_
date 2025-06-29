@@ -4,6 +4,7 @@ import { Icon } from "../assests/assets";
 import AnimateText from "../animate_compo/AnimateText";
 import ShinyText from "../animate_compo/ShineText";
 import StarBorder from "../animate_compo/StarBorder";
+import Heading from "./Heading";
 
 const projectData = [
   {
@@ -68,7 +69,7 @@ const ProjectCard = ({ title, images, github, live }) => {
             href={live}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2 text-black font-medium"
+            className="px-5 py-2 text-white font-medium"
           >
             Live
           </a>
@@ -76,7 +77,7 @@ const ProjectCard = ({ title, images, github, live }) => {
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2 text-black font-medium"
+            className="px-5 py-2 text-pink-400 font-medium"
           >
             GitHub
           </a>
@@ -92,9 +93,9 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="relative bg-gray-100 overflow-hidden py-16">
+    <section id="projects" className="relative bg-1E1E1E overflow-hidden py-16">
       <div className="container p-4 px-10    lg:px-40 xl:px-60 mx-auto">
-        <AnimateText
+        {/* <AnimateText
           text="My Masterpiece Projects"
           className="text-3xl sm:text-5xl  text-black md:text-6xl mb-16 font-bold flex justify-center"
           delay={150}
@@ -104,7 +105,12 @@ const Projects = () => {
           threshold={0.2}
           rootMargin="-50px"
           onLetterAnimationComplete={handleAnimationComplete}
-        />
+        /> */}
+      {/* <Heading text1="hello"/> */}
+       <div className="mb-10">
+        <span className="lg:text-4xl font-semibold text-white"><span className="text-pink-400 font-extrabold">#</span>Projects</span>
+         <span className="w-0 h-10 text-pink-400"> -------------</span>
+       </div>
 
         <div className="grid grid-cols-1 md:gap-0 md:grid-cols-2">
           {projectData.map((project, index) => (

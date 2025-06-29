@@ -31,21 +31,21 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative pt-20 pb-16 bg-lime-50 text-white flex justify-center items-center">
+    <section id="contact" className="relative pt-20 pb-16 bg-1E1E1E text-white flex justify-center items-center">
       <div className="container mx-auto px-6 z-10">
         <div className="flex flex-col md:flex-row items-center justify-center gap-12">
 
           {/* Social Links */}
-          <div className="flex flex-col gap-4 text-black text-left md:text-start w-full md:w-1/3">
-          Connect With Me
+          <div className="flex flex-col gap-4 text-pink-400 text-left md:text-start w-full md:w-1/3">
+             <span className="text-2xl">Connect <span className="text-white text-lg">us -----</span></span>
             <ul className="space-y-2">
-              <li>
+              <li className="text-white">
                  
                 <a href="#" className="">Instagram : @vue_coders</a></li>
               <li>
- GitHub : Meraj-1
+                GitHub : Meraj-1
               </li>
-              <li>
+              <li className="text-white">
              
              Gmail : mohdmerajansari76@gmail.com </li>
             </ul>
