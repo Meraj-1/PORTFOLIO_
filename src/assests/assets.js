@@ -1,12 +1,12 @@
 import Bootstrap from "./Bootstrap.png";
 import Css from "./Css.svg";
-import github from "./github.png";
+import github from "./Github.png";
 import HTML from "./HTML.svg";
 import Java from "./Java.svg";
 import javascript from "./javascript.svg";
 import react from "./react.svg.png";
 import Mongo from "./Mongo.png";
-// import logo from "./logo.avif"
+import logo from "./Logo.svg"
 import Business from "./Business.webp"
 import gmail from "./gmail.png"
 import insta from "./insta.jpg"
@@ -27,22 +27,30 @@ import estate2 from "./estate2.png"
 import person from "./person.jpg"
 import zerodha1 from "./zerodha1.png"
 import zerodha2 from "./zerodha2.png"
-import Backgroundclip from "./Background.mp4"
+// import Backgroundclip from "./Background.mp4"
 // import tech from "./techclip.mp4"
 import docker from "./docker.png"
 import manicon from "./man.jpg"
 import hero from "./hero_main.avif"
 import project from "./projects.avif"
 import navbar from "./navbar_mini.webp"
+import close from "./close.png"
+import open from "./open.png"
+import Linkedin from "./Linkedin.svg"
+import Twitter from "./Twitter.svg"
 
 export const Icon = {
+    Twitter,
+    Linkedin,
+    close,
+    open,
     docker,
     navbar,
     // tech,
     hero,
     project,
     manicon,
-    Backgroundclip,
+    // Backgroundclip,
     HTML,
     Css,
     javascript,
@@ -62,7 +70,7 @@ export const Icon = {
     node,
     leave,
     // Bug
-    // logo
+    logo,
     ecom1,
     ecom2,
     circle,
