@@ -38,8 +38,10 @@ import open from "./open.png"
 import Linkedin from "./Linkedin.svg"
 import Twitter from "./Twitter.svg"
 import main_hero from "./main_hero.png"
+import About from './About.png'
 
 export const Icon = {
+    About,
     main_hero,
     github,
     Twitter,

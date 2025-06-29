@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import Header from './components/Header';
-// import About from './components/About';
+import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -23,7 +23,7 @@ const App = () => {
       <Hero/>
       <div className=''>
       <Technology/>
-      {/* <About /> */}
+      <About />
       <Projects />
       <Contact />
     <Footer /> 
