@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-12 px-6 md:px-20 py-16 md:py-32 bg-transparent">
+    <div id='about' className="flex flex-col md:flex-row items-center justify-center gap-12 px-6 md:px-20 py-16 md:py-32 bg-transparent">
       {/* Text Section */}
       <div className="flex flex-col max-w-xl text-center md:text-left">
         <h2 className="text-white font-semibold text-lg md:text-xl mb-4">

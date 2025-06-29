@@ -21,7 +21,7 @@ const Hero = () => {
         </span>
         {/* <span></span> */}
         <button className="text-pink-400 mt-10 flex px-6 py-1 border">
-          Contact
+         <a href="#contact"> Contact</a>
         </button>
       </div>
       <div className="m-2">

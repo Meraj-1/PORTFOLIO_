@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Icon } from "../assests/assets";
-import AnimateText from "../animate_compo/AnimateText";
-import ShinyText from "../animate_compo/ShineText";
-import StarBorder from "../animate_compo/StarBorder";
-import Heading from "./Heading";
+
 
 const projectData = [
   {
@@ -44,8 +41,6 @@ const ProjectCard = ({ title, images, github, live }) => {
       className=" overflow-hidden  transition duration-300"
     >
       <div className="">
-        {/* <ShinyText
-               text={title} disabled={false} speed={3} className='custom-class normal_text text-2xl font-bold mb-5 text-center'/> */}
         <div
           className="cursor-pointer overflow-hidden  mb-2 relative group"
           onClick={toggleImage}
@@ -95,18 +90,6 @@ const Projects = () => {
   return (
     <section id="projects" className="relative bg-1E1E1E overflow-hidden py-16">
       <div className="container p-4 px-10    lg:px-40 xl:px-60 mx-auto">
-        {/* <AnimateText
-          text="My Masterpiece Projects"
-          className="text-3xl sm:text-5xl  text-black md:text-6xl mb-16 font-bold flex justify-center"
-          delay={150}
-          animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-          animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-          easing="easeOutCubic"
-          threshold={0.2}
-          rootMargin="-50px"
-          onLetterAnimationComplete={handleAnimationComplete}
-        /> */}
-      {/* <Heading text1="hello"/> */}
        <div className="mb-10">
         <span className="lg:text-4xl font-semibold text-white"><span className="text-pink-400 font-extrabold">#</span>Projects</span>
          <span className="w-0 h-10 text-pink-400"> -------------</span>

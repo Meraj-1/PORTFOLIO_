@@ -22,7 +22,7 @@ const Header = () => {
         <ul className="hidden md:flex gap-20 text-base font-medium">
           <li>
             <span className="text-pink-400 font-bold">#</span>
-            <a href="/">About</a>
+            <a href="#about">About</a>
           </li>
           <li>
             <span className="text-pink-400 font-bold">#</span>
