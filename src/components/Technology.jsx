@@ -10,7 +10,7 @@ const Technology = () => {
       <div className="flex justify-center mt-20 md:mt-30  lg:mb-20 items-center gap-2 mb-10">
         <RotatingText
           texts={["TOOL'S","&","Technologie's"]}
-          mainClassName="px-3 py-1 text-white md:text-5xl rounded-lg  overflow-hidden"
+          mainClassName="px-3 py-1 text-white text-2xl md:text-5xl rounded-lg  overflow-hidden"
           staggerFrom="last"
           initial={{ y: "100%" }}
           animate={{ y: 0 }}
