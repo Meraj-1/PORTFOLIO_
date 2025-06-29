@@ -30,7 +30,6 @@ import zerodha2 from "./zerodha2.png"
 // import Backgroundclip from "./Background.mp4"
 // import tech from "./techclip.mp4"
 import docker from "./docker.png"
-import manicon from "./man.jpg"
 import hero from "./hero_main.avif"
 import project from "./projects.avif"
 import navbar from "./navbar_mini.webp"
@@ -38,8 +37,10 @@ import close from "./close.png"
 import open from "./open.png"
 import Linkedin from "./Linkedin.svg"
 import Twitter from "./Twitter.svg"
+import main_hero from "./main_hero.png"
 
 export const Icon = {
+    main_hero,
     github,
     Twitter,
     Linkedin,
@@ -50,7 +51,6 @@ export const Icon = {
     // tech,
     hero,
     project,
-    manicon,
     // Backgroundclip,
     HTML,
     Css,
