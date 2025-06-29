@@ -1,7 +1,7 @@
 import Bootstrap from "./Bootstrap.png";
 import Css from "./Css.svg";
-import github from "./Github.png";
 import HTML from "./HTML.svg";
+import github from "./github.png" 
 import Java from "./Java.svg";
 import javascript from "./javascript.svg";
 import react from "./react.svg.png";
@@ -40,6 +40,7 @@ import Linkedin from "./Linkedin.svg"
 import Twitter from "./Twitter.svg"
 
 export const Icon = {
+    github,
     Twitter,
     Linkedin,
     close,
@@ -57,7 +58,6 @@ export const Icon = {
     react,
     Java,
     Mongo,
-    github,
     Bootstrap,
     tailwind,
     Business,

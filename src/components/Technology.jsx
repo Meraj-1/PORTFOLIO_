@@ -3,7 +3,7 @@ import { Icon } from "../assests/assets.js";
 import { motion } from "framer-motion";
 import RotatingText from "../animate_compo/RotatingText.jsx";
 import ShinyText from "../animate_compo/ShineText.jsx";
-import StarBorder from "../animate_compo/StarBorder.jsx";
+// import StarBorder from "../animate_compo/StarBorder.jsx";
 
 const Technology = () => {
   return (
@@ -43,7 +43,7 @@ const Technology = () => {
             { name: "Node.js", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSExv78hTzcjlPAXrxbaAy7zTF1KLE_597yjIMxEx00zj0n7U2WM-KH26q6vpk-F7NAjIM&usqp=CAU"},
             { name: "Express", image: "https://adware-technologies.s3.amazonaws.com/uploads/technology/thumbnail/20/express-js.png"},
             { name: "Mongo DB", image: Icon.Mongo },
-            { name: "GitHub",  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt6DXuvit57V1DmjnlLcwst4O-sTL5D37gIQ&s",},
+            { name: "GitHub",  image: Icon.github},
             { name: "Bootstrap", image: Icon.Bootstrap },
             { name: "TailwindCSS", image: Icon.tailwind },
             { name: "Dockers", image:Icon.docker }
