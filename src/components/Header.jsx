@@ -76,21 +76,21 @@ const Header = () => {
 
         {/* Social Icons */}
         <div className="flex justify-center gap-8 mt-32">
-          <a href="">
+          <a href="https://www.linkedin.com/in/meraj-ansari-12bb132a9/">
             <img
               src={Icon.Linkedin}
               alt="LinkedIn"
               className="w-[50px] h-auto"
             />
           </a>
-          <a href="">
+          <a href="https://x.com/BelalRaza41850">
             <img
               src={Icon.Twitter}
               alt="Twitter"
               className="w-[50px] h-auto"
             />
           </a>
-          <a href="">
+          <a href="https://github.com/Meraj-1">
             <img
               src={Icon.github}
               alt="GitHub"
