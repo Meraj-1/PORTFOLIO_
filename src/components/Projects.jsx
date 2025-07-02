@@ -22,6 +22,12 @@ const projectData = [
     github: "https://github.com/Meraj-1/Zerodha.2.0/tree/main/frontend",
     live: "https://zerodhaclonefivne.vercel.app/",
   },
+  // {
+  //   title : 'photo_grapher',
+  //   image : [],
+  //   github : "",
+  //   live : ""
+  // }
 ];
 
 const ProjectCard = ({ title, images, github, live }) => {

@@ -47,7 +47,7 @@ const Hero = () => {
         <div className="flex items-center border   justify-center">
           <span className="text-white">
             Currently working on
-            <span className="text-pink-400"> #Portfolio</span>
+            <span className="text-pink-400"> #App Development</span>
           </span>
         </div>
       </div>
