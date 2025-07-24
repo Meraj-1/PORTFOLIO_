@@ -9,26 +9,26 @@ const Header = () => {
       {/* Navbar */}
       <nav className="container mx-auto flex items-center justify-between px-5 py-2">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
+        <div className="cursor-target flex items-center space-x-2">
           <img
             src={Icon.logo}
             alt="Logo"
             className="w-[20px] h-auto cursor-pointer"
           />
-          <h1 className="text-white text-lg font-semibold">MERAJ</h1>
+          <h1 className="text-white text-lg font-semibold ">MERAJ</h1>
         </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-20 text-base font-medium">
-          <li>
-            <span className="text-pink-400 font-bold">#</span>
+          <li className="cursor-target">
+            <span className=" text-pink-400 font-bold">#</span>
             <a href="#about">About</a>
           </li>
-          <li>
+          <li className="cursor-target">
             <span className="text-pink-400 font-bold">#</span>
             <a href="#projects">Projects</a>
           </li>
-          <li>
+          <li className="cursor-target">
             <span className="text-pink-400 font-bold">#</span>
             <a href="#contact">Contact</a>
           </li>

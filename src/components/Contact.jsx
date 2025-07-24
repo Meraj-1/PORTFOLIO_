@@ -37,16 +37,15 @@ const Contact = () => {
 
           {/* Social Links */}
           <div className="flex flex-col gap-4 text-pink-400 text-left md:text-start w-full md:w-1/3">
-             <span className="text-2xl">Connect <span className="text-white text-lg">us -----</span></span>
+             <span className="cursor-target text-2xl">Connect <span className="text-white text-lg">us -----</span></span>
             <ul className="space-y-2">
               <li className="text-white">
                  
-                <a href="#" className="">Instagram : @vue_coders</a></li>
-              <li>
+                <a href="#" className="cursor-target">Instagram : @vue_coders</a></li>
+              <li className="cursor-target">
                 GitHub : Meraj-1
               </li>
-              <li className="text-white">
-             
+              <li className="text-white cursor-target">
              Gmail : mohdmerajansari76@gmail.com </li>
             </ul>
           </div>

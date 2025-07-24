@@ -10,7 +10,7 @@ const Technology = () => {
       <div className="flex justify-center mt-20 md:mt-30  lg:mb-20 items-center gap-2 mb-10">
         <RotatingText
           texts={["TOOL'S","&","Technologie's"]}
-          mainClassName="px-3 py-1 text-white text-2xl md:text-5xl rounded-lg  overflow-hidden"
+          mainClassName="cursor-target px-3 py-1 text-white text-2xl md:text-5xl rounded-lg  overflow-hidden"
           staggerFrom="last"
           initial={{ y: "100%" }}
           animate={{ y: 0 }}
@@ -44,7 +44,7 @@ const Technology = () => {
             { name: "TailwindCSS", image: Icon.tailwind },
             { name: "Dockers", image:Icon.docker }]
             .map((skill, index) => (
-            <li key={index} className="flex flex-col items-center gap-2 group">
+            <li key={index} className="cursor-target flex flex-col items-center gap-2 group">
               <div
                 className="w-20 h-20 md:w-36 cursor-pointer rounded-lg p-3  flex items-center justify-center transition-transform duration-300 hover:scale-110"
               >
