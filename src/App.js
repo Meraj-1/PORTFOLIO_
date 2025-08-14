@@ -1,5 +1,4 @@
 import React from 'react';
-import { useEffect } from 'react';
 import Header from './components/Header';
 import About from './components/About';
 import Projects from './components/Projects';
@@ -11,9 +10,6 @@ import Technology from './components/Technology';
 
 const App = () => {
 
-  // useEffect(() => {
-  //   initializeAnalytics();
-  // }, []);
 
   return (
   <div>
