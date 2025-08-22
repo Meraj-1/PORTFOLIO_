@@ -42,7 +42,7 @@ const Technology = () => {
             { name: "GitHub",  image: Icon.github},
             { name: "Bootstrap", image: Icon.Bootstrap },
             { name: "TailwindCSS", image: Icon.tailwind },
-            { name: "Docker", image:Icon.docker }]
+            // { name: "Docker", image:Icon.docker }]
             .map((skill, index) => (
             <li key={index} className="cursor-target flex flex-col items-center gap-2 group">
               <div
