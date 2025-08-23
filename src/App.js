@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 // import initializeAnalytics from './components/Analytics';
 import Technology from './components/Technology';
+import InterviewFAQ from './components/InterViewFAQ';
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
       <div className=''>
       <Technology/>
       <About />
+      <InterviewFAQ/>
       <Projects />
       <Contact />
     <Footer /> 
