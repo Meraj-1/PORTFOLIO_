@@ -10,7 +10,7 @@ const Hero = () => {
         <TargetCursor 
         spinDuration={2}
         hideDefaultCursor={true}/>
-         <span className="cursor-target font-bold md:text-[32px] text-[20px] text-white">
+         <span className="cursor-target font-bold md:text-[32px] lg:text-[50px] text-[20px] text-white">
           HI I'm MERAJ{" "}
           <span className="text-pink-400 font-extrabold">
             {" "}
@@ -21,21 +21,27 @@ const Hero = () => {
         </span>
         <div></div>
         <br />
-        <span className="text-white text-sm">
+        <div>
+          <TargetCursor 
+        spinDuration={2}
+        hideDefaultCursor={true}/>
+        <span className="text-white text-sm lg:text-lg">
+         
           I turn complex problems into elegant, efficient code with a focus on{" "}
           <br />
           performance and user experience.
         </span>
+        </div>
         <div className="flex gap-10">
         {/* <span></span> */}
-        <button className="text-pink-400 mt-10 flex px-6 py-1 border">
+        <button className="text-pink-400 mt-10 flex px-6 py-1 lg:px-10 lg:py-3 lg:text-[20px] border rounded-md">
           <a href="#contact"> Contact</a>
         </button>
 
         <a
           href="/meraj2.pdf"
           download
-          className="text-pink-400 mt-10 flex px-6 py-1 border"
+          className="text-pink-400 mt-10 flex px-6 py-1 lg:px-10 lg:py-3 lg:text-[20px] border rounded-md"
         >
           Resume
         </a>
