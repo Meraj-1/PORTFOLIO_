@@ -21,15 +21,15 @@ const Header = () => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-20 text-base font-medium">
           <li className="cursor-target">
-            <span className=" text-pink-400 font-bold">#</span>
+            <span className=" text-[#C778DD] font-bold">#</span>
             <a href="#about">About</a>
           </li>
           <li className="cursor-target">
-            <span className="text-pink-400 font-bold">#</span>
+            <span className="text-[#C778DD] font-bold">#</span>
             <a href="#projects">Projects</a>
           </li>
           <li className="cursor-target">
-            <span className="text-pink-400 font-bold">#</span>
+            <span className="text-[#C778DD] font-bold">#</span>
             <a href="#contact">Contact</a>
           </li>
         </ul>
@@ -56,19 +56,19 @@ const Header = () => {
         <div className="px-10 py-10">
           <ul className="flex flex-col gap-20 pt-20 text-4xl font-medium">
             <li>
-              <span className="text-pink-400">#</span>
+              <span className="text-[#C778DD]">#</span>
               <a href="#home" onClick={() => setIsMenuOpen(false)}>Home</a>
             </li>
             <li>
-              <span className="text-pink-400">#</span>
+              <span className="text-[#C778DD]">#</span>
               <a href="#about" onClick={() => setIsMenuOpen(false)}>About-me</a>
             </li>
             <li>
-              <span className="text-pink-400">#</span>
+              <span className="text-[#C778DD]">#</span>
               <a href="#projects" onClick={() => setIsMenuOpen(false)}>Works</a>
             </li>
             <li>
-              <span className="text-pink-400">#</span>
+              <span className="text-[#C778DD]">#</span>
               <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a>
             </li>
           </ul>

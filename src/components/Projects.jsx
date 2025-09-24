@@ -78,7 +78,7 @@ const ProjectCard = ({ title, images, github, live }) => {
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-target px-5 py-2 text-pink-400 font-medium"
+            className="cursor-target px-5 py-2 text-[#C778DD] font-medium"
           >
             GitHub
           </a>
@@ -97,8 +97,8 @@ const Projects = () => {
     <section id="projects" className="relative bg-1E1E1E overflow-hidden py-16">
       <div className="container p-4 px-10    lg:px-40 xl:px-60 mx-auto">
        <div className="mb-10">
-        <span className="cursor-target lg:text-4xl font-semibold text-white"><span className="text-pink-400 font-extrabold">#</span>Projects</span>
-         <span className="w-0 h-10 text-pink-400"> -------------</span>
+        <span className="cursor-target lg:text-4xl font-semibold text-white"><span className="text-[#C778DD] font-extrabold">#</span>Projects</span>
+         <span className="w-0 h-10 text-[#C778DD]"> -------------</span>
        </div>
 
         <div className="grid grid-cols-1 md:gap-0 md:grid-cols-2">

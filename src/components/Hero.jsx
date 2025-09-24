@@ -12,12 +12,12 @@ const Hero = () => {
         hideDefaultCursor={true}/>
          <span className="cursor-target font-bold md:text-[32px] lg:text-[50px] text-[20px] text-white">
           HI I'm MERAJ{" "}
-          <span className="text-pink-400 font-extrabold">
+          <span className="text-[#C778DD] font-extrabold">
             {" "}
             Software Developer{" "}
           </span>{" "}
           &<br />{" "}
-          <span className="text-pink-400 font-extrabold">Web Developer</span>
+          <span className="text-[#C778DD] font-extrabold">Web Developer</span>
         </span>
         <div></div>
         <br />
@@ -34,14 +34,14 @@ const Hero = () => {
         </div>
         <div className="flex gap-10">
         {/* <span></span> */}
-        <button className="text-pink-400 mt-10 flex px-6 py-1 lg:px-10 lg:py-3 lg:text-[20px] border rounded-md">
+        <button className="text-[#C778DD] mt-10 flex px-6 py-1 lg:px-10 lg:py-3 lg:text-[20px] border rounded-md">
           <a href="#contact"> Contact</a>
         </button>
 
         <a
           href="/meraj2.pdf"
           download
-          className="text-pink-400 mt-10 flex px-6 py-1 lg:px-10 lg:py-3 lg:text-[20px] border rounded-md"
+          className="text-[#C778DD] mt-10 flex px-6 py-1 lg:px-10 lg:py-3 lg:text-[20px] border rounded-md"
         >
           Resume
         </a>
@@ -57,7 +57,7 @@ const Hero = () => {
         <div className=" cursor-target flex items-center border   justify-center">
           <span className="text-white">
             I'm starting to explore
-            <span className="text-pink-400"> #Python.</span>
+            <span className="text-[#C778DD]"> #Python.</span>
           </span>
         </div>
       </div>

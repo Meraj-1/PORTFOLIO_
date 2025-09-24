@@ -19,11 +19,11 @@ const About = () => {
         {/* Title */}
         <h2 className="cursor-target text-white lg:mb-10 font-semibold text-3xl lg:text-4xl md:text-2xl mb-6">
           <span className="font-extrabold">#</span>About Me{" "}
-          <span className="text-pink-400">---------</span>
+          <span className="text-[#C778DD]">---------</span>
         </h2>
 
         {/* Intro */}
-        <span className="text-pink-400 font-semibold mb-4 text-xl">
+        <span className="text-[#C778DD] font-semibold mb-4 text-xl">
           Hi, I'm Meraj 
         </span>
 
@@ -36,7 +36,7 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-pink-400 font-bold text-xl mb-2 flex items-start gap-2">
+            <h3 className="text-[#C778DD] font-bold text-xl mb-2 flex items-start gap-2">
                Passion for Development
             </h3>
             <p className="text-white text-base leading-relaxed">
@@ -53,7 +53,7 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-pink-400 font-bold text-xl mb-2 flex items-center gap-2">
+            <h3 className="text-[#C778DD] font-bold text-xl mb-2 flex items-center gap-2">
                Full-Stack Expertise
             </h3>
             <p className="text-white text-start text-base leading-relaxed">
@@ -70,7 +70,7 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-pink-400 font-bold text-xl mb-2 flex items-center gap-2">
+            <h3 className="text-[#C778DD] font-bold text-xl mb-2 flex items-center gap-2">
                Problem-Solving Mindset
             </h3>
             <p className="text-white text-base leading-relaxed">
@@ -87,7 +87,7 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-pink-400 font-bold text-xl mb-2 flex items-center gap-2">
+            <h3 className="text-[#C778DD] font-bold text-xl mb-2 flex items-center gap-2">
                Growth & Innovation
             </h3>
             <p className="text-white text-base leading-relaxed">

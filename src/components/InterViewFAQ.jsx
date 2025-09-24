@@ -39,8 +39,8 @@ const InterviewFAQ = () => {
   return (
     <div className="max-w-5xl mx-auto mb-40 p-4">
       <h2 className="text-2xl  mb-6 text-white">
-        <span className="text-pink-400 text-2xl">#</span>
-        Why <span className="text-pink-400">Choose Me</span>
+        <span className="text-[#C778DD] text-2xl">#</span>
+        Why <span className="text-[#C778DD]">Choose Me</span>
       </h2> 
       {faqs.map((faq, index) => (
         <div key={index} className="mb-3 border border-gray-800 rounded-lg overflow-hidden">
@@ -49,7 +49,7 @@ const InterviewFAQ = () => {
             className="w-full flex justify-between items-center px-4 py-3 text-left text-white font-medium focus:outline-none bg-[#1E1E1E] hover:bg-pink-400 transition"
           >
             {faq.question}
-            <span className="text-pink-400 font-bold">
+            <span className="text-[#C778DD] font-bold">
               {openIndex === index ? "−" : "+"}
             </span>
           </button>

@@ -36,7 +36,7 @@
 //         <div className="flex flex-col md:flex-row items-center justify-center gap-12">
 
 //           {/* Social Links */}
-//           <div className="flex flex-col gap-4 text-pink-400 text-left md:text-start w-full md:w-1/3">
+//           <div className="flex flex-col gap-4 text-[#C778DD] text-left md:text-start w-full md:w-1/3">
 //              <span className="cursor-target text-2xl">Connect <span className="text-white text-lg">us -----</span></span>
 //             <ul className="space-y-2">
 //               <li className="text-white">
@@ -137,7 +137,7 @@ const Contact = () => {
   {/* Left Section */}
   <div>
     <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
-    <p className="max-w-sm text-sm mb-10 md:mb-0 text-pink-400">
+    <p className="max-w-sm text-sm mb-10 md:mb-0 text-[#C778DD]">
       Have any questions? Fill out the form and we’ll get back to you soon.
     </p>
   </div>
