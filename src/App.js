@@ -1,29 +1,27 @@
 import React from 'react';
-import { useEffect } from 'react';
 import Header from './components/Header';
-// import About from './components/About';
+import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 // import initializeAnalytics from './components/Analytics';
 import Technology from './components/Technology';
+import InterviewFAQ from './components/InterViewFAQ';
 
 const App = () => {
 
-  // useEffect(() => {
-  //   initializeAnalytics();
-  // }, []);
 
   return (
   <div>
      <Header />
-     <div className=' bg-[#ffffff]'>'
+     <div className=' bg-[#1E1E1E]'>'
       {/* <Header/> */}
       <Hero/>
       <div className=''>
       <Technology/>
-      {/* <About /> */}
+      <About />
+      <InterviewFAQ/>
       <Projects />
       <Contact />
     <Footer /> 
