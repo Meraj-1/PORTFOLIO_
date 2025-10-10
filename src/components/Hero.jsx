@@ -1,5 +1,6 @@
 import React from "react";
 import { Icon } from "../assests/assets";
+import Links from "../ui/Links";
 import { motion } from "framer-motion";
 import TargetCursor from "../animate_compo/TargetCursor";
 
@@ -7,6 +8,7 @@ const Hero = () => {
   return (
     <div className="flex justify-center flex-col md:flex-row h-auto   lg:pt-20">
       <div className="md:m-20 m-2">
+        <Links/>
         <TargetCursor 
         spinDuration={2}
         hideDefaultCursor={true}/>
