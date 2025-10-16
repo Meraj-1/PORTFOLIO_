@@ -63,6 +63,7 @@ const Hero = () => {
           </span>
         </div>
       </div>
+      {/* <QuoteCard/> */}
     </div>
   );
 };

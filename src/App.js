@@ -8,6 +8,7 @@ import Hero from './components/Hero';
 // import initializeAnalytics from './components/Analytics';
 import Technology from './components/Technology';
 import InterviewFAQ from './components/InterViewFAQ';
+import QuoteCard from './ui/QuoteCard';
 
 const App = () => {
 
@@ -18,6 +19,7 @@ const App = () => {
      <div>
       {/* <Header/> */}
       <Hero/>
+      <QuoteCard/>
       <div className=''>
       <Technology/>
       <About />
