@@ -37,7 +37,7 @@ const Technology = () => {
             { name: "JavaScript", image: Icon.javascript },
             { name: "React", image: Icon.react },
             { name: "Node.js", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSExv78hTzcjlPAXrxbaAy7zTF1KLE_597yjIMxEx00zj0n7U2WM-KH26q6vpk-F7NAjIM&usqp=CAU"},
-            { name: "Express", image: "https://adware-technologies.s3.amazonaws.com/uploads/technology/thumbnail/20/express-js.png"},
+            { name: "Express", image: "https://tse4.mm.bing.net/th/id/OIP.1fZjQpkRMKTBGN_7H5YnFwHaGL?pid=Api&P=0&h=180"},
             { name: "Mongo DB", image: Icon.Mongo },
             { name: "GitHub",  image: Icon.github},
             { name: "Bootstrap", image: Icon.Bootstrap },
