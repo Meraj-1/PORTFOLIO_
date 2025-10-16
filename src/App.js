@@ -6,14 +6,9 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
-// import initializeAnalytics from './components/Analytics';
 import Technology from './components/Technology';
 
 const App = () => {
-
-  // useEffect(() => {
-  //   initializeAnalytics();
-  // }, []);
 
   return (
   <div>
