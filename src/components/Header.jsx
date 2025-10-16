@@ -5,7 +5,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="w-full bg-[#1E1E1E] text-white md:pt-5 pt-2 md:p-0 z-50">
+    <header className="w-full  text-white md:pt-5 pt-2 md:p-0 z-50">
       {/* Navbar */}
       <nav className="container mx-auto flex items-center justify-between px-5 py-2">
         {/* Logo */}

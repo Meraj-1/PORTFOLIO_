@@ -45,6 +45,8 @@ export const Icon = {
     About,
     discord,
     main_hero,
+    Linkedin,
+    Twitter,
     github,
     Twitter,
     Linkedin,
