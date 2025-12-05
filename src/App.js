@@ -8,7 +8,7 @@ import Hero from './components/Hero';
 import Technology from './components/Technology';
 import InterviewFAQ from './components/InterViewFAQ';
 import QuoteCard from './ui/QuoteCard';
-import Work from './components/Work';
+import Work from './components/Work.jsx';
 // import Services from './components/Services';
 const App = () => {
 
