@@ -94,8 +94,8 @@ const services = [
 ];
 
 export default function ServicesScrollShowcase() {
-  const wrapperRef = useRef<HTMLDivElement | null>(null);
-  const stickyRef = useRef<HTMLDivElement | null>(null);
+  const wrapperRef = useRef(null);
+  const stickyRef = useRef(null);
   const [active, setActive] = useState(services[0].id);
 
   useEffect(() => {
@@ -122,19 +122,11 @@ export default function ServicesScrollShowcase() {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const mobileContainerRef = useRef<HTMLDivElement | null>(null);
-  const mobileCardsRef = useRef<HTMLDivElement>([]);
-
-  const addToMobileRefs = (el) => {
-    if (el && !mobileCardsRef.current.includes(el)) {
-      mobileCardsRef.current.push(el);
-    }
-  };
-
+  const mobileContainerRef = useRef(null);
   // Mobile stacking cards animation - cards stack on top of each other
   useGSAP(
     () => {
-      const cards = mobileCardsRef.current;
+      const cards = gsap.utils.toArray(".mobile-card");
       const totalCards = cards.length;
 
       cards.forEach((card, index) => {
@@ -279,8 +271,7 @@ export default function ServicesScrollShowcase() {
           {services.map((service, index) => (
             <div
               key={service.id}
-              ref={addToMobileRefs}
-              className="w-full min-h-screen relative rounded-t-2xl border-t-4 border-orange-500 mb-10 overflow-hidden"
+              className="mobile-card w-full min-h-screen relative rounded-t-2xl border-t-4 border-orange-500 mb-10 overflow-hidden"
               style={{
                 zIndex: index + 1,
               }}
