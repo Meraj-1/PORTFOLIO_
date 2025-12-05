@@ -177,7 +177,7 @@ export default function Portfolio() {
         <div className="md:hidden">
           <div
             ref={mobileCarouselRef}
-            className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2"
+            className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-2"
           >
             {projects.map((project, index) => (
               <motion.div
@@ -255,7 +255,6 @@ export default function Portfolio() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300" />
 
                   <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="bg-white/10 backdrop-blur-sm p-2 rounded-full">
