@@ -13,7 +13,7 @@ import Work from './components/Work';
 const App = () => {
 
   return (
-  <div className='bg-[#282C33]'>
+  <div className='bg-[#121316]'>
      <Header />
      <div>
       {/* <Header/> */}

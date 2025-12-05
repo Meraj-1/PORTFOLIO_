@@ -147,7 +147,7 @@ export default function Work() {
   }, []);
 
   return (
-    <section id="work" className="relative py-32 px-6 lg:px-12 bg-black">
+    <section id="work" className="relative py-32 px-6 lg:px-12 bg-[#121316]">
       <div className="max-w-7xl mx-auto">
         {/* HEADER */}
         <motion.div
