@@ -8,13 +8,10 @@ import Hero from './components/Hero';
 import Technology from './components/Technology';
 import InterviewFAQ from './components/InterViewFAQ';
 import QuoteCard from './ui/QuoteCard';
+import Work from './components/work';
 
 const App = () => {
 
-<<<<<<< HEAD
-=======
-
->>>>>>> aed17673ebbfd25184ea9a2518e36e9b5b2439f4
   return (
   <div className='bg-[#282C33]'>
      <Header />
@@ -24,6 +21,7 @@ const App = () => {
       <QuoteCard/>
       <div className=''>
       <Technology/>
+      <Work/>
       <About />
       <InterviewFAQ/>
       <Projects />
