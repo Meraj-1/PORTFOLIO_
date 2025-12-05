@@ -5,13 +5,12 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
-// import initializeAnalytics from './components/Analytics';
 import Technology from './components/Technology';
 import InterviewFAQ from './components/InterViewFAQ';
 import QuoteCard from './ui/QuoteCard';
-
+import Work from './components/Work';
+import Services from './components/Services';
 const App = () => {
-
 
   return (
   <div className='bg-[#282C33]'>
@@ -22,7 +21,9 @@ const App = () => {
       <QuoteCard/>
       <div className=''>
       <Technology/>
+      <Work/>
       <About />
+      {/* <Services/> */}
       <InterviewFAQ/>
       <Projects />
       <Contact />
