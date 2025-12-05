@@ -98,7 +98,7 @@ const projects = [
   },
 ];
 
-export default function Portfolio() {
+export default function Work() {
   const mobileCarouselRef = useRef(null);
 
   useEffect(() => {
