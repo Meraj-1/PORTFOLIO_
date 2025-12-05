@@ -9,7 +9,7 @@ import Technology from './components/Technology';
 import InterviewFAQ from './components/InterViewFAQ';
 import QuoteCard from './ui/QuoteCard';
 import Work from './components/Work';
-import Services from './components/Services';
+// import Services from './components/Services';
 const App = () => {
 
   return (
