@@ -167,7 +167,7 @@ const Contact = () => {
 
     {/* Message */}
     <textarea
-      placeholder="Message"
+      placeholder='Message'
       rows="4"
       className="w-full p-2 rounded bg-[#1E1E1E] text-white border border-gray-700 focus:outline-none focus:border-pink-600"
     ></textarea>

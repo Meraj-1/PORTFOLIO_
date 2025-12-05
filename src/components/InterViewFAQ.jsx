@@ -46,7 +46,7 @@ const InterviewFAQ = () => {
         <div key={index} className="mb-3 border border-gray-800 rounded-lg overflow-hidden">
           <button
             onClick={() => toggleFAQ(index)}
-            className="w-full flex justify-between items-center px-4 py-3 text-left text-white font-medium focus:outline-none bg-[#1E1E1E] hover:bg-pink-400 transition"
+            className="w-full flex justify-between items-center px-4 py-3 text-left text-white font-medium focus:outline-none bg-[#1E1E1E] hover:bg-[#C778DD] transition"
           >
             {faq.question}
             <span className="text-[#C778DD] font-bold">
@@ -64,7 +64,7 @@ const InterviewFAQ = () => {
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 className="overflow-hidden"
               >
-                <div className="px-4 py-3 text-black bg-pink-300">
+                <div className="px-4 py-3 text-black bg-[#C778DD]">
                   {faq.answer}
                 </div>
               </motion.div>
