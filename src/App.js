@@ -1,24 +1,31 @@
 import React from 'react';
-import { useEffect } from 'react';
 import Header from './components/Header';
-// import About from './components/About';
+import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Technology from './components/Technology';
+import InterviewFAQ from './components/InterViewFAQ';
+import QuoteCard from './ui/QuoteCard';
 
 const App = () => {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> aed17673ebbfd25184ea9a2518e36e9b5b2439f4
   return (
-  <div>
+  <div className='bg-[#282C33]'>
      <Header />
-     <div className=' bg-[#ffffff]'>'
+     <div>
       {/* <Header/> */}
       <Hero/>
+      <QuoteCard/>
       <div className=''>
       <Technology/>
-      {/* <About /> */}
+      <About />
+      <InterviewFAQ/>
       <Projects />
       <Contact />
     <Footer /> 

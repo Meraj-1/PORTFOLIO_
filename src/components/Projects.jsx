@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Icon } from "../assests/assets";
-import AnimateText from "../animate_compo/AnimateText";
-import ShinyText from "../animate_compo/ShineText";
-import StarBorder from "../animate_compo/StarBorder";
+
 
 const projectData = [
   {
@@ -24,6 +22,12 @@ const projectData = [
     github: "https://github.com/Meraj-1/Zerodha.2.0/tree/main/frontend",
     live: "https://zerodhaclonefivne.vercel.app/",
   },
+  // {
+  //   title : 'photo_grapher',
+  //   image : [],
+  //   github : "",
+  //   live : ""
+  // }
 ];
 
 const ProjectCard = ({ title, images, github, live }) => {
@@ -43,8 +47,6 @@ const ProjectCard = ({ title, images, github, live }) => {
       className=" overflow-hidden  transition duration-300"
     >
       <div className="">
-        {/* <ShinyText
-               text={title} disabled={false} speed={3} className='custom-class normal_text text-2xl font-bold mb-5 text-center'/> */}
         <div
           className="cursor-pointer overflow-hidden  mb-2 relative group"
           onClick={toggleImage}
@@ -68,7 +70,7 @@ const ProjectCard = ({ title, images, github, live }) => {
             href={live}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2 text-black font-medium"
+            className="cursor-target px-5 py-2 text-white font-medium"
           >
             Live
           </a>
@@ -76,7 +78,7 @@ const ProjectCard = ({ title, images, github, live }) => {
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2 text-black font-medium"
+            className="cursor-target px-5 py-2 text-[#C778DD] font-medium"
           >
             GitHub
           </a>
@@ -92,19 +94,12 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="relative bg-gray-100 overflow-hidden py-16">
+    <section id="projects" className="relative bg-1E1E1E overflow-hidden py-16">
       <div className="container p-4 px-10    lg:px-40 xl:px-60 mx-auto">
-        <AnimateText
-          text="My Masterpiece Projects"
-          className="text-3xl sm:text-5xl  text-black md:text-6xl mb-16 font-bold flex justify-center"
-          delay={150}
-          animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-          animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-          easing="easeOutCubic"
-          threshold={0.2}
-          rootMargin="-50px"
-          onLetterAnimationComplete={handleAnimationComplete}
-        />
+       <div className="mb-10">
+        <span className="cursor-target lg:text-4xl font-semibold text-white"><span className="text-[#C778DD] font-extrabold">#</span>Projects</span>
+         <span className="w-0 h-10 text-[#C778DD]"> -------------</span>
+       </div>
 
         <div className="grid grid-cols-1 md:gap-0 md:grid-cols-2">
           {projectData.map((project, index) => (

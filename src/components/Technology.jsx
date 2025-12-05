@@ -3,16 +3,14 @@ import { Icon } from "../assests/assets.js";
 import { motion } from "framer-motion";
 import RotatingText from "../animate_compo/RotatingText.jsx";
 import ShinyText from "../animate_compo/ShineText.jsx";
-import StarBorder from "../animate_compo/StarBorder.jsx";
 
 const Technology = () => {
   return (
-    <div className="px-4 sm:px-[5vw] md:px-[7vw] bg-yellow-100 md:h-full lg:px-[15vw] py-10">
-      {/* Title and Rotating Text */}
-      <div className="flex justify-center mt-20 md:mt-30 lg:mt-40 lg:mb-20 items-center gap-2 mb-10">
+    <div className="px-4 sm:px-[5vw] md:px-[7vw] bg-1E1E1E  lg:px-[15vw] py-10">
+      <div className="flex justify-center mt-20 md:mt-30  lg:mb-20 items-center gap-2 mb-10">
         <RotatingText
           texts={["TOOL'S","&","Technologie's"]}
-          mainClassName="px-3 py-1 tech_head text-6xl bg-yellow-100 md:text-7xl  text-black rounded-lg  overflow-hidden"
+          mainClassName="cursor-target px-3 py-1 text-white text-2xl md:text-5xl rounded-lg  overflow-hidden"
           staggerFrom="last"
           initial={{ y: "100%" }}
           animate={{ y: 0 }}
@@ -24,10 +22,8 @@ const Technology = () => {
         />
       </div>
 
-      {/* Tech Stack Section */}
       <div className="relative flex flex-col lg:flex-row items-center justify-center gap-12">
 
-        {/* Technology Icons */}
         <motion.ul
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -41,14 +37,15 @@ const Technology = () => {
             { name: "JavaScript", image: Icon.javascript },
             { name: "React", image: Icon.react },
             { name: "Node.js", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSExv78hTzcjlPAXrxbaAy7zTF1KLE_597yjIMxEx00zj0n7U2WM-KH26q6vpk-F7NAjIM&usqp=CAU"},
-            { name: "Express", image: "https://adware-technologies.s3.amazonaws.com/uploads/technology/thumbnail/20/express-js.png"},
+            { name: "Express", image: "https://tse4.mm.bing.net/th/id/OIP.1fZjQpkRMKTBGN_7H5YnFwHaGL?pid=Api&P=0&h=180"},
             { name: "Mongo DB", image: Icon.Mongo },
-            { name: "GitHub",  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt6DXuvit57V1DmjnlLcwst4O-sTL5D37gIQ&s",},
+            { name: "GitHub",  image: Icon.github},
             { name: "Bootstrap", image: Icon.Bootstrap },
             { name: "TailwindCSS", image: Icon.tailwind },
-            { name: "Dockers", image:Icon.docker }
-          ].map((skill, index) => (
-            <li key={index} className="flex flex-col items-center gap-2 group">
+            // { name: "Docker", image:Icon.docker }
+            ]
+            .map((skill, index) => (
+            <li key={index} className="cursor-target flex flex-col items-center gap-2 group">
               <div
                 className="w-20 h-20 md:w-36 cursor-pointer rounded-lg p-3  flex items-center justify-center transition-transform duration-300 hover:scale-110"
               >
@@ -59,7 +56,7 @@ const Technology = () => {
                 />
               </div>
               <ShinyText
-               text={skill.name} disabled={false} speed={3} className='custom-class text-lg text-black'/>
+               text={skill.name} disabled={false} speed={3} className='custom-class text-lg text-pink-300'/>
             </li>
           ))}
         </motion.ul>
