@@ -164,7 +164,7 @@ export default function Work() {
             Our works speaks itself.
           </h2>
           <div className="flex justify-center gap-4 mt-8">
-            <button className="text-white hover:text-orange-500 px-4 py-2 text-sm transition-colors">
+            <button className="text-white hover:text-[#C778DD] px-4 py-2 text-sm transition-colors">
               creative projects
             </button>
             <button className="text-gray-400 hover:text-white px-4 py-2 text-sm transition-colors">
@@ -188,7 +188,7 @@ export default function Work() {
                 transition={{ delay: index * 0.05 }}
                 className="group snap-center shrink-0 w-80 portfolio-card"
               >
-                <div className="relative overflow-hidden rounded-2xl border border-white/10 hover:border-orange-500/50 transition-all duration-300">
+                <div className="relative overflow-hidden rounded-2xl border border-white/10 hover:border-[#C778DD] transition-all duration-300">
                   <div className="aspect-[4/5] relative overflow-hidden">
                     <video
                       src={project.video}
@@ -202,7 +202,7 @@ export default function Work() {
                   </div>
 
                   <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
-                    <p className="text-orange-500 text-xs uppercase tracking-wider mb-2">
+                    <p className="text-[#C778DD] text-xs uppercase tracking-wider mb-2">
                       {project.category}
                     </p>
                     <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
@@ -243,7 +243,7 @@ export default function Work() {
               transition={{ delay: index * 0.1 }}
               className={`group relative cursor-pointer ${project.layout}`}
             >
-              <div className="relative overflow-hidden rounded-2xl border border-white/10 hover:border-orange-500/50 transition-all duration-300 h-full">
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 hover:border-[#C778DD] transition-all duration-300 h-full">
                 <div className="relative overflow-hidden h-full">
                   <video
                     src={project.video}

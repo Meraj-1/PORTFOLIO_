@@ -1,6 +1,5 @@
 import React from "react";
 import { Icon } from "../assests/assets.js";
-import BeamCircle from "../animate_compo/BeamCircle.jsx";
 import { motion } from "framer-motion";
 import RotatingText from "../animate_compo/RotatingText.jsx";
 import ShinyText from "../animate_compo/ShineText.jsx";

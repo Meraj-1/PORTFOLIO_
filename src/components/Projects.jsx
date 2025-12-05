@@ -89,10 +89,6 @@ const ProjectCard = ({ title, images, github, live }) => {
 };
 
 const Projects = () => {
-  const handleAnimationComplete = () => {
-    console.log("All letters have animated!");
-  };
-
   return (
     <section id="projects" className="relative bg-1E1E1E overflow-hidden py-16">
       <div className="container p-4 px-10    lg:px-40 xl:px-60 mx-auto">
