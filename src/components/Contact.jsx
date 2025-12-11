@@ -71,7 +71,7 @@ const ContactUs = () => {
                   <FaEnvelope className="text-[#C778DD] text-sm" />
                 </div>
                 <div>
-                  <span className="block text-gray-400 text-lg mb-1">mohdmerajansari76@gmail.com</span>
+                  <span className="block text-gray-400 text-lg mb-1">mohdmerajansari76@</span>
                 </div>
               </div>
 
