@@ -60,7 +60,7 @@ const ContactUs = () => {
                   <FaPhoneAlt className="text-[#C778DD] text-sm" />
                 </div>
                 <div>
-                  <span className="block text-gray-400 text-lg mb-1">+91 73048 80427</span>
+                  <span className="block text-gray-400 text-lg mb-1">+91 73041 85760</span>
                 </div>
               </div>
 
@@ -71,7 +71,7 @@ const ContactUs = () => {
                   <FaEnvelope className="text-[#C778DD] text-sm" />
                 </div>
                 <div>
-                  <span className="block text-gray-400 text-lg mb-1">info@clicktrick.in</span>
+                  <span className="block text-gray-400 text-lg mb-1">mohdmerajansari76@gmail.com</span>
                 </div>
               </div>
 
@@ -82,9 +82,9 @@ const ContactUs = () => {
                   <FaMapMarkerAlt className="text-[#C778DD] text-sm" />
                 </div>
                 <div className="max-w-[280px] md:max-w-none">
-                  <span className="block text-gray-400 text-sm mb-2 md:mb-0">C/202, Suha Apartment</span>
+                  <span className="block text-gray-400 text-sm mb-2 md:mb-0">Ghatkopar</span>
                   <span className="block text-gray-400 text-sm leading-relaxed">
-                    Opp. Bhraman Society, Syndicate, Kalyan West, Maharashtra 421301
+                    E mumbai, Maharashtra, India - 400077
                   </span>
                 </div>
               </div>
