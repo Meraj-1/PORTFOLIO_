@@ -134,7 +134,7 @@ const ContactUs = () => {
                       type="email"
                       name="email"
                       placeholder="example@email.com"
-                      className="w-full bg-transparent border-b border-gray-600 text-white py-2 focus:border-[#f97316] outline-none transition"
+                      className="w-full bg-transparent border-b border-gray-600 text-white py-2 focus:border-[#C778DD] outline-none transition"
                       required
                     />
                   </div>

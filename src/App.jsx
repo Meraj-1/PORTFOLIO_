@@ -21,7 +21,7 @@ const App = () => {
       <QuoteCard/>
       <div className=''>
       <Technology/>
-      {/* <Work/> */}
+      <Work/>
       <About />
       {/* <Services/> */}
       <InterviewFAQ/>
