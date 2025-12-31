@@ -13,22 +13,22 @@ const Header = () => {
           <img
             src={Icon.logo}
             alt="Logo"
-            className="w-[20px] h-auto cursor-pointer"
+            className="w-[35px] h-auto cursor-pointer"
           />
-          <h1 className="text-white text-lg font-semibold ">MERAJ</h1>
+          <h1 className="text-white text-2xl font-semibold ">PORTFOLIO</h1>
         </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-20 text-base font-medium">
-          <li className="cursor-target">
+          <li className="cursor-target text-2xl">
             <span className=" text-[#C778DD] font-bold">#</span>
             <a href="#about">About</a>
           </li>
-          <li className="cursor-target">
+          <li className="cursor-target text-2xl">
             <span className="text-[#C778DD] font-bold">#</span>
             <a href="#projects">Projects</a>
           </li>
-          <li className="cursor-target">
+          <li className="cursor-target text-2xl">
             <span className="text-[#C778DD] font-bold">#</span>
             <a href="#contact">Contact</a>
           </li>
