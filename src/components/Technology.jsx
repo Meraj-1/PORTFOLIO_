@@ -1,78 +1,126 @@
 // import React from "react";
-// import { Icon } from "../assests/assets.js";
 // import { motion } from "framer-motion";
-// import RotatingText from "../animate_compo/RotatingText.jsx";
-// import ShinyText from "../animate_compo/ShineText.jsx";
+// import { Icon } from "../assests/assets.js";
 
 // const Technology = () => {
 //   return (
-//     <div className="px-4 sm:px-[5vw] md:px-[7vw] bg-1E1E1E lg:px-[15vw] py-10">
-
+//     <section className="bg-black py-32 px-6 md:px-20">
 //       {/* Heading */}
-//       <div className="flex justify-center mt-20 md:mt-30 lg:mb-20 items-center gap-2 mb-10">
-//         <RotatingText
-//           texts={["TOOL'S", "&", "Technologie's"]}
-//           mainClassName="cursor-target px-3 py-1 text-white text-2xl md:text-5xl rounded-lg overflow-hidden"
-//           staggerFrom="last"
-//           initial={{ y: "100%" }}
-//           animate={{ y: 0 }}
-//           exit={{ y: "-120%" }}
-//           staggerDuration={0.025}
-//           splitLevelClassName="overflow-hidden"
-//           transition={{ type: "spring", damping: 30, stiffness: 400 }}
-//           rotationInterval={2000}
-//         />
-//       </div>
-
-//       {/* Skills Grid */}
-//       <motion.ul
-//         initial={{ opacity: 0, y: 20 }}
+//       <motion.div
+//         initial={{ opacity: 0, y: 30 }}
 //         whileInView={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 3 }}
+//         transition={{ duration: 0.6 }}
 //         viewport={{ once: true }}
-//         className="flex flex-wrap gap-6 sm:gap-10 justify-center items-center"
+//         className="mb-20"
 //       >
-//         {[
-//           { name: "HTML", image: Icon.HTML },
-//           { name: "CSS", image: Icon.Css },
-//           { name: "JavaScript", image: Icon.javascript },
-//           { name: "React", image: Icon.react },
-//           {
-//             name: "Node.js",
-//             image:
-//               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSExv78hTzcjlPAXrxbaAy7zTF1KLE_597yjIMxEx00zj0n7U2WM-KH26q6vpk-F7NAjIM&usqp=CAU",
-//           },
-//           {
-//             name: "Express",
-//             image:
-//               "https://tse4.mm.bing.net/th/id/OIP.1fZjQpkRMKTBGN_7H5YnFwHaGL?pid=Api&P=0&h=180",
-//           },
-//           { name: "Mongo DB", image: Icon.Mongo },
-//           { name: "GitHub", image: Icon.github },
-//           { name: "Bootstrap", image: Icon.Bootstrap },
-//           { name: "TailwindCSS", image: Icon.tailwind },
-//         ].map((skill, index) => (
-//           <li
-//             key={index}
-//             className="cursor-target flex flex-col items-center gap-2 group"
-//           >
-//             <div className="w-20 h-20 md:w-36 cursor-pointer rounded-lg p-3 flex items-center justify-center transition-transform duration-300 hover:scale-110">
-//               <img
-//                 src={skill.image}
-//                 alt={skill.name}
-//                 className="h-full w-full object-contain"
-//               />
-//             </div>
-//             <ShinyText
-//               text={skill.name}
-//               disabled={false}
-//               speed={3}
-//               className="custom-class text-lg text-pink-300"
-//             />
-//           </li>
-//         ))}
-//       </motion.ul>
-//     </div>
+//         <h2 className="text-4xl md:text-5xl font-bold text-white">
+//           Technology <span className="text-[#C778DD]">Stack</span>
+//         </h2>
+//         <p className="mt-4 text-gray-400 max-w-xl">
+//           A carefully chosen set of technologies I use to design, build and scale
+//           modern web applications.
+//         </p>
+//       </motion.div>
+
+//       {/* Bento Grid */}
+//       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+//         {/* Frontend */}
+//         <motion.div
+//           whileHover={{ scale: 1.02 }}
+//           className="col-span-1 md:col-span-2 rounded-3xl bg-white/5 border border-white/10 backdrop-blur p-8"
+//         >
+//           <h3 className="text-2xl font-semibold text-white mb-6">
+//             Frontend Development
+//           </h3>
+
+//           <div className="flex flex-wrap gap-6">
+//             {[
+//               { name: "HTML", icon: Icon.HTML },
+//               { name: "CSS", icon: Icon.Css },
+//               { name: "JavaScript", icon: Icon.javascript },
+//               { name: "React", icon: Icon.react },
+//               { name: "Next.js", icon: Icon.react },
+//               { name: "TypeScript", icon: Icon.ts },
+//             ].map((tech, i) => (
+//               <div
+//                 key={i}
+//                 className="flex items-center gap-3 bg-black/30 px-4 py-3 rounded-xl border border-white/10"
+//               >
+//                 <img src={tech.icon} alt={tech.name} className="w-8 h-8" />
+//                 <span className="text-white text-sm font-medium">
+//                   {tech.name}
+//                 </span>
+//               </div>
+//             ))}
+//           </div>
+//         </motion.div>
+
+//         {/* Backend */}
+//         <motion.div
+//           whileHover={{ scale: 1.02 }}
+//           className="rounded-3xl bg-white/5 border border-white/10 backdrop-blur p-8"
+//         >
+//           <h3 className="text-2xl font-semibold text-white mb-6">
+//             Backend & APIs
+//           </h3>
+
+//           <div className="space-y-4">
+//             {[
+//               { name: "Node.js", icon: Icon.node },
+//               { name: "Express", icon: Icon.express },
+//               { name: "MongoDB", icon: Icon.Mongo },
+//             ].map((tech, i) => (
+//               <div
+//                 key={i}
+//                 className="flex items-center gap-4 bg-black/30 px-4 py-3 rounded-xl border border-white/10"
+//               >
+//                 <img src={tech.icon} alt={tech.name} className="w-8 h-8" />
+//                 <span className="text-white font-medium">{tech.name}</span>
+//               </div>
+//             ))}
+//           </div>
+//         </motion.div>
+
+//         {/* Tools */}
+//         <motion.div
+//           whileHover={{ scale: 1.02 }}
+//           className="rounded-3xl bg-white/5 border border-white/10 backdrop-blur p-8"
+//         >
+//           <h3 className="text-2xl font-semibold text-white mb-6">
+//             Styling & Tools
+//           </h3>
+
+//           <div className="flex flex-wrap gap-4">
+//             {[
+//               { name: "Tailwind CSS", icon: Icon.tailwind },
+//               { name: "GitHub", icon: Icon.github },
+//             ].map((tech, i) => (
+//               <div
+//                 key={i}
+//                 className="flex items-center gap-3 bg-black/30 px-4 py-3 rounded-xl border border-white/10"
+//               >
+//                 <img src={tech.icon} alt={tech.name} className="w-8 h-8" />
+//                 <span className="text-white text-sm">{tech.name}</span>
+//               </div>
+//             ))}
+//           </div>
+//         </motion.div>
+
+//         {/* Highlight Card */}
+//         <motion.div
+//           whileHover={{ scale: 1.02 }}
+//           className="rounded-3xl bg-gradient-to-br from-[#C778DD]/20 to-transparent border border-[#C778DD]/30 p-8 flex flex-col justify-center"
+//         >
+//           <h3 className="text-2xl font-bold text-white mb-4">
+//             Full-Stack Focus
+//           </h3>
+//           <p className="text-gray-300 leading-relaxed">
+//             I specialize in building complete MERN applications — from clean,
+//             interactive frontends to secure, scalable backend systems.
+//           </p>
+//         </motion.div>
+//       </div>
+//     </section>
 //   );
 // };
 
@@ -81,109 +129,108 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Icon } from "../assests/assets.js";
 
-/* ===================== UNIQUE TECHNOLOGY SECTION =====================
-   Concept: "Technology as Capabilities"
-   Not just tools — what you can BUILD with them
-================================================ */
-
-const capabilities = [
+const dnaStack = [
   {
-    title: "Frontend Engineering",
-    desc: "Building fast, accessible and visually polished user interfaces.",
-    stack: ["React", "Next.js", "Tailwind", "JavaScript", "TypeScript"],
-    icon: Icon.react,
+    left: { name: "HTML", icon: Icon.HTML },
+    right: { name: "Node.js", icon: Icon.node },
   },
   {
-    title: "Backend Development",
-    desc: "Designing scalable APIs and server-side logic with clean architecture.",
-    stack: ["Node.js", "Express", "MongoDB", "REST APIs"],
-    icon: Icon.node,
+    left: { name: "CSS", icon: Icon.Css },
+    right: { name: "Express", icon: Icon.express },
   },
   {
-    title: "Full‑Stack Applications",
-    desc: "End-to-end MERN applications ready for real-world production use.",
-    stack: ["Auth", "Dashboards", "Admin Panels", "CRUD Systems"],
-    icon: Icon.Mongo,
+    left: { name: "JavaScript", icon: Icon.javascript },
+    right: { name: "MongoDB", icon: Icon.Mongo },
   },
   {
-    title: "UI / UX & Performance",
-    desc: "Smooth interactions, animations and performance-focused design.",
-    stack: ["Framer Motion", "Responsive UI", "Optimization"],
-    icon: Icon.tailwind,
+    left: { name: "React", icon: Icon.react },
+    right: { name: "TypeScript", icon: Icon.ts },
+  },
+  {
+    left: { name: "Next.js", icon: Icon.react },
+    right: { name: "Tailwind", icon: Icon.tailwind },
   },
 ];
 
 const Technology = () => {
   return (
-    <section
-      id="technology"
-      className="relative px-6 md:px-20 py-32 bg-black overflow-hidden"
-    >
-      {/* Subtle Background */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(199,120,221,0.08),transparent)]" />
-
-      {/* Header */}
+    <section className="bg-black py-32 px-6 md:px-20">
+      {/* Heading */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="relative z-10 max-w-3xl mb-24"
+        className="mb-24 text-center"
       >
-        <h2 className="text-5xl font-extrabold text-white leading-tight">
-          What I <span className="text-[#C778DD]">Build</span>
+        <h2 className="text-4xl md:text-5xl font-bold text-white">
+          My <span className="text-[#C778DD]">DNA Stack</span>
         </h2>
-        <p className="mt-6 text-gray-400 text-lg">
-          Technologies are tools — what matters is how they come together to
-          create scalable, high-quality products.
+        <p className="mt-4 text-gray-400 max-w-xl mx-auto">
+          How frontend and backend technologies come together to define my
+          full-stack development process.
         </p>
       </motion.div>
 
-      {/* Capability Cards */}
-      <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
-        {capabilities.map((item, index) => (
-          <motion.div
-            key={item.title}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            viewport={{ once: true }}
-            className="group"
-          >
-            <div className="relative h-full bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-xl transition-all duration-300 hover:border-[#C778DD]/50 hover:-translate-y-1">
-              {/* Icon */}
-              <div className="w-14 h-14 mb-6">
-                <img
-                  src={item.icon}
-                  alt={item.title}
-                  className="w-full h-full object-contain"
-                />
-              </div>
+      {/* DNA Structure */}
+      <div className="relative max-w-5xl mx-auto">
+        {/* Center Line */}
+        <div className="absolute left-1/2 top-0 h-full w-[2px] bg-gradient-to-b from-[#C778DD]/40 via-white/20 to-[#C778DD]/40" />
 
-              {/* Title */}
-              <h3 className="text-2xl font-semibold text-white mb-3">
-                {item.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-gray-400 leading-relaxed mb-6">
-                {item.desc}
-              </p>
-
-              {/* Stack Pills */}
-              <div className="flex flex-wrap gap-2">
-                {item.stack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="text-xs text-[#C778DD] bg-[#C778DD]/10 px-3 py-1 rounded-full"
-                  >
-                    {tech}
+        <div className="space-y-20">
+          {dnaStack.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="relative flex items-center justify-between"
+            >
+              {/* Left Tech */}
+              <div className="w-[45%] flex justify-end">
+                <div className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-xl px-5 py-4 backdrop-blur">
+                  <img
+                    src={item.left.icon}
+                    alt={item.left.name}
+                    className="w-8 h-8 object-contain"
+                  />
+                  <span className="text-white font-medium">
+                    {item.left.name}
                   </span>
-                ))}
+                </div>
               </div>
-            </div>
-          </motion.div>
-        ))}
+
+              {/* Connector Dot */}
+              <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[#C778DD]" />
+
+              {/* Right Tech */}
+              <div className="w-[45%] flex justify-start">
+                <div className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-xl px-5 py-4 backdrop-blur">
+                  <img
+                    src={item.right.icon}
+                    alt={item.right.name}
+                    className="w-8 h-8 object-contain"
+                  />
+                  <span className="text-white font-medium">
+                    {item.right.name}
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Center Identity */}
+        <div className="mt-32 text-center">
+          <h3 className="text-2xl font-bold text-white">
+            Meraj — <span className="text-[#C778DD]">MERN Stack Developer</span>
+          </h3>
+          <p className="mt-3 text-gray-400 max-w-lg mx-auto">
+            I bridge modern frontend experiences with scalable backend systems to
+            build complete, production-ready web applications.
+          </p>
+        </div>
       </div>
     </section>
   );
