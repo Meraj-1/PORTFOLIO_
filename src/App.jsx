@@ -10,6 +10,7 @@ import InterviewFAQ from './components/InterViewFAQ';
 import QuoteCard from './ui/QuoteCard';
 import Work from './components/Work';
 import Services from './components/Services';
+import WorkFlow from './components/WorkFlow';
 const App = () => {
 
   return (
@@ -21,6 +22,7 @@ const App = () => {
       <QuoteCard/>
       <div className=''>
       <Technology/>
+      <WorkFlow/>
       <Work/>
       <About />
       {/* <Services/> */}
