@@ -11,7 +11,7 @@ import QuoteCard from './ui/QuoteCard';
 import Work from './components/Work';
 import Services from './components/Services';
 import WorkFlow from './components/WorkFlow';
-// import TechImpact from './components/TechImpact';
+import TechImpact from './components/TechImpact';
 import SkillProof from './components/SkillProof';
 // import SkillPlayGround from './components/SkillPlayGround';
 const App = () => {
@@ -31,7 +31,7 @@ const App = () => {
       <About />
       {/* <Services/> */}
       <InterviewFAQ/>
-      {/* <TechImpact/> */}
+      <TechImpact/>
       {/* <Projects />    */}
       {/* <SkillPlayGround/> */}
       <Contact />
