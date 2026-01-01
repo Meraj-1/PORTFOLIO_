@@ -13,6 +13,7 @@ import Services from './components/Services';
 import WorkFlow from './components/WorkFlow';
 // import TechImpact from './components/TechImpact';
 import SkillProof from './components/SkillProof';
+// import SkillPlayGround from './components/SkillPlayGround';
 const App = () => {
 
   return (
@@ -32,6 +33,7 @@ const App = () => {
       <InterviewFAQ/>
       {/* <TechImpact/> */}
       {/* <Projects />    */}
+      {/* <SkillPlayGround/> */}
       <Contact />
     <Footer /> 
     </div>

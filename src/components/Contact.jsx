@@ -202,112 +202,190 @@
 // export default ContactUs;
 "use client";
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-
-const steps = [
-  { id: "name", label: "Hey 👋 What’s your name?", type: "text" },
-  { id: "email", label: "Nice to meet you! Your email?", type: "email" },
-  { id: "subject", label: "What’s this about?", type: "text" },
-  { id: "message", label: "Write your message ✨", type: "textarea" },
-];
+import { motion } from "framer-motion";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
-  const [step, setStep] = useState(0);
-  const [form, setForm] = useState({});
-  const [done, setDone] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleNext = () => {
-    if (!form[steps[step].id]) return;
-    if (step === steps.length - 1) {
-      setDone(true);
-    } else {
-      setStep(step + 1);
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    fetch("https://formspree.io/f/xnnqbwow", {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" },
+    })
+      .then((res) => {
+        if (res.ok) {
+          setSubmitted(true);
+          form.reset();
+        } else alert("Something went wrong. Try again.");
+      })
+      .catch(() => alert("Something went wrong. Try again."));
   };
 
   return (
-    <section className="min-h-screen bg-black flex items-center justify-center px-6">
-      <div className="max-w-xl w-full">
-        
-        {/* Header */}
-        <div className="mb-10">
-          <h2 className="text-4xl font-bold text-white">
-            Let’s <span className="text-[#C778DD]">Talk</span>
-          </h2>
-          <p className="text-gray-400 mt-2">
-            A quick conversation — no boring forms.
+    <section className="relative w-full bg-black text-white py-28 px-6 overflow-hidden">
+      {/* Floating Neon Dots */}
+      <motion.div
+        animate={{ x: [0, 50, 0], y: [0, -30, 0] }}
+        transition={{ repeat: Infinity, duration: 15, ease: "easeInOut" }}
+        className="absolute top-[-100px] left-[-100px] w-80 h-80 bg-[#C778DD]/20 rounded-full blur-3xl"
+      />
+      <motion.div
+        animate={{ x: [0, -50, 0], y: [0, 30, 0] }}
+        transition={{ repeat: Infinity, duration: 20, ease: "easeInOut" }}
+        className="absolute bottom-[-100px] right-[-100px] w-96 h-96 bg-[#FF6B6B]/20 rounded-full blur-3xl"
+      />
+
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 relative z-10">
+        {/* Left: Contact Info Card */}
+        <motion.div
+          initial={{ rotateY: -15, opacity: 0 }}
+          whileInView={{ rotateY: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="md:w-[400px] bg-[#111111] p-10 rounded-3xl shadow-2xl relative overflow-hidden"
+        >
+          <h2 className="text-2xl font-bold text-[#C778DD] mb-4">Contact Info</h2>
+          <p className="text-gray-400 mb-8">
+            Get in Touch! I am always open for discussions, collaborations or queries.
           </p>
-        </div>
 
-        {/* Chat Box */}
-        <div className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur">
-          <AnimatePresence mode="wait">
-            {!done ? (
-              <motion.div
-                key={step}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -30 }}
-                transition={{ duration: 0.4 }}
+          {/* Contact Items with neon line connectors */}
+          {[
+            { icon: FaPhoneAlt, text: "+91 73041 85760" },
+            { icon: FaEnvelope, text: "mohdmerajansari76@" },
+            { icon: FaMapMarkerAlt, text: "Ghatkopar, E Mumbai, Maharashtra, India - 400077" },
+          ].map((item, idx) => (
+            <div key={idx} className="flex items-center gap-4 mb-6 relative">
+              {/* Connector Line */}
+              <span className="absolute left-5 top-1/2 w-[2px] h-full bg-[#C778DD]/50 -z-10"></span>
+              <div className="w-10 h-10 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center text-[#C778DD]">
+                <item.icon />
+              </div>
+              <span className="text-gray-400">{item.text}</span>
+            </div>
+          ))}
+
+          {/* Social Icons */}
+          <div className="flex gap-6 mt-12 text-2xl">
+            {[FaTwitter, FaInstagram, FaLinkedin].map((Icon, idx) => (
+              <motion.a
+                key={idx}
+                whileHover={{ scale: 1.4, rotate: 10, color: "#C778DD" }}
+                className="transition cursor-pointer"
+                href="#"
               >
-                {/* Question */}
-                <div className="mb-6">
-                  <div className="inline-block bg-[#C778DD]/10 text-[#C778DD] px-4 py-2 rounded-2xl">
-                    {steps[step].label}
-                  </div>
-                </div>
+                <Icon />
+              </motion.a>
+            ))}
+          </div>
+        </motion.div>
 
-                {/* Input */}
-                {steps[step].type === "textarea" ? (
-                  <textarea
-                    rows={4}
-                    className="w-full bg-transparent border-b border-gray-600 text-white py-2 outline-none focus:border-[#C778DD]"
-                    onChange={(e) =>
-                      setForm({ ...form, [steps[step].id]: e.target.value })
-                    }
-                  />
-                ) : (
-                  <input
-                    type={steps[step].type}
-                    className="w-full bg-transparent border-b border-gray-600 text-white py-2 outline-none focus:border-[#C778DD]"
-                    onChange={(e) =>
-                      setForm({ ...form, [steps[step].id]: e.target.value })
-                    }
-                  />
-                )}
+        {/* Right: Contact Form Card */}
+        <motion.div
+          initial={{ rotateY: 15, opacity: 0 }}
+          whileInView={{ rotateY: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="md:w-[700px] bg-[#0A0A0A] p-10 rounded-3xl shadow-2xl"
+        >
+          {submitted ? (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="text-center py-12 text-green-400 font-semibold text-lg"
+            >
+              🎉 Your message has been sent successfully! Thank you for reaching out.
+            </motion.div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Name Fields */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input
+                  type="text"
+                  name="firstName"
+                  placeholder="First Name"
+                  required
+                  className="bg-transparent border-b border-gray-600 py-2 outline-none focus:border-[#C778DD] transition duration-300"
+                />
+                <input
+                  type="text"
+                  name="lastName"
+                  placeholder="Last Name"
+                  required
+                  className="bg-transparent border-b border-gray-600 py-2 outline-none focus:border-[#C778DD] transition duration-300"
+                />
+              </div>
 
-                {/* Action */}
-                <div className="flex justify-between items-center mt-8">
-                  <span className="text-sm text-gray-500">
-                    Step {step + 1} of {steps.length}
-                  </span>
-                  <button
-                    onClick={handleNext}
-                    className="bg-[#C778DD] text-black px-6 py-2 rounded-xl font-semibold hover:scale-105 transition"
-                  >
-                    {step === steps.length - 1 ? "Send 🚀" : "Next →"}
-                  </button>
+              {/* Email & Phone */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                  className="bg-transparent border-b border-gray-600 py-2 outline-none focus:border-[#C778DD] transition duration-300"
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  required
+                  className="bg-transparent border-b border-gray-600 py-2 outline-none focus:border-[#C778DD] transition duration-300"
+                />
+              </div>
+
+              {/* Subject Radio */}
+              <div>
+                <label className="block text-gray-400 mb-2">Select Subject</label>
+                <div className="flex flex-wrap gap-4">
+                  {["General Inquiry", "Feedback", "Business Inquiry", "Support"].map((option) => (
+                    <label
+                      key={option}
+                      className="flex items-center gap-2 cursor-pointer text-gray-300 hover:text-[#C778DD] transition"
+                    >
+                      <input
+                        type="radio"
+                        name="subject"
+                        value={option}
+                        defaultChecked={option === "General Inquiry"}
+                        className="accent-[#C778DD] w-4 h-4"
+                      />
+                      {option}
+                    </label>
+                  ))}
                 </div>
-              </motion.div>
-            ) : (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="text-center py-12"
+              </div>
+
+              {/* Message */}
+              <div>
+                <textarea
+                  name="message"
+                  rows={4}
+                  placeholder="Write your message..."
+                  required
+                  className="w-full bg-transparent border-b border-gray-600 py-2 outline-none focus:border-[#C778DD] transition duration-300 resize-none"
+                />
+              </div>
+
+              {/* Submit Button */}
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                type="submit"
+                className="w-full md:w-[214px] h-[54px] bg-[#C778DD] hover:bg-[#FF6B6B] border-2 border-black text-white font-semibold text-lg px-8 py-[15px] rounded-[8px] shadow-2xl hover:shadow-black/50 transition-all duration-300 flex items-center justify-center gap-2 ml-auto"
               >
-                <h3 className="text-3xl font-bold text-white mb-4">
-                  Message Sent 🎉
-                </h3>
-                <p className="text-gray-400">
-                  Thanks for reaching out. I’ll get back to you soon.
-                </p>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
+                Send Message
+              </motion.button>
+            </form>
+          )}
+        </motion.div>
       </div>
     </section>
   );
 };
 
 export default Contact;
+
