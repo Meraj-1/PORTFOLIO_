@@ -112,13 +112,13 @@ const Hero = () => {
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ delay: 0.8, duration: 0.6 }}
-                className="absolute left-0 -bottom-2 h-[3px] w-full
+                className="absolute left-0 -bottom-0 border-0 rounded-full h-[3px] w-full
                            bg-gradient-to-r from-[#C778DD] to-indigo-400
                            origin-left"
               />
             </span>
             <br />
-            that perform, scale, and last.
+            that perform, scale,and last.
           </motion.h1>
 
           {/* Description */}
