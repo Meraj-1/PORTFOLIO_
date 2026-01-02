@@ -29,7 +29,7 @@ const QuoteCard = () => {
   return (
     <div className="h-[25vh] flex items-center justify-center px-4">
       <motion.div
-        whileHover={{ scale: 1.03, rotateZ: 1 }}
+        // whileHover={{ scale: 1.03, rotateZ: 1 }}
         className="relative w-full max-w-2xl p-8 bg-gradient-to-br from-[#0f0f0f] to-[#1a1a1a] border border-[#C778DD]/30 rounded-2xl shadow-[0_0_30px_rgba(199,119,221,0.3)] backdrop-blur-sm"
       >
         {/* Top-left glowing quote mark */}
@@ -37,7 +37,7 @@ const QuoteCard = () => {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="absolute -top-4 -left-4 text-5xl text-[#C778DD] opacity-80"
+          className="absolute -top-3 left-4  text-5xl text-[#C778DD] opacity-80"
         >
           “
         </motion.span>
@@ -54,12 +54,12 @@ const QuoteCard = () => {
           transition={{ delay: 0.3 }}
           className="absolute -bottom-6 right-6 flex items-center gap-2 bg-[#2b2f36]/80 px-4 py-1 border border-[#C778DD]/30 rounded-md shadow-[0_0_15px_rgba(199,119,221,0.4)]"
         >
-          <span className="text-[#C778DD] text-xl">”</span>
-          <p className="text-gray-300 font-semibold">Mr. Meraj</p>
+          <span className="text-[#C778DD] absolute -top-2 left-1 text-xl">”</span>
+          <p className="text-gray-300 font-semibold">Mr.Meraj</p>
         </motion.div>
 
         {/* Bottom subtle glow line */}
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#C778DD]/50 via-[#8b5cf6]/40 to-[#f472b6]/40 rounded-t-full animate-pulse"></div>
+        {/* <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#C778DD]/50 via-[#8b5cf6]/40 to-[#f472b6]/40 rounded-t-full animate-pulse"></div> */}
       </motion.div>
     </div>
   );
