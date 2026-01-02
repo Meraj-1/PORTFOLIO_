@@ -129,11 +129,11 @@ const faqs = [
 ];
 
 const InterviewFAQ = () => {
-  const containerRef = useRef(null);
+  const listRef = useRef(null);
   const [active, setActive] = useState(0);
 
   useEffect(() => {
-    const items = containerRef.current.querySelectorAll("[data-index]");
+    const items = listRef.current.querySelectorAll("[data-index]");
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -144,45 +144,43 @@ const InterviewFAQ = () => {
         });
       },
       {
-        threshold: 0.6,
+        rootMargin: "-40% 0px -40% 0px", // 👈 viewport center trigger
       }
     );
 
     items.forEach((el) => observer.observe(el));
-
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section className="bg-black px-6 md:px-20">
+    <section className="bg-black text-white px-6 md:px-20 py-40">
       {/* Heading */}
-      <div className="max-w-4xl py-32">
-        <h2 className="text-4xl md:text-5xl font-bold text-white">
+      <div className="max-w-4xl mb-24">
+        <h2 className="text-4xl md:text-5xl font-bold">
           Interview <span className="text-[#C778DD]">Simulation</span>
         </h2>
         <p className="mt-4 text-gray-400">
-          Scroll down — questions change automatically.
+          Scroll down — answers update automatically.
         </p>
       </div>
 
-      {/* SCROLL CONTAINER */}
-      <div
-        ref={containerRef}
-        className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12"
-      >
-        {/* QUESTIONS (SCROLL SIDE) */}
-        <div className="space-y-32 pb-32">
+      {/* MAIN LAYOUT */}
+      <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+        
+        {/* LEFT — QUESTIONS (SCROLL AREA) */}
+        <div ref={listRef} className="space-y-[60vh] pb-[40vh]">
           {faqs.map((item, index) => (
             <div
               key={index}
               data-index={index}
-              className="min-h-[60vh] flex items-center"
+              className="min-h-[40vh] flex items-center"
             >
               <motion.div
                 animate={{
                   opacity: active === index ? 1 : 0.3,
                   scale: active === index ? 1 : 0.95,
                 }}
+                transition={{ duration: 0.3 }}
                 className={`p-6 rounded-2xl border backdrop-blur
                   ${
                     active === index
@@ -190,10 +188,10 @@ const InterviewFAQ = () => {
                       : "bg-white/5 border-white/10"
                   }`}
               >
-                <span className="block text-xs uppercase tracking-widest text-[#C778DD] mb-2">
+                <span className="text-xs uppercase tracking-widest text-[#C778DD] mb-2 block">
                   Question {index + 1}
                 </span>
-                <p className="text-white text-lg font-medium">
+                <p className="text-lg font-medium">
                   {item.question}
                 </p>
               </motion.div>
@@ -201,16 +199,16 @@ const InterviewFAQ = () => {
           ))}
         </div>
 
-        {/* ANSWER (STICKY) */}
-        <div className="sticky top-32 h-fit">
+        {/* RIGHT — ANSWER (ALWAYS VISIBLE) */}
+        <div className="sticky top-1/2 -translate-y-1/2 h-fit">
           <AnimatePresence mode="wait">
             <motion.div
               key={active}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4 }}
-              className="bg-white/5 border border-white/10 rounded-3xl p-10 backdrop-blur"
+              transition={{ duration: 0.5 }}
+              className="bg-white/5 border border-white/10 rounded-3xl p-10 backdrop-blur-xl shadow-xl"
             >
               <span className="text-xs uppercase tracking-widest text-[#C778DD]">
                 Answer
@@ -221,6 +219,7 @@ const InterviewFAQ = () => {
             </motion.div>
           </AnimatePresence>
         </div>
+
       </div>
     </section>
   );
