@@ -48,59 +48,8 @@ const projects = [
     image: "/clientlogos/cookease.png",
     href:"https://ecom-forever-2.vercel.app/",
     layout: "md:col-span-3 lg:col-span-5 row-span-2",
-  },
-  // {
-  //   id: 5,
-  //   title: "Seven Hours",
-  //   subtitle: "Brand Creation",
-  //   category: "Brand",
-  //   tags: [
-  //     "Branding",
-  //     "website development",
-  //     "Digital marketing",
-  //     "SEO",
-  //     "Events Management",
-  //   ],
-  //   image: "/clientlogos/sevenhours.png",
-  //   video:
-  //     "https://mediavault.clicktrick.in/uploads/68e60be1d265d81a1fca3c06/videos/8765534a-ecf9-4c28-a19b-7b44234e2bf7.webm",
-  //   layout: "md:col-span-6 lg:col-span-4 row-span-4",
-  // },
-  // {
-  //   id: 6,
-  //   title: "Estatein",
-  //   subtitle: "Estatein",
-  //   category: "",
-  //   tags: [],
-  //   image:
-  //     "https://mediavault.clicktrick.in/uploads/68e60be1d265d81a1fca3c06/images/optimized/fbb85bcb-001e-4657-9c6a-f74051229c58.webp",
-  //   video: "https://mediavault.clicktrick.in/uploads/68e60be1d265d81a1fca3c06/videos/1352b120-41cf-4d1b-872b-791804fd0c85.webm",
-  //   layout: "md:col-span-3 lg:col-span-8 row-span-2",
-  // },
-  // {
-  //   id: 7,
-  //   title: "Stability.ai",
-  //   subtitle: "Stable Diffusion 3.5",
-  //   category: "AI Generation",
-  //   tags: ["SD3.5 Large", "SD3.5 Large Turbo"],
-  //   image:
-  //     "https://images.squarespace-cdn.com/content/v1/6213c340453c3f502425776e/a3485d53-7e65-42b5-bc62-e2e55f8409b9/stability-ai-white-dot-desktop.png?format=1500w",
-  //   video: "https://files.catbox.moe/toocyj.mp4",
-  //   layout: "md:col-span-3 lg:col-span-4 row-span-2",
-  // },
-  // {
-  //   id: 8,
-  //   title: "Kling AI",
-  //   subtitle: "Alicloud Video",
-  //   category: "Cloud Solutions",
-  //   tags: ["Alicloud Video", "Minimax Video"],
-  //   image:
-  //     "https://mediavault.clicktrick.in/uploads/68e60be1d265d81a1fca3c06/images/optimized/e4cfdec5-0ec6-4397-ac78-67295fb7fb1f.webp",
-  //   video:
-  //     "https://p4-kling.klingai.com/kcdn/cdn-kcdn112452/kling-website/web-page2-6-new.mp4",
-  //   layout: "md:col-span-3 lg:col-span-4 row-span-2",
-  // },
-];
+  }
+]
 
 export default function Work() {
   const mobileCarouselRef = useRef(null);

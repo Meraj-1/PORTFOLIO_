@@ -59,9 +59,9 @@ const WorkFlow = () => {
 
       {/* Timeline */}
       <div className="relative max-w-4xl mx-auto">
-        <div className="absolute left-4 top-0 h-full w-px bg-white/10" />
+        <div className="absolute left-[14px] top-0 h-full w-px bg-[#bd61d6]" />
 
-        <div className="space-y-16">
+        <div className="space-y-1">
           {workflow.map((item, index) => (
             <motion.div
               key={item.step}

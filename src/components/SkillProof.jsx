@@ -41,7 +41,7 @@ const skillProof = [
   },
   {
     name: "TypeScript",
-    icon: Icon.ts,
+    icon: "https://tse3.mm.bing.net/th/id/OIP.E28SpuD-4LR72_fyxs6JcAHaHa?pid=Api&P=0&h=180",
     points: [
       "Type-safe components & APIs",
       "Reduced runtime bugs",

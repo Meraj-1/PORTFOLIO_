@@ -18,17 +18,19 @@ const dnaStack = [
   },
   {
     left: { name: "React", icon: Icon.react },
-    right: { name: "TypeScript", icon: Icon.ts },
+    right: { name: "TypeScript", icon: "https://tse3.mm.bing.net/th/id/OIP.E28SpuD-4LR72_fyxs6JcAHaHa?pid=Api&P=0&h=180"
+     },
   },
   {
-    left: { name: "Next.js", icon: Icon.react },
+    left: { name: "Next.js", icon: "https://tse3.mm.bing.net/th/id/OIP.T4Cc6edg_0mlnnAFE1ha5gHaHa?pid=Api&P=0&h=180"
+     },
     right: { name: "Tailwind", icon: Icon.tailwind },
   },
 ];
 
 const Technology = () => {
   return (
-    <section className="bg-black py-32 px-6 md:px-20">
+    <section className="bg-black py-32 px-6 md:px-50">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +64,7 @@ const Technology = () => {
       {/* DNA Structure */}
       <div className="relative max-w-5xl mx-auto">
         {/* Center Line */}
-        <div className="absolute left-1/2 top-0 h-full w-[2px] bg-gradient-to-b from-[#C778DD]/40 via-white/20 to-[#C778DD]/40" />
+        <div className="absolute left-1/2 top-0 h-[47em] w-[2px] bg-gradient-to-b from-[#C778DD]/40 via-white/20 to-[#C778DD]/40" />
 
         <div className="space-y-20">
           {dnaStack.map((item, index) => (
