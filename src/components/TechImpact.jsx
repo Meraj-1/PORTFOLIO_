@@ -11,7 +11,7 @@ const impactMap = [
   },
   {
     tech: "Next.js",
-    icon: Icon.react,
+    icon: "https://tse3.mm.bing.net/th/id/OIP.T4Cc6edg_0mlnnAFE1ha5gHaHa?pid=Api&P=0&h=180",
     use: "Server-side rendering & SEO",
     impact: "Better performance and search visibility",
   },
