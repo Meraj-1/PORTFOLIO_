@@ -1,152 +1,224 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 
-const projects = [
+export default function Work() {
+
+  const projects = [
   {
     id: 1,
     title: "EDEN ROSE",
-    category: "Website Development",
-    tags: ["React", "Tailwind", "Motion"],
-    video: "https://mediavault.clicktrick.in/uploads/68e60be1d265d81a1fca3c06/videos/d864b282-e067-42ee-aab8-c9141b58d5e5.webm",
+    category: "Photography Portfolio Website",
+    video:
+      "https://mediavault.clicktrick.in/uploads/68e60be1d265d81a1fca3c06/videos/d864b282-e067-42ee-aab8-c9141b58d5e5.webm",
     href: "https://photography-coral-mu.vercel.app/",
-    offset: "lg:ml-[8%]",
+
+    summary: {
+      goal:
+        "Design a visually immersive photography portfolio that highlights emotions, storytelling, and premium aesthetics.",
+      problem:
+        "The client needed a modern portfolio that feels luxurious and cinematic without sacrificing performance or usability.",
+      solution:
+        "Built a motion-driven website with fullscreen visuals, subtle animations, and optimized media loading to maintain speed.",
+      features: [
+        "Cinematic fullscreen video sections",
+        "Smooth Framer Motion animations",
+        "Responsive gallery layout",
+        "Optimized image & video loading",
+      ],
+      techStack: ["React", "Tailwind CSS", "Framer Motion", "Vercel"],
+      role: "Frontend Developer & UI Designer",
+      duration: "2 Weeks",
+      outcome:
+        "Delivered a premium portfolio experience that enhances brand identity and improves client engagement.",
+    },
   },
+
   {
     id: 2,
     title: "Real Estatein",
-    category: "Web Platform",
-    tags: ["Frontend", "UI/UX"],
-    video: "https://mediavault.clicktrick.in/uploads/68e60be1d265d81a1fca3c06/videos/a5a41d93-af5d-4f4a-bb96-f56d48bacc5f.mp4",
+    category: "Real Estate Business Website",
+    video:
+      "https://mediavault.clicktrick.in/uploads/68e60be1d265d81a1fca3c06/videos/a5a41d93-af5d-4f4a-bb96-f56d48bacc5f.mp4",
     href: "https://real-estate2-psi.vercel.app/",
-    offset: "lg:ml-[38%]",
+
+    summary: {
+      goal:
+        "Create a clean and professional real estate platform to showcase property listings effectively.",
+      problem:
+        "Users needed an easy-to-navigate interface to browse properties without feeling overwhelmed by information.",
+      solution:
+        "Designed a card-based layout with clear typography, intuitive navigation, and a mobile-first approach.",
+      features: [
+        "Modern property listing cards",
+        "Clean and minimal UI",
+        "Mobile-first responsive design",
+        "Fast page navigation",
+      ],
+      techStack: ["React", "Tailwind CSS", "JavaScript"],
+      role: "Frontend Developer",
+      duration: "10 Days",
+      outcome:
+        "Improved property visibility and user experience, making browsing simple and efficient.",
+    },
   },
+
   {
     id: 3,
     title: "Estatein",
-    category: "Landing Experience",
-    tags: ["React", "JS"],
-    video: "https://mediavault.clicktrick.in/uploads/68e60be1d265d81a1fca3c06/videos/e1f18114-9a37-40e5-a711-afccacf20861.mp4",
+    category: "Real Estate Landing Page",
+    video:
+      "https://mediavault.clicktrick.in/uploads/68e60be1d265d81a1fca3c06/videos/e1f18114-9a37-40e5-a711-afccacf20861.mp4",
     href: "https://real-estate-henna-nine.vercel.app/",
-    offset: "lg:ml-[15%]",
+
+    summary: {
+      goal:
+        "Build a high-conversion landing page for a real estate brand with a strong visual appeal.",
+      problem:
+        "The challenge was to present trust, clarity, and modern design within a limited content structure.",
+      solution:
+        "Focused on bold sections, clear CTAs, and a structured layout that guides users naturally.",
+      features: [
+        "High-impact hero section",
+        "Clear call-to-action layout",
+        "Minimal yet modern UI",
+        "Optimized for conversions",
+      ],
+      techStack: ["React", "Tailwind CSS", "JavaScript"],
+      role: "Frontend Developer",
+      duration: "1 Week",
+      outcome:
+        "Created a conversion-focused landing page that strengthens brand credibility and user trust.",
+    },
   },
+
   {
     id: 4,
     title: "ECOM-WEB",
-    category: "E-Commerce",
-    tags: ["UI", "Performance"],
-    video: "https://mediavault.clicktrick.in/uploads/68e60be1d265d81a1fca3c06/videos/f68c3592-94c1-4601-a798-5181df00075e.mp4",
+    category: "E-Commerce Website",
+    video:
+      "https://mediavault.clicktrick.in/uploads/68e60be1d265d81a1fca3c06/videos/f68c3592-94c1-4601-a798-5181df00075e.mp4",
     href: "https://ecom-forever-2.vercel.app/",
-    offset: "lg:ml-[45%]",
+
+    summary: {
+      goal:
+        "Develop a modern e-commerce frontend with a smooth shopping experience.",
+      problem:
+        "Users often drop off when interfaces are cluttered or slow, especially on mobile devices.",
+      solution:
+        "Built a clean and fast UI with product-focused layouts and smooth interactions.",
+      features: [
+        "Product-focused UI design",
+        "Clean category & product sections",
+        "Responsive shopping layout",
+        "Fast and smooth interactions",
+      ],
+      techStack: ["React", "Tailwind CSS"],
+      role: "Frontend Developer",
+      duration: "2 Weeks",
+      outcome:
+        "Delivered a user-friendly shopping experience with improved engagement and clarity.",
+    },
   },
 ];
 
-export default function Work() {
   return (
-    <section className="relative min-h-screen bg-[#07080b] py-40 overflow-hidden">
-      {/* 🌫️ Atmospheric Fog */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-[#C778DD]/15 blur-[200px]" />
-        <div className="absolute bottom-0 right-1/3 w-[600px] h-[600px] bg-cyan-500/10 blur-[180px]" />
-      </div>
-
-      {/* 🧠 TITLE */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-        className="text-center mb-32 px-6"
-      >
-        <h2 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight">
-          Project <span className="text-[#C778DD]">Archive</span>
-        </h2>
-        <p className="mt-6 max-w-xl mx-auto text-gray-400">
-          A frozen timeline of digital experiments — hover to re-activate.
-        </p>
-      </motion.div>
-
-      {/* 🧊 HOLOGRAM STACK */}
-      <div className="relative space-y-32 max-w-7xl mx-auto px-6">
-        {projects.map((project, i) => (
-          <motion.a
+    <section className="bg-[#07080b] py-32 px-6 md:px-20">
+      <div className="max-w-7xl mx-auto space-y-40">
+        {projects.map((project, index) => (
+          <motion.div
             key={project.id}
-            href={project.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            initial={{ opacity: 0, y: 80 }}
+            initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, delay: i * 0.15 }}
-            whileHover="active"
-            className={`group block relative w-full max-w-[520px] ${project.offset}`}
+            transition={{ duration: 0.8 }}
+            className={`grid md:grid-cols-2 gap-16 items-center ${
+              index % 2 !== 0 ? "md:grid-flow-dense" : ""
+            }`}
           >
-            {/* Glass Capsule */}
-            <motion.div
-              variants={{
-                active: { rotateX: 0, rotateY: 0 },
-              }}
-              className="relative rounded-[32px] overflow-hidden
-              border border-white/15
-              bg-white/5 backdrop-blur-2xl
-              shadow-[0_40px_120px_rgba(0,0,0,0.7)]"
-              style={{ transformStyle: "preserve-3d" }}
+            {/* 🎥 VIDEO SIDE */}
+            <div
+              className={`relative rounded-3xl overflow-hidden border border-white/10 ${
+                index % 2 !== 0 ? "md:col-start-2" : ""
+              }`}
             >
-              {/* Video Hologram */}
-              <motion.video
+              <video
                 src={project.video}
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="w-full h-[420px] object-cover
-                grayscale group-hover:grayscale-0
-                transition-all duration-700"
+                className="w-full h-[420px] object-cover"
               />
 
-              {/* Scan Lines */}
-              <div className="absolute inset-0 pointer-events-none opacity-40
-                bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px)]
-                bg-[size:100%_4px]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
 
-              {/* Hologram Tint */}
-              <div className="absolute inset-0 bg-gradient-to-t
-                from-black/80 via-black/20 to-transparent" />
+              <a
+                href={project.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute top-4 right-4 p-2 rounded-full bg-white/10 backdrop-blur"
+              >
+                <ExternalLink className="text-white" />
+              </a>
+            </div>
 
-              {/* Content */}
-              <div className="absolute bottom-0 p-6">
-                <p className="text-xs uppercase tracking-widest text-[#C778DD] mb-2">
-                  {project.category}
+            {/* 🧠 SUMMARY SIDE */}
+            <div className="text-white space-y-6">
+              <p className="text-sm uppercase tracking-widest text-[#C778DD]">
+                {project.category}
+              </p>
+
+              <h3 className="text-3xl font-extrabold">
+                {project.title}
+              </h3>
+
+              <div className="space-y-4 text-gray-300 leading-relaxed">
+                <p>
+                  <span className="text-white font-semibold">Goal:</span>{" "}
+                  {project.summary.goal}
                 </p>
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  {project.title}
-                </h3>
 
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map(tag => (
-                    <span
-                      key={tag}
-                      className="text-xs px-3 py-1 rounded-full
-                      bg-white/10 text-gray-300"
-                    >
-                      {tag}
-                    </span>
+                <p>
+                  <span className="text-white font-semibold">Problem:</span>{" "}
+                  {project.summary.problem}
+                </p>
+
+                <p>
+                  <span className="text-white font-semibold">Solution:</span>{" "}
+                  {project.summary.solution}
+                </p>
+              </div>
+
+              {/* FEATURES */}
+              <div>
+                <p className="text-white font-semibold mb-2">
+                  Key Features
+                </p>
+                <ul className="grid grid-cols-2 gap-2 text-sm text-gray-300">
+                  {project.summary.features.map((feature) => (
+                    <li key={feature}>• {feature}</li>
                   ))}
-                </div>
+                </ul>
               </div>
 
-              {/* Activate Icon */}
-              <div className="absolute top-5 right-5 opacity-0 group-hover:opacity-100 transition">
-                <div className="p-2 rounded-full bg-white/10 backdrop-blur-md">
-                  <ExternalLink size={18} className="text-white" />
-                </div>
+              {/* META */}
+              <div className="flex flex-wrap gap-3 pt-4">
+                {project.summary.techStack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="text-xs px-3 py-1 rounded-full bg-white/10"
+                  >
+                    {tech}
+                  </span>
+                ))}
               </div>
 
-              {/* Energy Edge */}
-              <div className="absolute inset-0 rounded-[32px]
-                group-hover:shadow-[0_0_80px_#C778DD55]
-                transition-all duration-700" />
-            </motion.div>
-          </motion.a>
+              <div className="pt-4 text-sm text-gray-400">
+                Role: {project.summary.role} • Duration:{" "}
+                {project.summary.duration}
+              </div>
+            </div>
+          </motion.div>
         ))}
       </div>
     </section>
