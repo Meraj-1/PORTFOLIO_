@@ -89,7 +89,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="/meraj.ansari.pdf"
+              href="/meraj_ansari.pdf"
               download
               className="cursor-target px-9 py-3 rounded-md
                          border border-white/20 text-white
