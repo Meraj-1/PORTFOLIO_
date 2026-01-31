@@ -39,15 +39,15 @@ const skillProof = [
       "Handled real-world data models",
     ],
   },
-  {
-    name: "TypeScript",
-    icon: "https://tse3.mm.bing.net/th/id/OIP.E28SpuD-4LR72_fyxs6JcAHaHa?pid=Api&P=0&h=180",
-    points: [
-      "Type-safe components & APIs",
-      "Reduced runtime bugs",
-      "Improved code maintainability",
-    ],
-  },
+  // {
+  //   name: "TypeScript",
+  //   icon: "https://tse3.mm.bing.net/th/id/OIP.E28SpuD-4LR72_fyxs6JcAHaHa?pid=Api&P=0&h=180",
+  //   points: [
+  //     "Type-safe components & APIs",
+  //     "Reduced runtime bugs",
+  //     "Improved code maintainability",
+  //   ],
+  // },
   {
     name: "Tailwind CSS",
     icon: Icon.tailwind,
