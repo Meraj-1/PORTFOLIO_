@@ -5,7 +5,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="w-full  text-white md:pt-5 pt-2 md:p-0 z-50">
+// bg-[#121316]
+    <header className="w-full border-b-[1px] border-gray-500 top-0 sticky bg-black z-50  text-white md:p-3 pt-2 ">
       {/* Navbar */}
       <nav className="container mx-auto flex items-center justify-between px-5 py-2">
         {/* Logo */}
@@ -15,7 +16,7 @@ const Header = () => {
             alt="Logo"
             className="w-[35px] h-auto cursor-pointer"
           />
-          <h1 className="text-white text-2xl font-semibold ">PORTFOLIO</h1>
+          <h1 className="text-white text-2xl font-semibold ">MERAJ</h1>
         </div>
 
         {/* Desktop Menu */}

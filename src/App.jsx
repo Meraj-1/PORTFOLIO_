@@ -15,9 +15,8 @@ import TechImpact from './components/TechImpact';
 import SkillProof from './components/SkillProof';
 // import SkillPlayGround from './components/SkillPlayGround';
 const App = () => {
-
   return (
-  <div className='bg-[#121316]'>
+  <div className='bg-black'>
      <Header />
      <div>
       {/* <Header/> */}
