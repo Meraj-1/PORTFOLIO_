@@ -29,7 +29,7 @@ const App = () => {
       <Work/>
       <About />
       {/* <Services/> */}
-      <InterviewFAQ/>
+      {/* <InterviewFAQ/> */}
       <TechImpact/>
       {/* <Projects />    */}
       {/* <SkillPlayGround/> */}

@@ -158,11 +158,11 @@ export default function Work() {
                 rel="noopener noreferrer"
                 className="absolute top-4 right-4 p-2 rounded-full bg-white/10 backdrop-blur"
               >
+            
                 <ExternalLink className="text-white" />
               </a>
             </div>
 
-            {/* 🧠 SUMMARY SIDE */}
             <div className="text-white space-y-6">
               <p className="text-sm uppercase tracking-widest text-[#C778DD]">
                 {project.category}
