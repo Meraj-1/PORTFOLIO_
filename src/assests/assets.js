@@ -24,7 +24,6 @@ import ecom2 from "./ecom-p2.png"
 import estate1 from "./estate1.png"
 import estate2 from "./estate2.png"
 // import Herobg from "./Herobg.jpg"
-import person from "./person.jpg"
 import zerodha1 from "./zerodha1.png"
 import zerodha2 from "./zerodha2.png"
 // import Backgroundclip from "./Background.mp4"
@@ -48,8 +47,6 @@ export const Icon = {
     Linkedin,
     Twitter,
     github,
-    Twitter,
-    Linkedin,
     close,
     open,
     docker,
@@ -87,4 +84,3 @@ export const Icon = {
     zerodha2
     // Herobg
 };
-

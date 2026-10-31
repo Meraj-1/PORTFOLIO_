@@ -1,17 +1,16 @@
+import React from "react";
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { ArrowUpRight, Github } from "lucide-react";
+import { Icon } from "../assests/assets.js";
 
-export default function Work() {
-
-  const projects = [
+const projects = [
   {
     id: 1,
     title: "EDEN ROSE",
-    category: "Photography Portfolio Website",
+    category: "Photography portfolio",
     video:
       "https://mediavault.clicktrick.in/uploads/68e60be1d265d81a1fca3c06/videos/d864b282-e067-42ee-aab8-c9141b58d5e5.webm",
     href: "https://photography-coral-mu.vercel.app/",
-
     summary: {
       goal:
         "Design a visually immersive photography portfolio that highlights emotions, storytelling, and premium aesthetics.",
@@ -32,15 +31,14 @@ export default function Work() {
         "Delivered a premium portfolio experience that enhances brand identity and improves client engagement.",
     },
   },
-
   {
     id: 2,
     title: "Real Estatein",
-    category: "Real Estate Business Website",
+    category: "Real estate business website",
     video:
       "https://mediavault.clicktrick.in/uploads/68e60be1d265d81a1fca3c06/videos/a5a41d93-af5d-4f4a-bb96-f56d48bacc5f.mp4",
     href: "https://real-estate2-psi.vercel.app/",
-
+    poster: Icon.estate2,
     summary: {
       goal:
         "Create a clean and professional real estate platform to showcase property listings effectively.",
@@ -61,15 +59,15 @@ export default function Work() {
         "Improved property visibility and user experience, making browsing simple and efficient.",
     },
   },
-
   {
     id: 3,
     title: "Estatein",
-    category: "Real Estate Landing Page",
+    category: "Real estate landing page",
     video:
       "https://mediavault.clicktrick.in/uploads/68e60be1d265d81a1fca3c06/videos/e1f18114-9a37-40e5-a711-afccacf20861.mp4",
     href: "https://real-estate-henna-nine.vercel.app/",
-
+    poster: Icon.estate1,
+    github: "https://github.com/Meraj-1/Real-Estate",
     summary: {
       goal:
         "Build a high-conversion landing page for a real estate brand with a strong visual appeal.",
@@ -90,18 +88,17 @@ export default function Work() {
         "Created a conversion-focused landing page that strengthens brand credibility and user trust.",
     },
   },
-
   {
     id: 4,
     title: "ECOM-WEB",
-    category: "E-Commerce Website",
+    category: "E-commerce website",
     video:
       "https://mediavault.clicktrick.in/uploads/68e60be1d265d81a1fca3c06/videos/f68c3592-94c1-4601-a798-5181df00075e.mp4",
     href: "https://ecom-forever-2.vercel.app/",
-
+    poster: Icon.ecom1,
+    github: "https://github.com/Meraj-1/Ecom_Backend",
     summary: {
-      goal:
-        "Develop a modern e-commerce frontend with a smooth shopping experience.",
+      goal: "Develop a modern e-commerce frontend with a smooth shopping experience.",
       problem:
         "Users often drop off when interfaces are cluttered or slow, especially on mobile devices.",
       solution:
@@ -121,106 +118,165 @@ export default function Work() {
   },
 ];
 
-  return (
-    <section className="bg-[#07080b] py-32 px-6 md:px-20">
-      <div className="max-w-7xl mx-auto space-y-40">
+const ProjectCard = ({ project, index }) => (
+  <motion.article
+    className="project-card"
+    initial={{ opacity: 0, y: 16 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.12 }}
+    transition={{ duration: 0.45, delay: index * 0.04 }}
+  >
+    <div className="project-media">
+      <video
+        src={project.video}
+        poster={project.poster}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="none"
+        aria-hidden="true"
+      />
+      <a
+        className="project-open"
+        href={project.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Visit ${project.title} project`}
+      >
+        <ArrowUpRight size={19} aria-hidden="true" />
+      </a>
+    </div>
+
+    <div className="project-content">
+      <span className="project-meta">
+        {String(index + 1).padStart(2, "0")} / 04 · {project.category}
+      </span>
+      <h3>{project.title}</h3>
+
+      <div className="project-description">
+        <p>
+          <strong>Goal</strong> {project.summary.goal}
+        </p>
+        <p>
+          <strong>Challenge</strong> {project.summary.problem}
+        </p>
+        <p>
+          <strong>Approach</strong> {project.summary.solution}
+        </p>
+      </div>
+
+      <div className="project-details">
+        <div>
+          <span className="project-detail-label">Key features</span>
+          <ul className="project-features">
+            {project.summary.features.map((feature) => (
+              <li key={feature}>{feature}</li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <span className="project-detail-label">Built with</span>
+          <ul className="project-stack">
+            {project.summary.techStack.map((technology) => (
+              <li key={technology}>{technology}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <p className="project-outcome">
+        <strong>Outcome</strong> {project.summary.outcome}
+      </p>
+      <p className="project-outcome">
+        {project.summary.role} · {project.summary.duration}
+      </p>
+      <div className="project-links">
+        <a href={project.href} target="_blank" rel="noopener noreferrer">
+          Visit project <ArrowUpRight size={15} aria-hidden="true" />
+        </a>
+        {project.github && (
+          <a href={project.github} target="_blank" rel="noopener noreferrer">
+            <Github size={15} aria-hidden="true" />
+            Source code <ArrowUpRight size={15} aria-hidden="true" />
+          </a>
+        )}
+      </div>
+    </div>
+  </motion.article>
+);
+
+const Work = () => (
+  <section className="section" id="projects">
+    <div className="site-container">
+      <div className="section-heading">
+        <div>
+          <span className="section-index">04 — Selected work</span>
+          <h2>Built to make<br />an impact.</h2>
+        </div>
+        <p>
+          A selection of recent work, from thoughtful brand experiences to
+          practical products built for the real world.
+        </p>
+      </div>
+
+      <div className="work-list">
         {projects.map((project, index) => (
-          <motion.div
-            key={project.id}
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className={`grid md:grid-cols-2 gap-16 items-center ${
-              index % 2 !== 0 ? "md:grid-flow-dense" : ""
-            }`}
-          >
-            {/* 🎥 VIDEO SIDE */}
-            <div
-              className={`relative rounded-3xl overflow-hidden border border-white/10 ${
-                index % 2 !== 0 ? "md:col-start-2" : ""
-              }`}
-            >
-              <video
-                src={project.video}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-[420px] object-cover"
-              />
-
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-
-              <a
-                href={project.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute top-4 right-4 p-2 rounded-full bg-white/10 backdrop-blur"
-              >
-            
-                <ExternalLink className="text-white" />
-              </a>
-            </div>
-
-            <div className="text-white space-y-6">
-              <p className="text-sm uppercase tracking-widest text-[#C778DD]">
-                {project.category}
-              </p>
-
-              <h3 className="text-3xl font-extrabold">
-                {project.title}
-              </h3>
-
-              <div className="space-y-4 text-gray-300 leading-relaxed">
-                <p>
-                  <span className="text-white font-semibold">Goal:</span>{" "}
-                  {project.summary.goal}
-                </p>
-
-                <p>
-                  <span className="text-white font-semibold">Problem:</span>{" "}
-                  {project.summary.problem}
-                </p>
-
-                <p>
-                  <span className="text-white font-semibold">Solution:</span>{" "}
-                  {project.summary.solution}
-                </p>
-              </div>
-
-              {/* FEATURES */}
-              <div>
-                <p className="text-white font-semibold mb-2">
-                  Key Features
-                </p>
-                <ul className="grid grid-cols-2 gap-2 text-sm text-gray-300">
-                  {project.summary.features.map((feature) => (
-                    <li key={feature}>• {feature}</li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* META */}
-              <div className="flex flex-wrap gap-3 pt-4">
-                {project.summary.techStack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="text-xs px-3 py-1 rounded-full bg-white/10"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              <div className="pt-4 text-sm text-gray-400">
-                Role: {project.summary.role} • Duration:{" "}
-                {project.summary.duration}
-              </div>
-            </div>
-          </motion.div>
+          <ProjectCard key={project.id} project={project} index={index} />
         ))}
       </div>
-    </section>
-  );
-}
+
+      <div className="repository-heading" id="github">
+        <div>
+          <span className="section-index">GitHub / Source</span>
+          <h3>Project repositories.</h3>
+          <p>Explore the code behind selected projects.</p>
+        </div>
+        <a
+          className="button-secondary"
+          href="https://github.com/Meraj-1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Github size={16} aria-hidden="true" />
+          GitHub profile
+          <ArrowUpRight size={16} aria-hidden="true" />
+        </a>
+      </div>
+      <div className="repository-grid">
+        <a
+          className="repository-card"
+          href="https://github.com/Meraj-1/Ecom_Backend"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="project-meta">E-commerce · MERN</span>
+          <span className="repository-title">Shopping platform</span>
+          <span className="repository-link">View repository <ArrowUpRight size={15} /></span>
+        </a>
+        <a
+          className="repository-card"
+          href="https://github.com/Meraj-1/Real-Estate"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="project-meta">Real estate · React / Next.js</span>
+          <span className="repository-title">Real Estate</span>
+          <span className="repository-link">View repository <ArrowUpRight size={15} /></span>
+        </a>
+        <a
+          className="repository-card"
+          href="https://github.com/Meraj-1/Zerodha.2.0/tree/main/frontend"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="project-meta">Trading UI · React</span>
+          <span className="repository-title">Zerodha Clone</span>
+          <span className="repository-link">View repository <ArrowUpRight size={15} /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+);
+
+export default Work;
