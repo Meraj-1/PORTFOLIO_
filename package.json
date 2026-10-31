@@ -62,6 +62,7 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.20",
+    "jest-watch-typeahead": "^1.1.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15"
   }

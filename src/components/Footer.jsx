@@ -1,4 +1,5 @@
 import React from "react";
+import { getProjectSlugFromPath } from "../utils/routes";
 
 const socialLinks = [
   { label: "GitHub", href: "https://github.com/Meraj-1" },
@@ -9,7 +10,12 @@ const socialLinks = [
 const Footer = () => (
   <footer className="site-footer">
     <div className="site-container footer-inner">
-      <a className="footer-brand" href="#home">MERAJ ANSARI</a>
+      <a
+        className="footer-brand"
+        href={getProjectSlugFromPath(window.location.pathname) ? "/" : "#home"}
+      >
+        MERAJ ANSARI
+      </a>
       <div className="footer-attribution">
         <span className="footer-role">Full-stack developer · Mumbai, India</span>
         <span className="footer-note">

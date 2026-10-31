@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { Icon } from "../assests/assets.js";
 
 const stats = [
-  { label: "Experience", value: "Clicktrik Company" },
-  { label: "Projects built", value: "6+ real-world projects" },
+  { label: "Focus", value: "Full-stack products" },
   { label: "Primary stack", value: "MERN stack" },
+  { label: "Approach", value: "UI & architecture" },
 ];
 
 const highlights = [
@@ -82,31 +82,6 @@ const About = () => (
             ))}
           </div>
         </div>
-      </div>
-    </section>
-    <section className="section experience-section" id="experience">
-      <div className="site-container">
-        <div className="section-heading">
-          <div>
-            <span className="section-index">03 — Experience</span>
-            <h2>Where I’ve<br />put ideas to work.</h2>
-          </div>
-          <p>
-            Professional experience and a growing body of real-world projects
-            inform how I approach every build.
-          </p>
-        </div>
-        <article className="experience-entry">
-          <span className="workflow-number">01</span>
-          <div>
-            <span className="project-meta">Professional experience</span>
-            <h3>Clicktrik Company</h3>
-          </div>
-          <p>
-            I work across frontend interfaces, full-stack products, and backend
-            APIs, turning real requirements into reliable applications.
-          </p>
-        </article>
       </div>
     </section>
   </>

@@ -11,25 +11,42 @@ import Work from "./components/Work";
 import WorkFlow from "./components/WorkFlow";
 import TechImpact from "./components/TechImpact";
 import SkillProof from "./components/SkillProof";
+import Experience from "./components/Experience";
+import NotFound from "./components/NotFound";
+import ProjectDetail from "./components/ProjectDetail";
+import { getProjectSlugFromPath, isPortfolioHomePath } from "./utils/routes";
 
-const App = () => (
-  <MotionConfig reducedMotion="user">
-    <div className="site-shell">
-      <Header />
-      <main>
-        <Hero />
-        <QuoteCard />
-        <About />
-        <Work />
-        <Technology />
-        <WorkFlow />
-        <SkillProof />
-        <TechImpact />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
-  </MotionConfig>
-);
+const App = () => {
+  const pathname = window.location.pathname;
+  const projectSlug = getProjectSlugFromPath(pathname);
+  const isHome = isPortfolioHomePath(pathname);
+
+  return (
+    <MotionConfig reducedMotion="user">
+      <div className="site-shell">
+        <Header />
+        {isHome ? (
+          <main>
+            <Hero />
+            <QuoteCard />
+            <About />
+            <Experience />
+            <Work />
+            <Technology />
+            <WorkFlow />
+            <SkillProof />
+            <TechImpact />
+            <Contact />
+          </main>
+        ) : projectSlug ? (
+          <ProjectDetail slug={projectSlug} />
+        ) : (
+          <NotFound />
+        )}
+        <Footer />
+      </div>
+    </MotionConfig>
+  );
+};
 
 export default App;

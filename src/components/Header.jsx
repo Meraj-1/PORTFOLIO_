@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Icon } from "../assests/assets";
+import { getProjectSlugFromPath } from "../utils/routes";
 
 const navigation = [
   { label: "Home", href: "#home" },
@@ -15,6 +16,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const menuToggleRef = useRef(null);
+  const projectSlug = getProjectSlugFromPath(window.location.pathname);
+  const homeHref = (href) => (projectSlug ? `/${href}` : href);
 
   const closeMenu = () => setIsMenuOpen(false);
 
@@ -62,7 +65,7 @@ const Header = () => {
       <nav className="site-container site-nav" aria-label="Main navigation">
         <a
           className="brand"
-          href="#home"
+          href={projectSlug ? "/" : "#home"}
           onClick={closeMenu}
           aria-label="Meraj home"
         >
@@ -77,10 +80,12 @@ const Header = () => {
           {navigation.map((item) => (
             <li key={item.href}>
               <a
-                href={item.href}
+                href={homeHref(item.href)}
                 onClick={closeMenu}
                 aria-current={
-                  activeSection === item.href.slice(1) ? "location" : undefined
+                  !projectSlug && activeSection === item.href.slice(1)
+                    ? "location"
+                    : undefined
                 }
               >
                 {item.label}
