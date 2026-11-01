@@ -5,20 +5,25 @@ const groups = [
   {
     name: "Frontend",
     technologies: [
-      { name: "React", icon: Icon.react },
+      { name: "React.js", icon: Icon.react },
       { name: "Next.js", mark: "N" },
-      { name: "TypeScript", mark: "TS" },
-      { name: "JavaScript", icon: Icon.javascript },
-      { name: "HTML", icon: Icon.HTML },
-      { name: "CSS", icon: Icon.Css },
       { name: "Tailwind CSS", icon: Icon.tailwind },
     ],
   },
   {
-    name: "Backend",
+    name: "Languages & web",
+    technologies: [
+      { name: "JavaScript (ES6+)", icon: Icon.javascript },
+      { name: "TypeScript", mark: "TS" },
+      { name: "HTML5", icon: Icon.HTML },
+      { name: "CSS3", icon: Icon.Css },
+    ],
+  },
+  {
+    name: "Backend & APIs",
     technologies: [
       { name: "Node.js", icon: Icon.node },
-      { name: "Express", icon: Icon.express },
+      { name: "Express.js", icon: Icon.express },
       { name: "REST APIs", mark: "API" },
     ],
   },
@@ -28,7 +33,12 @@ const groups = [
   },
   {
     name: "Tools",
-    technologies: [{ name: "Git & GitHub", icon: Icon.github }],
+    technologies: [
+      { name: "Git", mark: "Git" },
+      { name: "GitHub", icon: Icon.github },
+      { name: "Postman", mark: "PM" },
+      { name: "VS Code", mark: "VS" },
+    ],
   },
 ];
 
@@ -45,8 +55,8 @@ const Technology = () => (
           </h2>
         </div>
         <p>
-          From the first responsive component to the data layer behind it, these
-          are the technologies I use to build end-to-end products.
+          From responsive interfaces to backend APIs and database operations,
+          these are the tools I use to build and maintain web applications.
         </p>
       </div>
 

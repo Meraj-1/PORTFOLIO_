@@ -7,8 +7,6 @@ import {
   isValidExperience,
 } from "../utils/experience";
 
-const displayDetail = (value, label) => value || `${label} not provided`;
-
 const Experience = () => (
   <section className="section experience-section" id="experience">
     <div className="site-container">
@@ -45,8 +43,9 @@ const Experience = () => (
               startDate || "Start date not provided"
             } – ${endDate}`;
             const relatedProjects = projects.filter((project) =>
-              experience.relatedProjectIds.includes(project.id) ||
-              project.companyId === experience.companyId,
+              experience.relatedProjectIds.length
+                ? experience.relatedProjectIds.includes(project.id)
+                : project.companyId === experience.companyId,
             );
             return (
               <article className="experience-card" key={experience.id}>
@@ -86,16 +85,18 @@ const Experience = () => (
                       {duration && ` · ${duration}`}
                       {!validDates && experience.startDate && " · Check dates"}
                     </span>
-                    <span>
-                      <MapPin size={15} aria-hidden="true" />
-                      {displayDetail(experience.location || company.location, "Location")}
-                    </span>
-                    <span>
-                      {displayDetail(experience.employmentType, "Employment type")}
-                    </span>
-                    <span>
-                      {displayDetail(experience.workplaceType, "Workplace type")}
-                    </span>
+                    {(experience.location || company.location) && (
+                      <span>
+                        <MapPin size={15} aria-hidden="true" />
+                        {experience.location || company.location}
+                      </span>
+                    )}
+                    {experience.employmentType && (
+                      <span>{experience.employmentType}</span>
+                    )}
+                    {experience.workplaceType && (
+                      <span>{experience.workplaceType}</span>
+                    )}
                   </div>
 
                   {experience.summary ? (
@@ -127,32 +128,37 @@ const Experience = () => (
                         ["Start date", startDate],
                         ["End date", endDate],
                         ["Duration", duration],
-                      ].map(([label, value]) => (
-                        <div key={label}>
-                          <dt>{label}</dt>
-                          <dd>{displayDetail(value, label)}</dd>
-                        </div>
-                      ))}
+                      ]
+                        .filter(
+                          ([, value]) => value !== null && value !== undefined,
+                        )
+                        .map(([label, value]) => (
+                          <div key={label}>
+                            <dt>{label}</dt>
+                            <dd>{value}</dd>
+                          </div>
+                        ))}
                     </dl>
 
                     {[
                       ["Overview", experience.summary ? [experience.summary] : []],
                       ["Responsibilities", experience.responsibilities],
                       ["Contributions & achievements", experience.achievements],
-                    ].map(([heading, items]) => (
-                      <div className="experience-detail-group" key={heading}>
-                        <h4>{heading}</h4>
-                        {items.length ? (
+                    ]
+                      .filter(([, items]) => items.length)
+                      .map(([heading, items]) => (
+                        <div
+                          className="experience-detail-group"
+                          key={heading}
+                        >
+                          <h4>{heading}</h4>
                           <ul>
                             {items.map((item) => (
                               <li key={item}>{item}</li>
                             ))}
                           </ul>
-                        ) : (
-                          <p>Details not provided.</p>
-                        )}
-                      </div>
-                    ))}
+                        </div>
+                      ))}
 
                     <div className="experience-detail-group">
                       <h4>Technologies & tools</h4>

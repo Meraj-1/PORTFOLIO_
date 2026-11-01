@@ -10,6 +10,7 @@ import {
   projectCategories,
   projectBySlug,
 } from "../data/portfolioData";
+import { formatEmploymentDate } from "../utils/experience";
 
 const updateMetadata = (project) => {
   const previousTitle = document.title;
@@ -139,7 +140,7 @@ const ProjectDetail = ({ slug }) => {
   const company = project.companyId ? companyById(project.companyId) : null;
   const category =
     projectCategories.find((item) => item.id === project.category)?.label ||
-    projectCategories.find((item) => item.id === "unclassified").label;
+    projectCategories.find((item) => item.id === "personal").label;
   const gallery = project.gallery.length
     ? project.gallery
     : project.thumbnail
@@ -153,13 +154,18 @@ const ProjectDetail = ({ slug }) => {
       : [];
   const details = [
     ["Category", category],
-    ["Ownership", project.ownership],
+    ["Company", company?.name],
     ["Status", project.status],
-    ["Started", project.startDate],
-    ["Completed", project.completionDate],
-    ["Role", project.myContribution],
-    ...(company ? [["Associated company", company.name]] : []),
-  ];
+    [
+      "Started",
+      formatEmploymentDate(project.startDate) || project.startDate,
+    ],
+    [
+      "Completed",
+      formatEmploymentDate(project.completionDate) || project.completionDate,
+    ],
+    ["Role", project.role],
+  ].filter(([, value]) => value);
   const links = [
     {
       label: "Live project",
@@ -228,10 +234,19 @@ const ProjectDetail = ({ slug }) => {
             ))}
           </section>
         ) : (
-          <div className="project-gallery-empty">
-            <span>{project.title}</span>
-            <p>No project screenshots have been added.</p>
-          </div>
+          <section
+            className="project-case-study-cover"
+            aria-label="Project summary"
+          >
+            <span>
+              {company ? `${company.name} · ` : ""}
+              {project.role || category}
+            </span>
+            <h2>{project.tagline || project.title}</h2>
+            {(project.fullDescription || project.shortDescription) && (
+              <p>{project.fullDescription || project.shortDescription}</p>
+            )}
+          </section>
         )}
 
         <div className="project-detail-layout">
@@ -242,22 +257,20 @@ const ProjectDetail = ({ slug }) => {
               {details.map(([label, value]) => (
                 <div key={label}>
                   <dt>{label}</dt>
-                  <dd>{value || "Not provided"}</dd>
+                  <dd>{value}</dd>
                 </div>
               ))}
             </dl>
-            <div className="project-detail-block">
-              <h3>Technology</h3>
-              {project.technologies.length ? (
+            {project.technologies.length > 0 && (
+              <div className="project-detail-block">
+                <h3>Technology</h3>
                 <ul className="project-stack">
                   {project.technologies.map((technology) => (
                     <li key={technology}>{technology}</li>
                   ))}
                 </ul>
-              ) : (
-                <p>Technologies not provided.</p>
-              )}
-            </div>
+              </div>
+            )}
           </section>
 
           <div className="project-detail-story">
@@ -268,24 +281,24 @@ const ProjectDetail = ({ slug }) => {
               ["Challenges", project.challenges],
               ["Technical approach", project.architecture],
               ["Outcome", project.outcome],
-            ].map(([label, content]) => (
-              <section className="project-detail-block" key={label}>
-                <h3>{label}</h3>
-                <p>{content || "Details not provided."}</p>
-              </section>
-            ))}
-            <section className="project-detail-block">
-              <h3>Key features</h3>
-              {project.features.length ? (
+            ]
+              .filter(([, content]) => content)
+              .map(([label, content]) => (
+                <section className="project-detail-block" key={label}>
+                  <h3>{label}</h3>
+                  <p>{content}</p>
+                </section>
+              ))}
+            {project.features.length > 0 && (
+              <section className="project-detail-block">
+                <h3>Key features</h3>
                 <ul className="project-detail-feature-list">
                   {project.features.map((feature) => (
                     <li key={feature}>{feature}</li>
                   ))}
                 </ul>
-              ) : (
-                <p>Features not provided.</p>
-              )}
-            </section>
+              </section>
+            )}
           </div>
         </div>
 

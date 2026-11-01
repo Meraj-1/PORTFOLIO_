@@ -13,7 +13,7 @@ const Hero = () => (
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45 }}
         >
-          Full-stack developer · Mumbai, India
+          Full-stack engineer <span aria-hidden="true">/</span> Mumbai, India
         </motion.p>
 
         <motion.h1
@@ -21,8 +21,8 @@ const Hero = () => (
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 0.08 }}
         >
-          Engineering digital
-          <span>experiences that last.</span>
+          I turn complex ideas
+          <span>into useful software.</span>
         </motion.h1>
 
         <motion.p
@@ -31,9 +31,8 @@ const Hero = () => (
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.18 }}
         >
-          I’m Meraj — a full-stack software developer building scalable
-          architectures, intuitive user experiences, and performance-driven
-          applications that solve real-world problems.
+          I’m Meraj Ansari, a full-stack engineer building thoughtful web
+          experiences from interface to backend.
         </motion.p>
 
         <motion.div
@@ -43,19 +42,23 @@ const Hero = () => (
           transition={{ duration: 0.45, delay: 0.28 }}
         >
           <a className="button-primary" href="#contact">
-            Let’s build something <ArrowUpRight size={16} aria-hidden="true" />
+            Get in touch <ArrowUpRight size={16} aria-hidden="true" />
           </a>
-          <a className="button-secondary" href="#projects">
-            View projects <ArrowRight size={16} aria-hidden="true" />
+          <a className="button-secondary hero-text-link" href="#projects">
+            Selected work <ArrowRight size={16} aria-hidden="true" />
           </a>
-          <a className="button-secondary" href="/meraj_ansari.pdf" download>
+          <a
+            className="button-secondary hero-text-link hero-resume-link"
+            href="/meraj_ansari.pdf"
+            download
+          >
             Download résumé <ArrowDownRight size={16} aria-hidden="true" />
           </a>
         </motion.div>
 
         <div className="hero-meta">
           <span className="availability">Open to conversations</span>
-          <span>Idea → architecture → production</span>
+          <span>Frontend · Backend · E-commerce</span>
         </div>
       </div>
 
@@ -65,10 +68,13 @@ const Hero = () => (
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.65, delay: 0.12 }}
       >
-        <img src={Icon.main_hero} alt="Portrait of Meraj Ansari" />
+        <span className="hero-visual-index" aria-hidden="true">
+          M<span> / </span>01
+        </span>
+        <img src={Icon.main_hero} alt="Illustration representing Meraj Ansari" />
         <div className="visual-caption">
           <span>Meraj Ansari</span>
-          <span>Full-stack developer</span>
+          <span>Building for the web</span>
         </div>
       </motion.div>
     </div>

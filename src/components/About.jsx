@@ -9,10 +9,10 @@ const stats = [
 ];
 
 const highlights = [
-  "MERN Stack Developer (MongoDB, Express, React, Node.js)",
-  "Frontend focused on React & Next.js with modern UI/UX",
-  "Backend development with Express, Node.js & TypeScript",
-  "Experience building real-world, production-level applications",
+  "Full-stack development with React.js, Next.js, TypeScript, Node.js, and Express.js",
+  "E-commerce features spanning carts, wishlists, checkout, inventory, and orders",
+  "REST APIs, MongoDB data operations, and payment and shipping integrations",
+  "Responsive interfaces, production support, debugging, and feature testing",
 ];
 
 const About = () => (
@@ -31,9 +31,8 @@ const About = () => (
             </h2>
           </div>
           <p>
-            I turn complex ideas into useful digital experiences — pairing
-            considered interfaces with dependable engineering from the first
-            sketch to production.
+            Thoughtful interfaces, dependable engineering, and a focus on
+            making useful things for the web.
           </p>
         </div>
 
@@ -45,18 +44,20 @@ const About = () => (
             viewport={{ once: true }}
             transition={{ duration: 0.45 }}
           >
-            <h3>Hi, I’m Meraj.</h3>
-            <p>
-              I’m a MERN Stack Developer with a strong focus on frontend and
-              backend development. I build scalable web applications using
-              React, Next.js, Node.js, Express, and TypeScript — bringing ideas
-              to life with clean UI and solid architecture.
-            </p>
-            <ul className="highlight-list">
-              {highlights.map((highlight) => (
-                <li key={highlight}>{highlight}</li>
-              ))}
-            </ul>
+            <div className="about-intro">
+              <span className="about-kicker">A little about me</span>
+              <h3>Hi, I’m Meraj.</h3>
+              <p>
+                I’m a full-stack software engineer who turns requirements into
+                useful web applications. I work across responsive interfaces,
+                backend APIs, databases, and e-commerce integrations.
+              </p>
+            </div>
+            <div className="about-education">
+              <span>Education</span>
+              <strong>Bachelor of Computer Applications</strong>
+              <p>Vikas College of Arts, Commerce &amp; Science</p>
+            </div>
           </motion.div>
 
           <motion.div
@@ -71,15 +72,34 @@ const About = () => (
               alt="Meraj working on a digital product"
               loading="lazy"
             />
+            <span className="about-image-caption">
+              <span>Thoughtful by design</span>
+              <span aria-hidden="true">01 / 03</span>
+            </span>
           </motion.div>
 
-          <div className="about-stats" aria-label="Experience highlights">
-            {stats.map((stat) => (
-              <div className="about-stat" key={stat.label}>
-                <strong>{stat.value}</strong>
-                <span>{stat.label}</span>
-              </div>
-            ))}
+          <div className="about-details">
+            <div className="about-stats" aria-label="Experience highlights">
+              {stats.map((stat, index) => (
+                <div className="about-stat" key={stat.label}>
+                  <span className="about-stat-index">
+                    0{index + 1}
+                  </span>
+                  <div>
+                    <strong>{stat.value}</strong>
+                    <span>{stat.label}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="about-focus">
+              <span className="about-focus-label">What I work on</span>
+              <ul className="highlight-list">
+                {highlights.map((highlight) => (
+                  <li key={highlight}>{highlight}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

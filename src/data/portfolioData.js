@@ -4,7 +4,7 @@ import { Icon } from "../assests/assets";
  * Portfolio content is maintained here because this project has no CMS or
  * backend. Keep unknown employment and ownership details null until confirmed.
  *
- * @typedef {"personal" | "professional" | "open-source" | "freelance" | "client" | "experimental" | "unclassified"} ProjectCategory
+ * @typedef {"personal" | "company"} ProjectCategory
  * @typedef {Object} Company
  * @property {string} id
  * @property {string} name
@@ -62,7 +62,7 @@ import { Icon } from "../assests/assets";
 export const companies = [
   {
     id: "clicktrik",
-    name: "Clicktrik Company",
+    name: "Click Trick",
     logo: null,
     website: null,
     location: null,
@@ -72,20 +72,68 @@ export const companies = [
 /** @type {Experience[]} */
 export const experiences = [
   {
-    id: "clicktrik-role-to-confirm",
+    id: "clicktrik-software-engineer",
     companyId: "clicktrik",
-    role: null,
-    employmentType: null,
+    role: "Software Engineer",
+    employmentType: "Full-time",
     workplaceType: null,
-    location: null,
-    startDate: null,
-    endDate: null,
-    isCurrent: null,
-    summary: null,
-    responsibilities: [],
-    achievements: [],
-    technologies: [],
+    location: "Mumbai, Maharashtra",
+    startDate: "2026-03",
+    endDate: "2026-09",
+    isCurrent: false,
+    summary:
+      "Built and maintained web applications across frontend and backend, delivering features for e-commerce, SaaS, and brand projects.",
+    responsibilities: [
+      "Developed responsive customer-facing and administrative interfaces using React.js and Next.js.",
+      "Built backend functionality and REST APIs with TypeScript, Node.js, and Express.js, backed by MongoDB.",
+      "Implemented e-commerce workflows for product variants, carts, wishlists, checkout, customer addresses, inventory, and order processing.",
+      "Integrated third-party payment and shipping services and supported shipment booking and delivery workflows.",
+      "Collaborated with teammates to debug issues, test features, support deployments, and maintain production applications.",
+    ],
+    achievements: [
+      "Maintained and improved production applications as business requirements evolved.",
+    ],
+    technologies: [
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "REST APIs",
+    ],
     relatedProjectIds: [],
+  },
+  {
+    id: "clicktrik-software-engineer-intern",
+    companyId: "clicktrik",
+    role: "Software Engineer Intern",
+    employmentType: "Internship",
+    workplaceType: null,
+    location: "Mumbai, Maharashtra",
+    startDate: "2025-09",
+    endDate: "2026-02",
+    isCurrent: false,
+    summary:
+      "Completed a six-month internship contributing to web application development across frontend, backend, and e-commerce features.",
+    responsibilities: [
+      "Developed responsive user-interface features and backend functionality based on project requirements.",
+      "Worked with TypeScript, Node.js, Express.js, and MongoDB on application features and data operations.",
+      "Supported authentication and third-party API integrations.",
+      "Helped identify and fix bugs, test new features, and resolve technical issues.",
+    ],
+    achievements: [
+      "Contributed to maintaining existing applications and adapting functionality as requirements changed.",
+    ],
+    technologies: [
+      "React.js",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "REST APIs",
+    ],
+    relatedProjectIds: ["power-kick"],
   },
 ];
 
@@ -99,10 +147,63 @@ const gallery = (assets, title) =>
 /** @type {PortfolioProject[]} */
 export const projects = [
   {
+    id: "power-kick",
+    title: "Power Kick — Energy Drink Brand Website",
+    slug: "power-kick",
+    category: "company",
+    ownership: "Official company project developed at Click Trick.",
+    status: "Ongoing",
+    tagline: "A responsive brand experience with product-focused storytelling.",
+    shortDescription:
+      "A responsive frontend for an energy drink brand, featuring an animated hero and interactive nutrition information.",
+    fullDescription:
+      "Built a responsive frontend experience that translates the Power Kick brand identity into product-focused layouts and visual storytelling across desktop and mobile screens.",
+    thumbnail: "/project/click_powerkick/powercick.jpg",
+    gallery: [
+      {
+        src: "/project/click_powerkick/powercick.jpg",
+        type: "image",
+        alt: "Power Kick energy drink campaign artwork",
+      },
+      {
+        src: "/project/click_powerkick/Screen%20Recording%202026-11-01%20225232.mp4",
+        type: "video",
+        alt: "Power Kick website preview",
+      },
+    ],
+    technologies: ["React.js", "JavaScript", "HTML5", "CSS3"],
+    features: [
+      "Animated hero section",
+      "Interactive Nutrition Specs experience",
+      "Responsive desktop and mobile layouts",
+      "Navigation and contact enquiry interactions",
+    ],
+    myContribution:
+      "Frontend development, including responsive interfaces and interactive brand experiences.",
+    problem:
+      "The brand needed a modern web experience to present its identity, products, and nutrition information clearly.",
+    solution:
+      "Created product-focused layouts, an animated hero, and an interactive nutrition information experience.",
+    challenges: null,
+    architecture: null,
+    liveUrl: null,
+    githubUrl: null,
+    documentationUrl: null,
+    companyId: "clicktrik",
+    startDate: "2025-07",
+    completionDate: null,
+    isFeatured: true,
+    displayOrder: 1,
+    role: "Frontend Developer",
+    duration: null,
+    outcome:
+      "Delivered a responsive brand experience that presents product and nutrition information across screen sizes.",
+  },
+  {
     id: "eden-rose",
     title: "EDEN ROSE",
     slug: "eden-rose",
-    category: "client",
+    category: "personal",
     ownership: "Client project, as described in the existing case study.",
     status: null,
     tagline: "A photography portfolio shaped around cinematic storytelling.",
@@ -139,7 +240,7 @@ export const projects = [
     startDate: null,
     completionDate: null,
     isFeatured: true,
-    displayOrder: 1,
+    displayOrder: 2,
     role: "Frontend Developer & UI Designer",
     duration: "2 Weeks",
     outcome:
@@ -149,7 +250,7 @@ export const projects = [
     id: "real-estatein",
     title: "Real Estatein",
     slug: "real-estatein",
-    category: "unclassified",
+    category: "personal",
     ownership: null,
     status: null,
     tagline: "A clear, mobile-first home for property listings.",
@@ -180,7 +281,7 @@ export const projects = [
     startDate: null,
     completionDate: null,
     isFeatured: false,
-    displayOrder: 2,
+    displayOrder: 3,
     role: "Frontend Developer",
     duration: "10 Days",
     outcome:
@@ -190,7 +291,7 @@ export const projects = [
     id: "estatein",
     title: "Estatein",
     slug: "estatein",
-    category: "unclassified",
+    category: "personal",
     ownership: null,
     status: null,
     tagline: "A focused landing page for a real estate brand.",
@@ -221,7 +322,7 @@ export const projects = [
     startDate: null,
     completionDate: null,
     isFeatured: true,
-    displayOrder: 3,
+    displayOrder: 4,
     role: "Frontend Developer",
     duration: "1 Week",
     outcome:
@@ -231,7 +332,7 @@ export const projects = [
     id: "ecommerce-platform",
     title: "ECOM-WEB",
     slug: "ecommerce-platform",
-    category: "unclassified",
+    category: "personal",
     ownership: null,
     status: null,
     tagline: "A product-first storefront built for a smoother shop.",
@@ -262,7 +363,7 @@ export const projects = [
     startDate: null,
     completionDate: null,
     isFeatured: true,
-    displayOrder: 4,
+    displayOrder: 5,
     role: "Frontend Developer",
     duration: "2 Weeks",
     outcome:
@@ -272,7 +373,7 @@ export const projects = [
     id: "zerodha-clone",
     title: "Zerodha Clone",
     slug: "zerodha-clone",
-    category: "unclassified",
+    category: "personal",
     ownership: null,
     status: null,
     tagline: null,
@@ -294,7 +395,81 @@ export const projects = [
     startDate: null,
     completionDate: null,
     isFeatured: false,
-    displayOrder: 5,
+    displayOrder: 6,
+    role: null,
+    duration: null,
+    outcome: null,
+  },
+  {
+    id: "artitory",
+    title: "Artitory",
+    slug: "artitory",
+    category: "company",
+    ownership: "Official company project developed at Click Trick.",
+    status: null,
+    tagline: "Little Hands, Big Ideas.",
+    shortDescription: "A creative brand for children.",
+    fullDescription: null,
+    thumbnail: "/project/click_artiory/logo.png",
+    gallery: [
+      {
+        src: "/project/click_artiory/logo.png",
+        type: "image",
+        alt: "Artitory logo",
+      },
+    ],
+    technologies: [],
+    features: [],
+    myContribution: null,
+    problem: null,
+    solution: null,
+    challenges: null,
+    architecture: null,
+    liveUrl: null,
+    githubUrl: null,
+    documentationUrl: null,
+    companyId: "clicktrik",
+    startDate: null,
+    completionDate: null,
+    isFeatured: false,
+    displayOrder: 7,
+    role: null,
+    duration: null,
+    outcome: null,
+  },
+  {
+    id: "vicky-tailor",
+    title: "Vicky Tailor",
+    slug: "vicky-tailor",
+    category: "personal",
+    ownership: null,
+    status: null,
+    tagline: "Since 1983.",
+    shortDescription: "A tailoring brand established in 1983.",
+    fullDescription: null,
+    thumbnail: "/project/vickytailor/logo.png",
+    gallery: [
+      {
+        src: "/project/vickytailor/logo.png",
+        type: "image",
+        alt: "Vicky Tailor logo",
+      },
+    ],
+    technologies: [],
+    features: [],
+    myContribution: null,
+    problem: null,
+    solution: null,
+    challenges: null,
+    architecture: null,
+    liveUrl: null,
+    githubUrl: null,
+    documentationUrl: null,
+    companyId: null,
+    startDate: null,
+    completionDate: null,
+    isFeatured: false,
+    displayOrder: 8,
     role: null,
     duration: null,
     outcome: null,
@@ -302,13 +477,8 @@ export const projects = [
 ];
 
 export const projectCategories = [
-  { id: "personal", label: "Personal projects" },
-  { id: "professional", label: "Professional projects" },
-  { id: "open-source", label: "Open source" },
-  { id: "freelance", label: "Freelance projects" },
-  { id: "client", label: "Client projects" },
-  { id: "experimental", label: "Experimental projects" },
-  { id: "unclassified", label: "Unclassified" },
+  { id: "company", label: "Company projects" },
+  { id: "personal", label: "Personal & independent projects" },
 ];
 
 export const projectBySlug = (slug) =>

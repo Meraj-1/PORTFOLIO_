@@ -12,32 +12,32 @@ const impactMap = [
   {
     tech: "Next.js",
     mark: "N",
-    use: "Server-side rendering & SEO",
-    impact: "Better performance and search visibility",
+    use: "Modern React application development",
+    impact: "Structured frontend experiences for web products",
   },
   {
     tech: "Node.js",
     icon: Icon.node,
     use: "Backend logic & APIs",
-    impact: "Scalable and secure server-side systems",
+    impact: "Backend functionality for production web applications",
   },
   {
     tech: "Express",
     icon: Icon.express,
     use: "API routing & middleware",
-    impact: "Clean, structured REST APIs",
+    impact: "REST APIs and third-party service integrations",
   },
   {
     tech: "MongoDB",
     icon: Icon.Mongo,
-    use: "Database & data modeling",
-    impact: "Flexible and scalable data storage",
+    use: "Application data operations",
+    impact: "Product, customer, cart, and order data management",
   },
   {
     tech: "Tailwind CSS",
     icon: Icon.tailwind,
-    use: "Utility-first styling",
-    impact: "Rapid UI development with consistency",
+    use: "Responsive interface styling",
+    impact: "Consistent layouts across customer-facing screens",
   },
 ];
 
