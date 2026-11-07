@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Github, Linkedin, Menu, X } from "lucide-react";
 import { Icon } from "../assests/assets";
-import { getProjectSlugFromPath } from "../utils/routes";
+import {
+  getProjectSlugFromPath,
+  isPortfolioHomePath,
+} from "../utils/routes";
 
 const navigation = [
   { label: "Home", href: "#home" },
@@ -17,6 +20,8 @@ const Header = () => {
   const [activeSection, setActiveSection] = useState("home");
   const menuToggleRef = useRef(null);
   const projectSlug = getProjectSlugFromPath(window.location.pathname);
+  const isEditorialHome =
+    !projectSlug && isPortfolioHomePath(window.location.pathname);
   const homeHref = (href) => (projectSlug ? `/${href}` : href);
 
   const closeMenu = () => setIsMenuOpen(false);
@@ -61,17 +66,53 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <header className="site-header">
+    <header
+      className={`site-header${isEditorialHome ? " site-header-hero" : ""}`}
+    >
       <nav className="site-container site-nav" aria-label="Main navigation">
         <a
-          className="brand"
+          className={`brand${isEditorialHome ? " brand-editorial" : ""}`}
           href={projectSlug ? "/" : "#home"}
           onClick={closeMenu}
           aria-label="Meraj home"
         >
-          <img src={Icon.logo} alt="" />
-          <span>MERAJ ANSARI</span>
+          {isEditorialHome ? (
+            <span className="brand-editorial-copy">
+              <strong>Meraj.</strong>
+              <small>software engineer</small>
+            </span>
+          ) : (
+            <>
+              <img src={Icon.logo} alt="" />
+              <span>MERAJ ANSARI</span>
+            </>
+          )}
         </a>
+
+        {isEditorialHome && (
+          <div
+            className="hero-social-links"
+            role="group"
+            aria-label="Social links"
+          >
+            <a
+              href="https://github.com/Meraj-1"
+              aria-label="GitHub"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Github size={15} aria-hidden="true" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/meraj-ansari-12bb132a9/"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Linkedin size={15} aria-hidden="true" />
+            </a>
+          </div>
+        )}
 
         <ul
           className={`nav-links${isMenuOpen ? " is-open" : ""}`}
@@ -99,8 +140,13 @@ const Header = () => {
           </li>
         </ul>
 
-        <a className="nav-contact" href="/meraj_ansari.pdf" download>
-          Résumé <span aria-hidden="true">↗</span>
+        <a
+          className={`nav-contact${isEditorialHome ? " nav-contact-hero" : ""}`}
+          href={isEditorialHome ? "#contact" : "/meraj_ansari.pdf"}
+          download={!isEditorialHome}
+        >
+          {isEditorialHome ? "Schedule a call" : "Résumé"}
+          <span aria-hidden="true">↗</span>
         </a>
 
         <button

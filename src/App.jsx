@@ -8,9 +8,9 @@ import Hero from "./components/Hero";
 import Technology from "./components/Technology";
 import QuoteCard from "./ui/QuoteCard";
 import Work from "./components/Work";
-import WorkFlow from "./components/WorkFlow";
-import TechImpact from "./components/TechImpact";
-import SkillProof from "./components/SkillProof";
+// import WorkFlow from "./components/WorkFlow";
+// import TechImpact from "./components/TechImpact";
+// import SkillProof from "./components/SkillProof";
 import Experience from "./components/Experience";
 import NotFound from "./components/NotFound";
 import ProjectDetail from "./components/ProjectDetail";
@@ -26,16 +26,16 @@ const App = () => {
       <div className="site-shell">
         <Header />
         {isHome ? (
-          <main>
+          <main className="home-page">
             <Hero />
             <QuoteCard />
             <About />
             <Experience />
             <Work />
             <Technology />
-            <WorkFlow />
-            <SkillProof />
-            <TechImpact />
+            {/* <WorkFlow /> */}
+            {/* <SkillProof /> */}
+            {/* <TechImpact /> */}
             <Contact />
           </main>
         ) : projectSlug ? (
