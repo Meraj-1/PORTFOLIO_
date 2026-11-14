@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Github } from "lucide-react";
 import {
@@ -20,20 +20,25 @@ const getProjectPeriod = (project) => {
 
 const ProjectMedia = ({ project }) => {
   const firstMedia = project.gallery[0];
+  const [previewFailed, setPreviewFailed] = useState(false);
+  const reduceMotion =
+    typeof window !== "undefined" &&
+    window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
 
-  if (firstMedia?.type === "video") {
+  if (firstMedia?.type === "video" && !previewFailed) {
     return (
-      <div className="project-media-placeholder">
-        <span className="project-placeholder-label">Project preview</span>
-        <div className="project-placeholder-copy">
-          <span className="project-placeholder-mark" aria-hidden="true">
-            ▶
-          </span>
-          <div>
-            <span>{project.title}</span>
-            <span>Video preview available on project page</span>
-          </div>
-        </div>
+      <div className="project-video-preview">
+        <video
+          src={firstMedia.src}
+          muted
+          playsInline
+          loop
+          autoPlay={!reduceMotion}
+          preload="metadata"
+          aria-hidden="true"
+          onError={() => setPreviewFailed(true)}
+        />
+        <span className="project-video-label">Video preview</span>
       </div>
     );
   }
@@ -222,9 +227,8 @@ const Work = () => {
             </h2>
           </div>
           <p>
-            Browse official company work separately from personal and
-            independent projects. Client work remains identified in its
-            project details.
+            A mix of client work and independent builds, with the thinking,
+            tools, and contribution behind each project.
           </p>
         </div>
 
